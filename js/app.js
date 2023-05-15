@@ -1,18 +1,12 @@
-let imgcars = document.querySelectorAll('.imgcars');
+let imgcars = document.querySelectorAll(".imgcars");
 
+let xboximg = document.getElementById("xbox-img");
 
-let xboximg = document.getElementById('xbox-img');
-
-imgcars.forEach((ee)=>{
-  ee.addEventListener('click',function(){
-    xboximg.src = ee.src
-  })
-})
-
-
-
-
-
+imgcars.forEach((ee) => {
+  ee.addEventListener("click", function () {
+    xboximg.src = ee.src;
+  });
+});
 
 // document
 //   .querySelector(".menu-btn")
@@ -91,7 +85,7 @@ imgcars.forEach((ee)=>{
 // let selectedLink = document.querySelector(".selectedLink");
 
 // function checkActive() {
-//   document.querySelectorAll("nav li").forEach((item) => {
+  //   document.querySelectorAll("nav li").forEach((item) => {
 //     console.log(item);
 //     if (item.dataset.active == "true") {
 //       selectedLink.style.transform = `translateX(${
@@ -102,14 +96,14 @@ imgcars.forEach((ee)=>{
 // }
 
 // document.querySelectorAll("nav li").forEach((item) => {
-//   console.log(item.offsetLeft);
+  //   console.log(item.offsetLeft);
 //   item.addEventListener("click", (e) => {
 //     document.querySelectorAll("nav li").forEach((i) => {
-//       i.dataset.active = "false";
-//     });
-//     e.currentTarget.dataset.active = "true";
-//     checkActive();
-//   });
+  //       i.dataset.active = "false";
+  //     });
+  //     e.currentTarget.dataset.active = "true";
+  //     checkActive();
+  //   });
 // });
 
 // checkActive();
@@ -117,7 +111,6 @@ let selectedLink = document.querySelector(".selectedLink");
 
 function checkActive() {
   document.querySelectorAll("nav li").forEach((item) => {
-    console.log(item);
     if (item.dataset.active == "true") {
       selectedLink.style.transform = `translateX(${
         item.offsetLeft + item.offsetWidth / 2 - 24 + "px"
@@ -127,7 +120,6 @@ function checkActive() {
 }
 
 document.querySelectorAll("nav li").forEach((item) => {
-  console.log(item.offsetLeft);
   item.addEventListener("click", (e) => {
     document.querySelectorAll("nav li").forEach((i) => {
       i.dataset.active = "false";
@@ -144,14 +136,51 @@ checkActive();
 let En = document.getElementById("terms-checkbox-37");
 
 let translatedText = document.getElementById("translatedText");
-
-// let label = document.getElementById('label');
+let testAsfour = document.querySelector(".asfour");
 let testTrans = document.querySelectorAll(".testtran");
 var textToTranslate = "";
 for (let i of testTrans) {
   textToTranslate += i.innerHTML + "-"; // يجب استبدال هذا النص بالنص المراد ترجمته
 }
 let engLetter = "";
+
+testAsfour.addEventListener('change',function(){
+  function trns() {
+    var xhr = new XMLHttpRequest();
+    var langPair = "en-ar"; // يجب تحديد الزوج اللغوي المراد استخدامه، وهنا هو اللغة الإنجليزية إلى العربية
+    var url =
+      "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
+      langPair.split("-")[0] +
+      "&tl=" +
+      langPair.split("-")[1] +
+      "&dt=t&q=" +
+      encodeURI(textToTranslate);
+    console.log(5);
+    xhr.open("GET", url);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        for (let i = 0; i < testTrans.length; i++) {
+          testTrans[i].innerHTML = response[0][0][0].split("-")[i];
+        }
+      }
+    };
+    xhr.send();
+  }
+  if (testAsfour.value == '3') {
+    engLetter = textToTranslate;
+    console.log(engLetter);
+    trns();
+  } else {
+    for (let i = 0; i < testTrans.length; i++) {
+      testTrans[i].innerHTML = engLetter.split("-")[i];
+    }
+    console.log(engLetter.split("-"));
+  }
+  console.log(143);
+})
+console.log(testAsfour)
+// let label = document.getElementById('label');
 
 En.addEventListener("click", function () {
   // if (label.style.display == 'none') {
@@ -165,17 +194,15 @@ En.addEventListener("click", function () {
 
   // }
   En.classList.toggle("ward");
-  
-  if(En.classList.value.includes('ward')){
+
+  if (En.classList.value.includes("ward")) {
     engLetter = textToTranslate;
-    console.log(engLetter)
-    trns()
-  }
-  else{
+    console.log(engLetter);
+    trns();
+  } else {
     for (let i = 0; i < testTrans.length; i++) {
       testTrans[i].innerHTML = engLetter.split("-")[i];
     }
-    console.log(engLetter.split("-"))
   }
   function trns() {
     var xhr = new XMLHttpRequest();
@@ -187,7 +214,6 @@ En.addEventListener("click", function () {
       langPair.split("-")[1] +
       "&dt=t&q=" +
       encodeURI(textToTranslate);
-    console.log(5);
     xhr.open("GET", url);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {

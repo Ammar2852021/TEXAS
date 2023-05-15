@@ -382,7 +382,7 @@ font-weight: bold;
   background-size:500px;
   background-repeat: no-repeat;
   background-position: 500px -40px; 
-
+overflow: hidden;
   display: grid;
 background-image: url(/TEXAS/img/Screenshot\ 2023-05-13\ 114704.png);
   grid-template-columns: 2fr 1fr;
@@ -480,7 +480,7 @@ margin-left: -45vh;
 
   .blue{background:#003f82; 
     position: absolute;
-    bottom: -80px;
+    bottom: -25px;
   width: auto;
   height: 45vh;
   display: flex;
@@ -496,7 +496,9 @@ display: grid;
 grid-template-columns: 3fr 1fr 1fr 1fr 1fr 2fr;
 background-color: white;
 position: relative;
-border-radius: 5px;}
+border-radius: 5px;
+margin-top: 16vh;
+}
 
 .Promised .Top{position: absolute;
 width: 30%;
@@ -608,44 +610,91 @@ align-items: center; */
 
 
 
+/* ....................................... */
+.Our-Service{background-color: #26272b;width: 100%; height: 100vh;
+  margin-bottom: 10vh;
+overflow: hidden;}
 
+.Our-Service .Our-Service-p{
+color: white;
+font-size: 30px;
+margin: 15px 0px 0px 10px;
+text-align: left;
+font-weight: bold;}
 
-
-
-.Grid{width: 100%; height: 70vh; 
+.Grid{ 
+width: 100%;
+height:80vh;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-
-}
+grid-template-columns: 1fr 1fr;}
 
 .Text-card{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-color: white;
-}
-
-
-.card-Grid-Tow{background-size: cover;
-
-}
-
-
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;}
 
 .card-Grid{
+margin: 10px;
+display: grid;
+grid-template-columns: 1fr 1fr;}
 
-  margin: 10px;
-  border-radius: 20px;
-  background-size: cover;
+.Grid-img{background-color: black;
+margin: 10px;
+overflow: hidden;
+border-radius: 10px;}
+
+.Grid-img img{width: 100%;
+height:-webkit-fill-available;}
+
+.Grid-text{margin: 10px;
+  display: flex;
+  align-items: center;
+color: white;}
+
+
+
+/* ....................................... */
+.About{font-weight: bold;
+font-size: 25px;
+text-align: center;
 }
 
-.card-Grid-Tow{grid-row-start:1;
-  grid-row-end:3;
-  grid-column-start:2;
-  grid-column-end:3;
-  margin: 10px;
-  border-radius: 20px;}
+.About-us{
+width: 100%;
+height: 50vh;
+display: grid;
+grid-template-columns: 1fr 1fr;}
 
+.About-img{background-color: rebeccapurple;
+margin: 20px;
+border-radius: 20px;}
+
+.About-text{
+text-align: left;
+margin: 20px;
+color: black;
+
+}
+
+
+
+.About-text h2 {margin: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ............................................. */
 
 
 .icons-Grid{width: auto;
@@ -654,8 +703,8 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 background: #372a23;
 margin: 10px;
-border-radius: 20px;
-}
+border-radius: 20px;}
+
 .icons{ margin: 10px; display: flex;
 justify-content: center;
 align-items: center;
@@ -851,7 +900,6 @@ margin-top: 2vh;
   margin-bottom: 5px;
 }
 
-.Contenar-our h2,p{text-align: center;}
 
 .Our-Tame a {
   display: inline-block;
@@ -974,7 +1022,36 @@ margin-right: 30px;}
 
 
 .footer ul li a {text-decoration: none;color: white;}
-@media(max-width: 700px) {
+@media(max-width: 767px) {
+  .logo h3{display: none;}
+
+  .Promised .Top{display: none;}
+  .blue{
+        /* background: #003f82; */
+        position: absolute;
+        /* bottom: -25px; */
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        
+  }
+  .showcase-img img{display: none;}
+
+  .Our-Service{height: auto;}
+  .Grid{display: block;
+  height: auto;
+  }
+
+/* ......................... */
+.About-img{display: none;}
+.About-us{display: block;}
+
+/* ............................ */
+
+.xbox{display: block;}
+
+
   .menu-btn {
     display: block;
   }
@@ -1237,4 +1314,19 @@ margin-top: 12vh;
     margin-right: 0;
     font-weight: 600;
   }
+}
+
+
+
+.meck{width: 100%;
+height: 5vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+background-color: #000;
+}
+
+.meck a {text-decoration: none;
+color: white;
 }
