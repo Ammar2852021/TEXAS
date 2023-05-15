@@ -471,7 +471,7 @@ font-weight: bold;
   height: 85vh;
   background-size:500px;
   background-repeat: no-repeat;
-  background-position: 500px -40px; 
+  background-position: 700px 10px; 
 overflow: hidden;
   display: grid;
 background-image: url(/TEXAS/img/Screenshot\ 2023-05-13\ 114704.png);
@@ -486,8 +486,8 @@ display: flex;
 justify-content: right;
 align-items: center;}
 
-.showcase-img img{width: 150%;
-  margin-right: 20vh;
+.showcase-img img{width: 180%;
+  margin-right: 10vh;
 z-index: 999;}
 
 .showcase-text h2 , p {margin: 30px;}
