@@ -808,6 +808,7 @@ color: white;
     position: relative;
     overflow: hidden;
     width: 100%;
+    z-index: 1;
     color: white;
     padding: 15px;
     font-size: 18px;
