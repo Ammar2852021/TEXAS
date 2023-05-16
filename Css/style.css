@@ -1159,7 +1159,15 @@ margin-right: 30px;}
 }
 
 .msg textarea {
-  height: 212px;
+  height: 200px;
+}
+input[type="submit"]{width: 100%;
+padding: 5px;
+outline: none;
+border: none;
+border-radius: 20px;
+background: #003f82;
+color: white;
 }
 
 
