@@ -41,7 +41,7 @@ let testAsfour = document.querySelector(".asfour");
 let testTrans = document.querySelectorAll(".testtran");
 var textToTranslate = "";
 for (let i of testTrans) {
-  textToTranslate += i.innerHTML + "-"; // يجب استبدال هذا النص بالنص المراد ترجمته
+  textToTranslate += i.innerText + "-"; // يجب استبدال هذا النص بالنص المراد ترجمته
 }
 let engLetter = "";
 
@@ -61,7 +61,7 @@ testAsfour.addEventListener('change',function(){
       if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.responseText);
         for (let i = 0; i < testTrans.length; i++) {
-          testTrans[i].innerHTML = response[0][0][0].split("-")[i];
+          testTrans[i].innerText = response[0][0][0].split("-")[i];
         }
       }
     };
@@ -72,7 +72,8 @@ testAsfour.addEventListener('change',function(){
     trns();
   } else {
     for (let i = 0; i < testTrans.length; i++) {
-      testTrans[i].innerHTML = engLetter.split("-")[i];
+      console.log(engLetter)
+      testTrans[i].innerText = engLetter.split("-")[i];
     }
   }
 })
@@ -89,7 +90,7 @@ En.addEventListener("click", function () {
     trns();
   } else {
     for (let i = 0; i < testTrans.length; i++) {
-      testTrans[i].innerHTML = engLetter.split("-")[i];
+      testTrans[i].innerText = engLetter.split("-")[i];
     }
   }
   function trns() {
@@ -107,7 +108,7 @@ En.addEventListener("click", function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.responseText);
         for (let i = 0; i < testTrans.length; i++) {
-          testTrans[i].innerHTML = response[0][0][0].split("-")[i];
+          testTrans[i].innerText = response[0][0][0].split("-")[i];
         }
       }
     };
