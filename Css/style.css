@@ -797,7 +797,7 @@ color: black;
 
 
 .icons-Grid{width: auto;
-height: 20vh;
+height: 50vh;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 background: #26272b;
@@ -955,6 +955,10 @@ margin-top: 2vh;
 /* .................................. */
 
 /* Home cards */
+
+.Contenar-our h2{text-align: center; margin-top: 5vh;}
+.Contenar-our p{text-align: center;}
+
 .Our-Tame {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -994,9 +998,13 @@ margin-top: 2vh;
 }
 
 .Our-Tame h3 {
-  margin-bottom: 5px;
-}
+  margin: 10px;
+  font-size: 18px;}
 
+  .Our-Tame p {
+    margin: 10px;
+    font-weight: 500;
+    font-size: 18px;}
 
 .Our-Tame a {
   display: inline-block;
@@ -1165,7 +1173,7 @@ input[type="submit"]{width: 100%;
 padding: 5px;
 outline: none;
 border: none;
-border-radius: 20px;
+border-radius: 5px;
 background: #003f82;
 color: white;
 }
