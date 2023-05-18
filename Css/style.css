@@ -1389,6 +1389,7 @@ color: white;
         width: 100%;
         height: auto;
         display: flex;
+        padding-bottom: 20px;
         justify-content: center;
         
   }
@@ -1400,6 +1401,12 @@ color: white;
   }
   .card-Grid{display: block;}
 
+  .offer-offer{width: 100%;}
+
+  .home-cards-img{width: 100%;}
+  .home-cards-img img{width: 150px;}
+  .icons-Grid{display: block; }
+  .Our-Tame-img{height: auto;}
 /* ......................... */
 .About-img{display: none;}
 .About-us{display: block;}
