@@ -65,7 +65,7 @@ ul {
   align-items: flex-start;
   width: 100%;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  /* transition: max-height 0.2s ease-out; */
 }
 .top-nav .menu li a {
   display: inline-block;
@@ -121,7 +121,7 @@ font-size: 20px;
 .top-nav .menu-btn:checked ~ .menu {
   max-height: 100%;
   background-color: white;
-  height: 80vh;
+  height: 100vh;
   z-index: 999;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -473,7 +473,7 @@ font-weight: bold;
 /*  */
 .showcase {
   width: auto;
-  height: 85vh;
+  height: 100vh;
   background-size:600px;
   background-repeat: no-repeat;
   background-position: 700px 10px; 
@@ -489,13 +489,13 @@ background-image: url(/TEXAS/img/Screenshot\ 2023-05-13\ 114704.png);
 width: inherit;
 display: flex;
 justify-content: right;
-align-items: center;}
+align-items: self-start;}
 
 .showcase-img img{width: 180%;
   margin-right: 10vh;
 z-index: 5;}
 
-.showcase-text h2 , p {margin: 30px;}
+/* .showcase-text h2 , p {background-color: red;} */
 
 .header-img{
 
@@ -575,7 +575,7 @@ margin-left: -45vh;
 
   .blue{background:#003f82; 
     position: absolute;
-    bottom: -25px;
+    bottom: 0;
   width: auto;
   height: 45vh;
   display: flex;
@@ -591,7 +591,7 @@ display: grid;
 grid-template-columns: 3fr 1fr 1fr 1fr 1fr 2fr;
 background-color: white;
 position: relative;
-border-radius: 5px;
+border-radius: 0px 5px 5px 5px;
 margin-top: 16vh;
 }
 
@@ -599,7 +599,7 @@ margin-top: 16vh;
 width: 30%;
 height: 10vh;
 background-color: white;
-top: -59px;
+top: -64.3px;
 border-radius: 10px 10px 0px 0px;
 overflow: hidden;
 }
@@ -693,9 +693,27 @@ align-items: center; */
 
 
 
+/* ....................................... */
+.offer-card{width: 100%; 
+height: auto;
+align-items: center;
+overflow: auto;
+display:-webkit-box;}
 
 
+.offer-offer{
+width: 32%;
+margin: 8px;
+height: 50vh;
+display: grid;
+grid-template-rows: 2fr 1fr;}
 
+.offer-offer-img{
+  background-image: url(/TEXAS/img/66d1c9ec-d0a4-4031-b95c-70efa6d59eca.jpg);
+  background-size: cover;
+margin: 10px;
+border-radius: 10px;
+}
 
 
 
@@ -709,7 +727,6 @@ align-items: center; */
 .Our-Service{
 background-color: #26272b;
 width: 100%;
-margin-top: 18vh;
  height: 110vh;
   margin-bottom: 10vh;
 overflow: hidden;}
@@ -1036,7 +1053,11 @@ border-radius: 5px;}
 
   
 .showcase h2 {
-  margin: 15vh 0px 0px 10vh;
+  /* margin: 0vh 0px 0px 20vh; */
+  text-align: center;
+  font-family: inherit;
+  letter-spacing: 50px;
+  margin-right: 250px;
   font-size: 5rem;
   color: black;
   font-weight: bold;}
@@ -1045,7 +1066,8 @@ border-radius: 5px;}
   font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 0vh 0px 0px 12vh;
+  margin-left: 90px;
+  letter-spacing: 5px;
 
   }
 
@@ -1127,7 +1149,7 @@ width: 100%;
 height: 320px;
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: flex-start;
 overflow: hidden;
 }
 
