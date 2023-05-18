@@ -800,11 +800,12 @@ display: grid;
 grid-template-columns: 1fr 1fr;}
 
 .About-img{
-  background-color: red;
-  display: flex;
+background-image: url(/TEXAS/img/Hire\ Chauffeur\ for\ a\ Business\ Meeting.jpeg);
+background-size: cover;
+background-position: top center;
 margin: 20px;
 overflow: hidden;
-border-radius: 20px;}
+border-radius: 5px;}
 
 .About-text{
 text-align: left;
@@ -813,6 +814,8 @@ color: black;
 
 }
 
+
+/* .About-text p {text-transform: uppercase;} */
 
 
 .About-text h2 {margin: 20px;}
@@ -833,16 +836,6 @@ color: black;
 /* ............................................. */
 
 
-.icons-Grid{width: auto;
-  margin-bottom: 5vh;
-height: auto;
-background: #26272b;
-margin: 10px;
-display: flex;
-justify-content: center;
-padding: 20px;
-border-radius: 5px;}
-
 
 
 
@@ -856,54 +849,8 @@ border-radius: 5px;}
 	background-color: rgba(0, 0, 0, 0.4);
 } */
 
-.accordion {
-	--circle-x: 1.8rem;
-	--circle-y: 0;
-	--circle-r: 200%;
-	--circle-bg: #fff;
-	color: #000;
-  margin: 10px;
 
-	background-color: var(--circle-bg);
-	max-width: 56ch;
-	margin-bottom: 1rem;
-	border-radius: min(8px, 0.5rem);
 
-	display: grid;
-	grid-template-rows: 0fr 0fr;
-	transition-timing-function: var(--slide-ease);
-	transition-duration: 200ms, 200ms, var(--slide-duration);
-	transition-property: opacity, box-shadow, grid-template-rows;
-	transition-delay: 0ms, 0ms, var(--slide-delay);
-	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-	opacity: 0.9;
-}
-
-.accordion:not(:target):hover {
-	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
-}
-
-.accordion:not(:target):active {
-	opacity: 1;
-	box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.3);
-}
-
-.accordion,
-.content {
-	overflow: hidden;
-}
-
-.accordion:target {
-	--d: 90deg;
-	grid-template-rows: 0fr 1fr;
-	transition: grid-template-rows var(--slide-ease) var(--slide-duration)
-		var(--slide-delay);
-}
-
-.wrapper {
-	padding-block: 0 1.05rem;
-	padding-inline: 1.25rem;
-}
 
 
 
@@ -918,76 +865,7 @@ border-radius: 5px;}
 	margin-bottom: 0;
 } */
 
-.title a {
-	padding: 1rem 1.25rem;
-	font-size: var(--size-accordion-title);
-	font-weight: 800;
-	color: currentColor;
-	text-decoration: none;
-	display: flex;
-	flex-direction: row;
-	place-items: center;
-}
 
-.title a::before {
-	--chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath fill='white' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
-	content: "";
-	left: 0;
-	top: 0;
-	width: 0.65rem;
-	aspect-ratio: 320 / 512;
-	display: inline-block;
-	margin-right: 0.75rem;
-	transform: rotate(var(--d, 0deg));
-	transition: transform var(--slide-ease) var(--slide-duration)
-		var(--slide-delay);
-	mask-image: var(--chevron-icon);
-	mask-size: 100% 100%;
-	-webkit-mask-image: var(--chevron-icon);
-	-webkit-mask-size: 100% 100%;
-	background-color: currentColor;
-}
-
-
-
-.accordion::before {
-	--r: 0%;
-	transition-delay: var(--circle-duration), var(--circle-duration), 0ms;
-	transition-duration: 0ms, var(--circle-duration), 0ms;
-	opacity: 0;
-}
-
-.accordion:target::before {
-	--r: var(--circle-r);
-	transition-delay: 0ms, 0ms, 0ms;
-	transition-duration: 0ms, var(--circle-duration), 0ms;
-	opacity: 1;
-}
-
-.accordion::after {
-	--r: var(--circle-r);
-	transition-delay: 0ms, 0ms, var(--circle-duration);
-	transition-duration: 0ms, var(--circle-duration), 0ms;
-	visibility: hidden;
-	opacity: 1;
-}
-
-.accordion:target:after {
-	--r: 0%;
-	transition-delay: 0ms, 0ms, 0ms;
-	transition-duration: 0ms, 0ms, 0ms;
-	visibility: visible;
-	opacity: 0;
-}
-
-.title a:focus-visible {
-	background-color: hsl(0, 100%, 90%);
-	outline: none;
-}
-
-.accordion:target .title a:focus-visible {
-	background-color: hsl(183, 100%, 93%);
-}
 
 
 
@@ -1301,81 +1179,8 @@ padding: 20px;
 color: white;
 }
 
-.footer-inner {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;}
-
-.footer div {
-  margin: 20px;
-  color: white;
-  display: flex;
-  align-items: center;}
-
-.footer div i {margin-right: 10px;}
-
-.footer ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;}
-
-.footer li {
-margin-right: 30px;}
 
 
-.footer ul li a {text-decoration: none;color: white;}
-
-.contact-form {
-  display: flex;
-}
-
-.input-fields {
-  display: flex;
-  flex-direction: column;
-  margin-right: 4%;
-}
-
-.input-fields,
-.msg {
-  width: 100%;
-}
-
-.input-fields .input,
-.msg textarea {
-  margin: 10px 0;
-  background: transparent;
-  border: 0px;
-  border-bottom: 2px solid white;
-  padding: 10px;
-  color: white;
-  outline: none;
-  width: 100%;
-}
-
-.msg textarea {
-  height: 200px;
-}
-input[type="submit"]{width: 100%;
-padding: 5px;
-outline: none;
-border: none;
-border-radius: 5px;
-background: #003f82;
-color: white;
-}
-
-
-.btn {
-  text-align: center;
-  padding: 15px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-}
 
 @media screen and (max-width: 600px) {
   .contact-form {
@@ -1426,6 +1231,8 @@ color: white;
 .About-us{display: block;}
 
 /* ............................ */
+
+
 
 .xbox{display: block;}
 
@@ -1533,7 +1340,7 @@ color: white;
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:767px) {
   
 #Promised{
   text-align: center;
@@ -1544,8 +1351,26 @@ background-color: white;
 margin-top: 12vh;
 }
 
+.top-nav{
+  justify-content: flex-start;
 }
 
+}
+
+
+
+@media screen and (max-width:1115px) {
+  .blue{width: 100%;}
+  .showcase-img img{width: 200%;    margin-right: 0; margin-top: -18vh;}
+  .Promised{grid-template-columns: 1fr 1fr 1fr ; height: auto; margin-top: 8vh;}
+  .Promised .Top{display: none;}
+  .showcase h2{
+    margin-top: -15vh;
+    font-size: 4rem;
+    letter-spacing: 0;
+  }
+  .showcase p{ font-size: 1rem;letter-spacing: normal;}
+}
 
 
 
@@ -1707,3 +1532,119 @@ background-color: #000;
 .meck a {text-decoration: none;
 color: white;
 }
+
+
+/*FOOTER*/
+
+footer {
+  background: #16222a;
+  background: -webkit-linear-gradient(59deg, #3a6073, #16222a);
+  background: linear-gradient(59deg, #3a6073, #16222a);
+  color: white;
+  margin-top: 100px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #fa944b;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #ffffff;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+}
+
+/*SOCİAL İCONS*/
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+/* footer social icons */
+
+.social-network a.icoFacebook:hover {
+  background-color: #3b5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44bcdd;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #f9f9f9;
+}
+
+
