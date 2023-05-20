@@ -1040,8 +1040,11 @@ color: black;
 .Our-Fleet h2 {color: black; font-family: sans-serif; margin: 20px; text-transform: capitalize;
   margin-bottom: 0;
 font-weight: 700;
+text-align: center;
 }
-.Our-Fleet p {color: black; font-family: sans-serif; text-transform: capitalize; margin-left: 20px;}
+.Our-Fleet p {color: black; font-family: sans-serif; text-transform: capitalize; margin-left: 20px;
+text-align: center;
+}
 
 .home-cards {
   display:grid;
@@ -1245,7 +1248,7 @@ border-radius: 10px;
 }
 
 .site-footer-blue{width: 100%;
-  height: 15vh;
+  height: 10vh;
   background: #003f82;
 display: flex;
 justify-content: space-between;
