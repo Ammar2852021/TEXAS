@@ -1186,7 +1186,7 @@ body a {
   .timeline__date {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
     transform: translate(-50%, -50%);
   }
 }
@@ -1214,7 +1214,7 @@ body a {
 }
 @media (min-width: 900px) {
   .timeline__event {
-    width: 80%;
+    width: 90%;
     margin: 0;
   }
 }
