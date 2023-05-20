@@ -49,10 +49,13 @@ ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   transition: top 0.75s ease-in;
   background:none;
+  grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: -1vh;
 
 }
 
@@ -170,6 +173,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 20px;
 }
 .icon-user a {text-decoration: none; color: black;
 }
@@ -270,6 +274,7 @@ margin-right: 5vh;
   top: 0;
   left: 12px;
   transition: transform 0.5s ease;
+  
 }
 
 .selectedLink .side {
@@ -477,7 +482,7 @@ font-weight: bold;
   height: 100vh;
   background-size:600px;
   background-repeat: no-repeat;
-  background-position: 700px -50px; 
+  background-position: 700px 10px; 
 overflow: hidden;
   display: grid;
 background-image: url(/TEXAS/img/Screenshot\ 2023-05-13\ 114704.png);
@@ -494,7 +499,7 @@ align-items: self-start;}
 
 .showcase-img img{width: 180%;
   margin-right: 10vh;
-  margin-top: 18vh;
+  /* margin-top: 18vh; */
 z-index: 5;}
 
 /* .showcase-text h2 , p {background-color: red;} */
@@ -648,6 +653,8 @@ align-items: center; */
     text-align: center;
     width: 100%;
     height: 100%;
+    /* border-right: 2px solid #003f82; */
+    /* padding-right: 15px; */
   }
   
   .search__input {
@@ -700,6 +707,7 @@ align-items: center; */
 .TEXES-Car{font-size: 1.5rem;
   text-align: center;
   color: black;
+  margin-top: 5vh;
   font-weight: bold;
   text-transform: capitalize;}
 
@@ -959,13 +967,11 @@ color: black;
 
   
 .showcase h2 {
-  /* margin: 0vh 0px 0px 20vh; */
   font-family: inherit;
   letter-spacing: 10px;
-  /* margin-right: 250px; */
   font-size: 5rem;
   color: black;
-  margin: 15vh 0px 0px 12vh;
+  margin: 0vh 0px 0px 12vh;
   font-weight: bold;}
 
   .showcase p{color: black;
