@@ -48,7 +48,7 @@ ul {
 .top-nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: start;
   flex-wrap: wrap;
   transition: top 0.75s ease-in;
@@ -750,6 +750,8 @@ border-radius: 10px;}
 .Our-Service{
 background-color: #1c1c1c;
 width: 100%;
+background-image: url(/TEXAS/img/kuni-map.png);
+background-size: cover;
  height: auto;
   margin-bottom: 10vh;
 overflow: hidden;}
@@ -1655,7 +1657,10 @@ footer a:hover {
 .footer-middle {
   padding-top: 2em;
   color: white;
+  background-image: url(/TEXAS/img/kuni-map.png);
   background-color: #1c1c1c;
+  background-size: cover;
+
 }
 
 /*SOCİAL İCONS*/
@@ -1706,7 +1711,11 @@ ul.social-network li {
   width: 30px;
   height: 30px;
   font-size: 15px;
+  color: black;
+padding: 2px;
 }
+
+
 
 .social-circle li i {
   margin: 0;
@@ -1725,6 +1734,7 @@ ul.social-network li {
   -o-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
+  
 }
 
 .social-circle i {
