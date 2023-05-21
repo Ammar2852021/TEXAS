@@ -144,21 +144,6 @@ justify-content: center;
   top: 0;
 }
 
-@media (min-width: 1500px) {
-  .top-nav li {
-    margin: 0 10px;
-  }
-
-  .top-nav .menu {
-    width: auto;
-    max-height: none;
-    flex-direction: row;
-  }
-
-  .top-nav .menu-icon {
-    display: none;
-  }
-}
 
 
 
@@ -1737,9 +1722,15 @@ text-transform: capitalize;
 letter-spacing: 1px;
 display: flex;
 justify-content: center;
+
 }
 
 .Add-A{margin-left: 10px;}
 
 
 #ARBLANG{display: none;}
+
+
+
+@media screen and (min-width:1500px) and (max-width:2500px) {
+  .Promised .Top{top: -71px;}}
