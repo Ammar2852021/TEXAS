@@ -595,10 +595,12 @@ background-color: white;
 top: -64.3px;
 border-radius: 10px 10px 0px 0px;
 overflow: hidden;
+display: grid;
+grid-template-columns: 1fr 1fr;
 
 }
 
-.Top-TOP{width: 50%; height: 10vh; background-color: #dbdbdb;
+.Top-TOP{background-color: #dbdbdb;
 float: right;
 display: flex;
 align-items: center;
@@ -608,7 +610,11 @@ justify-content: center;
 .span-top{font-size: 20px;
 font-weight: 500;
 font-family: sans-serif;
+color: #eee;
+font-weight: bold;
 }
+
+.TOPS{background: white;}
 
 label.testtran {
   color: lightgray;
@@ -757,12 +763,20 @@ background-size: cover;
 overflow: hidden;}
 
 
-#Grid-img{background-image: url(/TEXAS/img/VW\ Virtus\ 2020\ \(2\).png);
+#Grid-img-one{background-image: url(/TEXAS/img/Toyota\ Corolla\ Cross.png);
 background-size: cover;
 background-position: center center;
 }
 
+#Grid-img-Tow{background-image: url(/TEXAS/img/ford\ puma.png);
+  background-size: cover;
+  background-position: center center;
+  }
 
+  #Grid-img-Thre{background-image: url(/TEXAS/img/BMW\ i3.jpg);
+    background-size: cover;
+    background-position: center center;
+    }
 
 .Our-Service h2 {
   color: white;
