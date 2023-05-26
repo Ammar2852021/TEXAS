@@ -126,7 +126,7 @@ font-size: 20px;
   z-index: 999;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-align-items: center;
+align-items: start;
 justify-content: center;
 }
 
@@ -1152,7 +1152,7 @@ margin-top: 2vh;
 .Our-Tame-img{background: #dbdbdb;
   border-radius: 20px;
 width: 100%;
-height: 320px;
+height: auto;
 display: flex;
 justify-content: center;
 align-items: flex-start;
@@ -1355,6 +1355,10 @@ color: white;
 .About-us{display: block;}
 
 /* ............................ */
+
+
+
+
 
 
 

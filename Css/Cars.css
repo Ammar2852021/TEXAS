@@ -1,0 +1,93 @@
+*{margin: 0%; padding: 0%; font-family: sans-serif;}
+
+
+body{background: #eee;}
+
+.nav{width: 100%; height: 15vh; background-color: white;}
+
+.contenar{width: 100%; height: 100vh;
+display: grid;
+grid-template-columns: 1fr 3fr;
+margin-top: 10vh;
+overflow: hidden;
+}
+
+.con{
+  display: grid;
+  grid-template-rows: 3fr 1fr 2fr 2fr;
+}
+
+ul{margin: 10px;}
+ul li {list-style-type: none;}
+
+ul li a {text-decoration: none;}
+
+.checkbox{display: flex;
+
+justify-content: space-between;
+align-items: center;
+}
+
+input[type="checkbox"]{margin-right: 10px;}
+
+.f{
+margin-bottom: 5px;
+}
+
+.f h2{margin: 10px;
+font-size: large;
+}
+
+.num {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="range"] {
+  margin: 10px;
+  width:-webkit-fill-available;
+}
+
+svg{width: 10%;}
+
+
+.cars{
+ display: grid;
+ grid-template-columns: 1fr  1fr 1fr;
+background: white;
+overflow: auto;
+}
+
+
+.card{
+margin: 10px;
+height: 60vh;
+background-color: var(--color-background,rgba(255,255,255,1));
+    transition: box-shadow 300ms ease-in-out 0s;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+display: grid;
+grid-template-rows:1fr 3fr 1fr 1fr ;
+}
+
+/* .card-titel{background-color: red;} */
+
+.card-titel h2{margin: 10px;}
+.card-titel p{margin: 10px;}
+
+
+.card-img{display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card-img img{width: 100%;}
+
+
+/* .card-coo{background: red;} */
+
+.card-salre{background:none;}
+.card-salre h2{margin: 10px;}
+
+::-webkit-scrollbar {
+  width: 0;
+}
