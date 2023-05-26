@@ -294,10 +294,11 @@ nav ul li {
 
 
 
-.contenar{width: 100%; height: 100vh;
+.contenar{width: 90%; height: 100vh;
 display: grid;
-grid-template-columns: 1fr 3fr;
+grid-template-columns: 1fr 2.5fr;
 margin-top: 10vh;
+
 overflow: hidden;
 }
 
@@ -451,13 +452,22 @@ align-items: center;
 .card-img img{width: 70%;}
 
 
-.card-coo{background: red;
+.card-coo{
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 }
+.card-coo .o{text-align: center;}
 
-.card-coo o svg{width: 35px;}
+.card-coo .o h3{font-size: small;
+text-align: center;
+color: rgba(138,138,138,1);
+font-weight: normal;
+}
+
+.card-coo .o svg{width: 30px;
+  align-items: center;
+}
 
 
 
