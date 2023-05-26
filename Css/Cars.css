@@ -294,7 +294,7 @@ nav ul li {
 
 
 
-.contenar{width: 90%; height: 100vh;
+.contenar{width: 100%; height: 100vh;
 display: grid;
 grid-template-columns: 1fr 2.5fr;
 margin-top: 10vh;
