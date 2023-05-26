@@ -1327,12 +1327,15 @@ color: white;
         position: absolute;
         /* bottom: -25px; */
         width: 100%;
-        height: auto;
+        height: 90vh;
         display: flex;
         padding-bottom: 20px;
         justify-content: center;
         
   }
+
+
+
   .showcase-img img{display: none;}
 
   .Our-Service{height: auto;}
@@ -1463,6 +1466,8 @@ color: white;
 
 @media screen and (max-width:767px) {
   
+  .logo h1{display: none;}
+
 #Promised{
   text-align: center;
 width: 90%; height: fit-content; 
