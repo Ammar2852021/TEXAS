@@ -977,6 +977,9 @@ color: black;
     background:#003f82;
     border: none;
   }
+  .button2 a {text-decoration: none;
+  color: white;
+  }
   
   .button2:active {
     color: #666;
