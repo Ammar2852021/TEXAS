@@ -429,7 +429,7 @@ overflow: auto;
 
 
 .card{
-/* margin: 10px; */
+margin: 10px;
 height: 60vh;
 background-color: var(--color-background,rgba(255,255,255,1));
     transition: box-shadow 300ms ease-in-out 0s;

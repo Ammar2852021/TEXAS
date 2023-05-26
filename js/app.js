@@ -22,10 +22,37 @@ const date =
     ? `0${now.getDate().toString()}`
     : now.getDate();
 const formattedDate = `${year}-${month}-${date}`;
-dat[0].value = formattedDate
-dat[1].value = formattedDate
+dat[0].value = formattedDate;
+dat[1].value = formattedDate;
 
 // // .........................
+// ---------------------------
+// let membersContainer = document.getElementById("membersContainer");
+
+// async function getMembers() {
+//   const response = await fetch(APIs.host + APIs.members);
+//   const jsonData = await response.json();
+//   let status = true;
+//   jsonData["data"].forEach((e) => {
+//     let str = APIs.host + "/public" + e.image;
+//     status = !status;
+//     let card = `
+//     <div class="${status ? "One-Tame" : "Tow-Tame"} TE "data-aos="${
+//       status ? "fade-right" : "fade-left"
+//     }">
+//       <div class="Our-Tame-img">
+//         <img src="${str}" alt="Member">
+//       </div>
+//       <h3 class="Name">${e.name}</h3>
+//       <p class="About">${e.job_title}</p> 
+//     </div>`;
+
+//     membersContainer.innerHTML += card;
+//   });
+// }
+
+// getMembers();
+
 // input time
 let time = document.querySelectorAll(".time");
 const hours =
@@ -37,89 +64,80 @@ const minutes =
     ? `0${now.getMinutes().toString()}`
     : now.getMinutes();
 const formattTime = `${hours}:${minutes}`;
-time[0].value = formattTime
-time[1].value = formattTime
-
+time[0].value = formattTime;
+time[1].value = formattTime;
 
 // ..............................
 
-const listItems = document.querySelectorAll('.fadeIn');
-const productBoxes = document.querySelectorAll('.product-box');
+const listItems = document.querySelectorAll(".fadeIn");
+const productBoxes = document.querySelectorAll(".product-box");
 
-listItems.forEach(function(listItem, index) {
-  listItem.setAttribute('style', `animation-delay: ${index * .2}s`);
+listItems.forEach(function (listItem, index) {
+  listItem.setAttribute("style", `animation-delay: ${index * 0.2}s`);
 });
 
-productBoxes.forEach(function(productBox, index) {
-  productBox.setAttribute('style', `animation-delay: ${index * .1}s`);
+productBoxes.forEach(function (productBox, index) {
+  productBox.setAttribute("style", `animation-delay: ${index * 0.1}s`);
 });
-
-document.querySelector('.action-button').addEventListener('click', function () {
-    document.querySelector('.app-right').classList.add('isOpen');
-  document.querySelector('.app-left').classList.add('hide');
-});
-
-document.querySelector('.app-right-hide').addEventListener('click', function () {
-    document.querySelector('.app-right').classList.remove('isOpen');
-  document.querySelector('.app-left').classList.remove('hide');
-});
-
-
-
+if (document.querySelector(".action-button") != null) {
+  document
+    .querySelector(".action-button")
+    .addEventListener("click", function () {
+      document.querySelector(".app-right").classList.add("isOpen");
+      document.querySelector(".app-left").classList.add("hide");
+    });
+}
+if (document.querySelector(".app-right-hide")) {
+  document
+    .querySelector(".app-right-hide")
+    .addEventListener("click", function () {
+      document.querySelector(".app-right").classList.remove("isOpen");
+      document.querySelector(".app-left").classList.remove("hide");
+    });
+}
 
 //DOM STRINGS OBJECT
 const DOM = {
-  timelineDate: document.querySelectorAll('.timeline__date'),
-  timelineElem: document.querySelectorAll('.timeline__elem'),
-  timelineBar: document.querySelector('.timeline__bar') };
-
+  timelineDate: document.querySelectorAll(".timeline__date"),
+  timelineElem: document.querySelectorAll(".timeline__elem"),
+  timelineBar: document.querySelector(".timeline__bar"),
+};
 
 //TIMELINE ELEM SET DIRECTION TO EVENT ITEMS (left or right oriented)
 
 //getting direction from .timeline-elem
-const __getDir = timelineElem => {
-
-  if (timelineElem.classList.contains('timeline__elem--left')) {
-    return 'left';
-  } else if (timelineElem.classList.contains('timeline__elem--right')) {
-    return 'right';
+const __getDir = (timelineElem) => {
+  if (timelineElem.classList.contains("timeline__elem--left")) {
+    return "left";
+  } else if (timelineElem.classList.contains("timeline__elem--right")) {
+    return "right";
   }
-
 };
 
 const setDirEvent = () => {
-
-  DOM.timelineElem.forEach(elem => {
-
+  DOM.timelineElem.forEach((elem) => {
     const direction = __getDir(elem);
 
-    const timelineEvent = elem.querySelector('.timeline__event');
+    const timelineEvent = elem.querySelector(".timeline__event");
 
     timelineEvent.classList.add(`timeline__event--${direction}`);
-
   });
-
 };
 
 //TIMELINE ELEM DATE STYLES (background)
 const __getBGImage = () => {
-
   const compStyle = getComputedStyle(DOM.timelineBar);
 
   return compStyle.backgroundImage;
-
 };
 
 const __getBGSize_height = () => {
-
   const timebarHeight = DOM.timelineBar.offsetHeight;
 
   return timebarHeight;
-
 };
 
-const __getBGPos_y = dateElem => {
-
+const __getBGPos_y = (dateElem) => {
   const timelinebarBox = DOM.timelineBar.getBoundingClientRect();
 
   const dateBox = dateElem.getBoundingClientRect();
@@ -127,17 +145,14 @@ const __getBGPos_y = dateElem => {
   const pos_y = dateBox.top - timelinebarBox.top;
 
   return pos_y;
-
 };
 
 const setDateBG = () => {
-
   const bgImg = __getBGImage();
 
   const bgHeight = __getBGSize_height();
 
-  DOM.timelineDate.forEach(elem => {
-
+  DOM.timelineDate.forEach((elem) => {
     //setting bgImage
     elem.style.backgroundImage = bgImg;
 
@@ -148,18 +163,15 @@ const setDateBG = () => {
     const dateOffset = __getBGPos_y(elem);
 
     elem.style.backgroundPosition = `0 -${dateOffset}px`;
-
   });
-
 };
 
 //ONLOAD FUNCTION
-window.addEventListener('load', () => {
-
+window.addEventListener("load", () => {
   //setting direction class to the timeline event block
   setDirEvent();
 
   //set date background styles
   setDateBG();
-
 });
+
