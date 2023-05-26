@@ -55,7 +55,6 @@ ul {
   background:none;
   grid-column-start: 1;
     grid-column-end: 3;
-    margin-top: -1vh;
 
 }
 
@@ -1313,6 +1312,14 @@ color: white;
 
 @media(max-width: 767px) {
   .logo h3{display: none;}
+
+
+  .site-footer-blue{display: none;}
+
+  .TE{margin-bottom: 5vh;}
+  /* .Our-Tame{grid-gap:0px;} */
+  .offer-offer{margin: 0%;}
+
 
   .Promised .Top{display: none;}
   .blue{
