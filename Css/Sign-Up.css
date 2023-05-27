@@ -62,3 +62,14 @@ margin-left: -100vh;
         }
 
 
+
+        @media screen and (max-width:992px) {          
+           
+
+            .Container-img{display: none;}
+            .Container{
+             display: block;
+            }
+
+            .Sign-Up{margin:10px;}
+        }
