@@ -33,13 +33,10 @@ time[1].value = formattTime;
 // ..............................
 let carContainer = document.getElementById("carsContainer");
 
-async function getCars() {
-  const response = await fetch(APIs.host + APIs.cars);
-  const jsonData = await response.json();
-  // console.log(jsonData);
-  // carContainer.innerHTML += JSON.stringify(jsonData);
-  jsonData["data"].forEach((e) => {
-    let str = APIs.host + "/public" + e.image;
+getData(APIs.host + APIs.cars).then((data) => {
+  let status = true;
+  data["data"].forEach((e) => {
+    let str = APIs.host + "/public/" + e.image;
     let card = `
       <div class="card">
     <div class="card-titel">
@@ -112,6 +109,4 @@ async function getCars() {
 
     carContainer.innerHTML += card;
   });
-}
-
-getCars();
+});

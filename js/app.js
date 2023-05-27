@@ -26,32 +26,53 @@ dat[0].value = formattedDate;
 dat[1].value = formattedDate;
 
 // // .........................
+
+let social = [],
+  facebook = document.getElementById("facebook"),
+  phone = document.getElementById("phone"),
+  whatsapp = document.getElementById("whatsapp"),
+  google_play = document.getElementById("google_play"),
+  instagram = document.getElementById("instagram"),
+  email = document.getElementById("email"),
+  phone_t = document.getElementById("phone-t"),
+  address = document.getElementById("address");
+
+getData(APIs.host + APIs.social).then((data) => {
+  data["data"].forEach((e) => {
+    social[`${e.key}`] = e.value;
+  });
+  console.log(social);
+  facebook.href = social["facebook"];
+  phone.href = social["phone"];
+  whatsapp.href = social["whatsapp"];
+  google_play.href = social["google_play"];
+  instagram.href = social["instagram"];
+  email.innerText = social["email"];
+  phone_t.innerText = social["phone"];
+  address.innerText = social["address"];
+});
 // ---------------------------
-// let membersContainer = document.getElementById("membersContainer");
+let membersContainer = document.getElementById("membersContainer");
 
-// async function getMembers() {
-//   const response = await fetch(APIs.host + APIs.members);
-//   const jsonData = await response.json();
-//   let status = true;
-//   jsonData["data"].forEach((e) => {
-//     let str = APIs.host + "/public" + e.image;
-//     status = !status;
-//     let card = `
-//     <div class="${status ? "One-Tame" : "Tow-Tame"} TE "data-aos="${
-//       status ? "fade-right" : "fade-left"
-//     }">
-//       <div class="Our-Tame-img">
-//         <img src="${str}" alt="Member">
-//       </div>
-//       <h3 class="Name">${e.name}</h3>
-//       <p class="About">${e.job_title}</p> 
-//     </div>`;
+getData(APIs.host + APIs.members).then((data) => {
+  let status = true;
+  data["data"].forEach((e) => {
+    let str = APIs.host + "/public/" + e.image;
+    status = !status;
+    let card = `
+    <div class="${status ? "One-Tame" : "Tow-Tame"} TE "data-aos="${
+      status ? "fade-right" : "fade-left"
+    }">
+      <div class="Our-Tame-img">
+        <img src="${str}" alt="Member">
+      </div>
+      <h3 class="Name">${e.name}</h3>
+      <p class="About">${e.job_title}</p> 
+    </div>`;
 
-//     membersContainer.innerHTML += card;
-//   });
-// }
-
-// getMembers();
+    membersContainer.innerHTML += card;
+  });
+});
 
 // input time
 let time = document.querySelectorAll(".time");
@@ -174,4 +195,3 @@ window.addEventListener("load", () => {
   //set date background styles
   setDateBG();
 });
-
