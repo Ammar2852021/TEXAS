@@ -41,7 +41,6 @@ getData(APIs.host + APIs.social).then((data) => {
   data["data"].forEach((e) => {
     social[`${e.key}`] = e.value;
   });
-  console.log(social);
   facebook.href = social["facebook"];
   phone.href = social["phone"];
   whatsapp.href = social["whatsapp"];
