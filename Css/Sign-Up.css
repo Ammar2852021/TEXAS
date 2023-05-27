@@ -53,8 +53,11 @@ height: 7vh;
 
 
         .Container-img{
-        background-color: #003f82;
-        overflow: hidden;
+background-image: url(/TEXAS/img/CITROËN\ -\ E-Mehari.jpg);
+background-size: cover;
+background-position: center  left;
+
+overflow: hidden;
         }
 
 
