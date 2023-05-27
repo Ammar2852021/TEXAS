@@ -20,7 +20,7 @@ font-weight: 800;
 
 
    .Sign-Up-input form{
-    width: 70%;
+    width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
        }
@@ -53,12 +53,14 @@ height: 7vh;
 
 
         .Container-img{
-        position: relative;}
+        background-color: #003f82;
+        overflow: hidden;
+        }
 
 
         .Container-img svg  {
-            transform: rotate(270deg);        
-margin-left: -100vh;  
+            transform: scale(2);
+            margin-left: 10px;
         }
 
 
