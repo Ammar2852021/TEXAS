@@ -3,6 +3,9 @@ var APIs = {
   cars: "/api/cars",
   members: "/api/members",
   social: "/api/get-information",
+  user: {
+    register: "/api/auth/user/register",
+  },
 };
 async function postData(url = "", data = {}, token = null, method) {
   // Default options are marked with *
