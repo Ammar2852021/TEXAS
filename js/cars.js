@@ -110,3 +110,7 @@ getData(APIs.host + APIs.cars).then((data) => {
     carContainer.innerHTML += card;
   });
 });
+
+
+// ...............
+
