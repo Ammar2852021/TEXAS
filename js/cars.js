@@ -117,8 +117,18 @@ getData(APIs.host + APIs.cars).then((data) => {
 let con = document.getElementById('con');
 
 let responsicons = document.getElementById('responsicons');
+
+let exit = document.getElementById('exit');
+
 responsicons.addEventListener('click',function()
 {
   con.style.display='block'
   
 })
+
+exit.addEventListener('click',function()
+{
+  con.style.display='none'
+
+})
+

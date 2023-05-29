@@ -317,6 +317,16 @@ margin-top: 10vh;
 /* overflow: hidden; */
 }
 
+
+.exit{display: flex;
+justify-content: space-between;
+}
+
+.exit svg{width: 20px;
+margin: 10px;
+cursor: pointer;
+}
+
 .con{
   display: grid;
   grid-template-rows: 3fr 1fr 2fr 2fr;
@@ -534,7 +544,14 @@ input[ type="range"]::-webkit-slider-thumb {
 .mallorca{display: none;}
 .cars{grid-template-columns: 1fr 1fr;}
 
-.respons{display: block;}}
+.respons{display: block;}
+.con{
+  transform-origin: 1s;
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+}
 
 
 
