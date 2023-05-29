@@ -289,7 +289,21 @@ nav ul li {
     }
   
   
-  
+    .respons{display: none;
+    }
+
+.respons svg {width: 30px;
+display: flex;
+justify-content: center;
+float: right;
+margin: 10px;
+cursor: pointer;
+}
+
+
+
+
+
 
 
 
@@ -488,7 +502,6 @@ font-weight: normal;
 input[ type="range"] {
   -webkit-appearance: none;
           appearance: none;
-  width: 350px;
   background: #003f82;
   height: 10px;
   outline: none;
@@ -509,15 +522,28 @@ input[ type="range"]::-webkit-slider-thumb {
 
 
 
-@media screen and (max-width:767px) {
-  .mallorca{display: none;}
 
-  .contenar{display: block; height: auto;}
-  .cars{
-     display: block;}
+
+
+
+
+@media screen and (max-width:992px) {
   .con{display: none;}
-  
+  .contenar{display: block; height: auto;}
+.respons {display: block;}
+.mallorca{display: none;}
+.cars{grid-template-columns: 1fr 1fr;}
+
+.respons{display: block;}}
+
+
+
+@media screen and (max-width:767px) {
+.mallorca{display: none;}
+
+.contenar{display: block; height: auto;}
+.cars{
+   display: block;}
+.con{display: none;}
+
 }
-
-
-

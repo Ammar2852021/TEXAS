@@ -112,5 +112,13 @@ getData(APIs.host + APIs.cars).then((data) => {
 });
 
 
-// ...............
+// ............... R E S
 
+let con = document.getElementById('con');
+
+let responsicons = document.getElementById('responsicons');
+responsicons.addEventListener('click',function()
+{
+  con.style.display='block'
+  
+})
