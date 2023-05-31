@@ -38,7 +38,8 @@ getData(APIs.host + APIs.cars).then((data) => {
   data["data"].forEach((e) => {
     let str = APIs.host + "/public/" + e.image;
     let card = `
-      <div class="card">
+    <a href="/TEXAS/page/Choose-your.html">
+    <div class="card">
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -105,7 +106,13 @@ getData(APIs.host + APIs.cars).then((data) => {
       <h2 style="color: #003f82">$${e.cost} /day</h2>
       <h2>$${e.cost}/day</h2>
     </div>
-  </div>`;
+  </div>
+  </a>
+
+
+
+    
+    `;
 
     carContainer.innerHTML += card;
   });

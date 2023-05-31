@@ -1,0 +1,79 @@
+*{margin: 0%; padding: 0%;}
+
+body{background: #eee;}
+
+.Container{width: 100%; 
+    overflow: hidden;
+height: 100vh;}
+
+.Container nav{width: 100%; 
+height: 10vh;
+background: white;
+padding: 1vh;
+display: flex;
+justify-content: space-between;
+align-items: center;}
+
+.Container nav .logo a {color: #003f82;
+    text-decoration: none;
+font-family: sans-serif;
+margin-left: 20px;
+font-weight: 800;
+font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+.Container .Content{width: 100%; 
+height: 75vh;
+}
+
+.titel{display: flex; align-items: center;margin: 30px 0px 0px 35px;}
+.Container .Content  .titel h2{
+    font: var(--typo-headline-small-font, 700 1.5rem "Roboto Condensed",sans-serif );
+    color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));}
+.Container .Content  .titel   svg{width: 30px; cursor: pointer;
+}
+
+
+.Container .Content .Content-div{
+width: 100%; 
+height: 60vh;
+display: grid;
+grid-template-columns: 1fr 3fr;}
+
+.Container .Content .Content-div .Content-div-one , .Content-div-Tow {
+    background-color: var(--color-background,rgba(255,255,255,1));
+    transition: box-shadow 300ms ease-in-out 0s;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+margin: 30px;}
+
+.Container .Content .Content-div .Content-div-one{border: 3px solid #003f82;
+    background-color: var(--color-background,rgba(255,255,255,1));
+    transition: box-shadow 300ms ease-in-out 0s;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+}
+
+
+.Container footer{height: 10vh;
+border-top:1px solid rgba(255,255,255,1); 
+padding: 2vh;
+}
+
+
+.Container footer ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.Container footer ul li a {text-decoration: none;
+    text-transform: var(--typo-link-medium-transform,none );
+    letter-spacing: var(--typo-link-medium-letter-spacing,0 );
+    font: var(--typo-link-medium-font,700 0.875rem Roboto,sans-serif );
+    color: var(--debug-typo-color,var(--color-secondary,rgba(138,138,138,1)));}
