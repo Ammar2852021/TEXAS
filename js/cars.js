@@ -144,13 +144,16 @@ exit.addEventListener('click',function()
 
 // ..................... range
 
-let range = document.getElementById('range')
+
+var range = document.getElementById("range");
 console.log(range);
 
-var slider = document.getElementById("range");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
 
-slider.oninput = function() {
+var output = document.getElementById("demo");
+output.innerHTML = range.value;
+
+
+
+range.oninput = function() {
   output.innerHTML = this.value;
 }
