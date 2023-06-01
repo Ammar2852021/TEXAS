@@ -562,3 +562,8 @@ button a {text-decoration: none;
         height: auto;
     }
 }
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
