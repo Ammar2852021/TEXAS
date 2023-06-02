@@ -221,7 +221,7 @@ nav ul li {
      outline: none;
       border: none;
       padding: 10px;
-    color: white;
+    /* color: white; */
     text-align: center;}
   
   
@@ -231,7 +231,7 @@ nav ul li {
     outline: none;
      border: none;
      padding: 10px;
-   color: white;
+   /* color: white; */
    text-align: center;
   
   }
@@ -267,7 +267,7 @@ nav ul li {
     
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
-      color: #ccc;
+      color: black;
     }
     
     /* .search__input:focus + .search__button {
