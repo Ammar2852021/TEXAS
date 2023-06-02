@@ -1875,6 +1875,12 @@ label {
 
   @media(max-width: 767px) {
 
+    .blue {
+      background: #003f82;
+      background-image: url(/TEXAS/img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
+      background-position: right center;
+      position: absolute;}
+
     .Rent-car{font: var(--typo-headline-small-font,700 1rem "Roboto Condensed",sans-serif );}
 
   
