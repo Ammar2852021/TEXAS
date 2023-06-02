@@ -1874,6 +1874,24 @@ label {
 
 
   @media(max-width: 767px) {
+
+    .Rent-car{font: var(--typo-headline-small-font,700 1rem "Roboto Condensed",sans-serif );}
+
+  
+     .Add input[type="time"],.Add input[type="date"] {
+      text-transform: var(--typo-headline-small-transform,none );
+      letter-spacing: var(--typo-headline-small-letter-spacing,0 );
+      font: var(--typo-headline-small-font,700 1rem "Roboto Condensed",sans-serif );
+      color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+    
+
+.search {
+    border-bottom: 1px solid black;
+}
+      
     .zah-12zumyu {display: none;}
     .logo h3{display: none;}
   
@@ -1908,8 +1926,7 @@ label {
     }
     .card-Grid{display: block;}
   
-    .offer{width: 80%;margin: 20px 0px;}
-    .home-cards{display: block;}
+    .offer-offer{width: 100%;}
   
     .home-cards-img{width: 100%;}
     .home-cards-img img{width: 150px;}
@@ -1972,7 +1989,7 @@ label {
     }
   
     .home-cards {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
   
     .Our-Tame {
