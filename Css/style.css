@@ -761,6 +761,7 @@ padding-left: 10px;}
   background-size: cover; */
 margin: 10px;
 overflow: hidden;
+height: 35vh;
 border-radius: 10px;}
 
 .offer-offer-img img{width: 100%;}
@@ -1166,7 +1167,6 @@ margin-top: 2vh;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-gap: 50px;
-  overflow: auto;
   margin: 50px;
   color: black;
   padding-top:80px ;
@@ -1705,7 +1705,7 @@ justify-content: center;
 
 #ARBLANG{display: none;}
 
-
+.Rent-car{display: none;}
 
 #svg-px{width: 30px;}
 /* @media screen and (min-width:1500px) and (max-width:2500px) {
@@ -1715,37 +1715,43 @@ justify-content: center;
 
     .showcase p{
       margin-left: 50px;
+      display: none;
     }
     .showcase{
-      background-position: 300px 10px;
+      background: none;
     }
-    .showcase-img img{margin-right: 0;}
+    .showcase-img img{margin-right: 0;
+    margin-top: 50vh;
+    display: none;
+    }
 
     .Promised .Top{display: none;}
 
     .Promised{
-      border-radius: 5px;
+      border-radius: 0px;
       height: auto;
       width: 100%;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr ;
       margin: 10px;
+      margin-top: 5vh;
     }
-    .Add-input{
+
+    /* .Add ,.Add input[type="date"]{text-align: left;} */
+     .Add-input{
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 3;
 
     }
 
     .Add-button{
-      grid-column-start: 4;
-      grid-column-end: 5;
-      grid-row-start: 1;
-      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    
       
 
-    }
-    .showcase-img img{margin-top: -18vh;}
-    .showcase h2{margin: -25vh 0px -15px 5vh;}
+    } */
+    .showcase-img img{margin-top: 28vh;}
+    .showcase h2{margin: -25vh 0px -15px 5vh;display: none;}
 
     /* ..................... */
     .offer-offer{margin: 0;
@@ -1767,7 +1773,92 @@ overflow: hidden;
 .Our-Tame-img{height: auto;}
 /* ................... */
 .Add-A{display: none;}
+.offer-offer{height: auto;}
+
+
+.blue {
+  background: #003f82;
+  background-image: url(/TEXAS/img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
+  background-position: bottom;
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+}
+
+.home-cards img{width: 80%;}
+.card-Grid{height: 30vh;}
+.Grid-text {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Rent-car{
+display: block;
+text-align: left;
+margin: 10px;
+text-transform: var(--typo-headline-small-transform,none );
+letter-spacing: var(--typo-headline-small-letter-spacing,0 );
+font: var(--typo-headline-small-font,700 1.5rem "Roboto Condensed",sans-serif );
+color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));
+text-transform: uppercase;
+
+}
+.search__input{padding: 0%;}
+.Add{  text-align: left;
+}
+label  {
+  text-transform: var(--typo-copy-small-transform,none );
+  letter-spacing: var(--typo-copy-small-letter-spacing,0 );
+  font: var(--typo-copy-small-font,400 0.875rem / 1.5 Roboto,sans-serif );
+  color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));
+}
+ .Add input[type="time"],.Add input[type="date"] {
+  text-transform: var(--typo-headline-small-transform,none );
+  letter-spacing: var(--typo-headline-small-letter-spacing,0 );
+  font: var(--typo-headline-small-font,700 1.5rem "Roboto Condensed",sans-serif );
+  color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));
+  text-align: left;
+  border-bottom: 2px solid black;
+}
+
+.search{
+  border-bottom: 2px solid black;
+
+}
+label {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.search__input {
+  appearance: none;
+  
+  outline: none;
+  cursor: text;
+  padding: 10px;
+  width: 100%;
+  border: 0px;
+  border-radius: 0px;
+  background: transparent;
+  color: var(--color-primary,rgba(25,25,25,1));
+  text-transform: var(--typo-input-small-transform,none );
+  letter-spacing: var(--typo-input-small-letter-spacing,0 );
+  font: var(--typo-input-small-font,700 1.25rem "Roboto Condensed",sans-serif );
+}
+
   }
+
+
+
+
+
+
 
   @media screen and (max-width:767px) {
     
