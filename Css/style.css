@@ -1781,6 +1781,7 @@ overflow: hidden;
   background-image: url(/TEXAS/img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
   background-position: bottom;
   position: absolute;
+  background-repeat: no-repeat;
   top: 10vh;
   width: 100%;
   height: 80vh;
@@ -1860,7 +1861,7 @@ label {
 
 
 
-  @media screen and (max-width:767px) {
+  /* @media screen and (max-width:767px) {
     
   }
 
@@ -1869,10 +1870,11 @@ label {
   @media screen and (max-width:600px) {
     
   }
- 
+  */
 
 
   @media(max-width: 767px) {
+    .zah-12zumyu {display: none;}
     .logo h3{display: none;}
   
   
@@ -1906,7 +1908,8 @@ label {
     }
     .card-Grid{display: block;}
   
-    .offer-offer{width: 100%;}
+    .offer{width: 80%;margin: 20px 0px;}
+    .home-cards{display: block;}
   
     .home-cards-img{width: 100%;}
     .home-cards-img img{width: 150px;}
