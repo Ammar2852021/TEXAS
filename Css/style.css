@@ -1909,6 +1909,9 @@ label {
   
   
     .Promised .Top{display: none;}
+
+    .Promised{height: 70vh;}
+
     .blue{
           /* background: #003f82; */
           position: absolute;
