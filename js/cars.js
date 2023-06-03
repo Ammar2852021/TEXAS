@@ -24,13 +24,19 @@ if (
   localStorage.getItem("pickup_date") != null &&
   localStorage.getItem("drop_off_date") != null
 ) {
+  // <a href="/TEXAS/page/Choose-your.html" class="car-a" >
   getData(APIs.host + APIs.cars).then((data) => {
     data["data"].forEach((e) => {
       let str = APIs.host + "/public/" + e.image;
       let card = `
-    <a href="/TEXAS/page/Choose-your.html">
+    <a href="/TEXAS/page/Choose-your.html" class="car-a" >
     <div class="card">
-    <div class="card-titel">
+    <div class="ad" data-ele="carCard" data-car_name="${
+      e.brand + " " + e.model
+    }" data-cost="${e.cost}" data-car_type="${
+        e.car_type
+      }" data-img="${str}" ></div>
+    <div class="card-titel" >
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
     </div>
@@ -79,18 +85,12 @@ if (
         </h3>
       </div>
       <div class="o">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <path
-            fill="#191919"
-            fill-rule="evenodd"
-            d="M4 11h3v3H4v-3zm6.5 0h3v3h-3v-3zm6.5 0h3v3h-3v-3z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#191919" fill-rule="evenodd" d="M16 8H8v11h8V8zm2 0v11h2V8h-2zM6 8H4v11h2V8zm2-2V3h8v3h6v15H2V6h6zm2 0h4V5h-4v1z" clip-rule="evenodd"></path></svg>
         <h3>
-          <span></span> More
+        <span>${e.seats}</span> Bags
         </h3>
       </div>
+      
     </div>
     <div class="card-salre">
       <h2 style="color: #003f82">$${e.cost} /day</h2>
@@ -133,6 +133,11 @@ function handleCarType(type) {
       let card = `
     <a href="/TEXAS/page/Choose-your.html">
     <div class="card">
+    <div class="ad" data-ele="carCard" data-car_name="${
+      e.brand + " " + e.model
+    }" data-cost="${e.cost}" data-car_type="${
+        e.car_type
+      }" data-img="${str}" ></div>
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -234,6 +239,11 @@ function handleAutoOnly(status) {
         let card = `
         <a href="/TEXAS/page/Choose-your.html">
         <div class="card">
+        <div class="ad" data-ele="carCard" data-car_name="${
+          e.brand + " " + e.model
+        }" data-cost="${e.cost}" data-car_type="${
+            e.car_type
+          }" data-img="${str}" ></div>
         <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -310,6 +320,11 @@ function handleAutoOnly(status) {
       let card = `
       <a href="/TEXAS/page/Choose-your.html">
       <div class="card">
+      <div class="ad" data-ele="carCard" data-car_name="${
+        e.brand + " " + e.model
+      }" data-cost="${e.cost}" data-car_type="${
+          e.car_type
+        }" data-img="${str}" ></div>
       <div class="card-titel">
     <h2>${e.brand + " " + e.model}</h2>
     <p>${e.car_type}</p>
@@ -401,6 +416,11 @@ function handleSeats(seats) {
       let card = `
     <a href="/TEXAS/page/Choose-your.html">
     <div class="card">
+    <div class="ad" data-ele="carCard" data-car_name="${
+      e.brand + " " + e.model
+    }" data-cost="${e.cost}" data-car_type="${
+        e.car_type
+      }" data-img="${str}" ></div>
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -497,6 +517,11 @@ function handleBags(bags) {
       let card = `
     <a href="/TEXAS/page/Choose-your.html">
     <div class="card">
+    <div class="ad" data-ele="carCard" data-car_name="${
+      e.brand + " " + e.model
+    }" data-cost="${e.cost}" data-car_type="${
+        e.car_type
+      }" data-img="${str}" ></div>
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -558,7 +583,7 @@ function handleBags(bags) {
           <span></span> More
         </h3>
       </div>
-    </div>
+    </div>*/
     <div class="card-salre">
       <h2 style="color: #003f82">$${e.cost} /day</h2>
       <h2>$${e.cost * days} /total</h2>
@@ -574,4 +599,19 @@ let inputBage = document.getElementById("input-range");
 
 inputBage.addEventListener("change", function (e) {
   handleBags(e.target.value);
+});
+// Select Car
+window.addEventListener("click", (e) => {
+  if (e.target.dataset.ele) {
+    localStorage.setItem(
+      "selectedCar",
+      JSON.stringify({
+        car_type: e.target.dataset.car_type,
+        car_name: e.target.dataset.car_name,
+        car_cost: Number(e.target.dataset.cost),
+        image: e.target.dataset.img,
+      })
+    );
+
+  }
 });
