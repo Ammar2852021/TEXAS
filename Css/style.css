@@ -167,6 +167,11 @@ justify-content: center;
  
 }
 
+.zah-cixbgt a {
+display: flex;
+align-items: center;
+}
+
 .zah-cixbgt.bLHlxK svg {
   width:  1.5rem;
   margin-right: 10px;
@@ -734,15 +739,16 @@ align-items: center; */
 .offer-card{width: 100%; 
   margin-top: 5vh;
   margin-bottom: 5vh;
-height: auto;
+height: -webkit-fill-available;
 align-items: center;
+overflow: auto;
 display:-webkit-box;}
 
 
 .offer-offer{
 width: 32%;
 margin: 8px;
-height: 50vh;
+height: -webkit-fill-available;
 display: grid;
 grid-template-rows: 2fr 1fr;}
 
@@ -2001,7 +2007,7 @@ label {
     }
   
     .Our-Tame {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
   
     .xbox .content p {
