@@ -76,10 +76,14 @@
         <div class="Promised" id="Promised">
           <div class="Add">
             <div class="search">
+              <!-- <input type="text" class="search__input" id="Address" placeholder="From : Address"> -->
+              <datalist id="suggestions"> </datalist>
               <input
-                type="text"
                 class="search__input"
+                id="Address"
                 placeholder="From : Address"
+                autocomplete="on"
+                list="suggestions"
               />
               <button class="search__button">
                 <svg
@@ -97,23 +101,23 @@
             </div>
           </div>
           <div class="Add">
-            <label for="appt">Received</label>
-            <input type="date" class="date" />
+            <label for="appt">Pick up date</label>
+            <input type="date" class="date" id="pickup_date" />
           </div>
 
           <div class="Add">
-            <label for="appt">Delivery Date</label>
-            <input type="date" class="date" />
+            <label for="appt">Drop Off Date</label>
+            <input type="date" class="date" id="drop_off_date" />
           </div>
 
           <div class="Add">
             <label for="appt">Pick up time</label>
-            <input type="time" class="time" />
+            <input type="time" class="time" id="pickup_time" />
           </div>
 
           <div class="Add">
-            <label for="appt">Delivery time</label>
-            <input type="time" class="time" />
+            <label for="appt">Drop off time</label>
+            <input type="time" class="time" id="drop_off_time" />
           </div>
         </div>
       </div>
@@ -152,9 +156,9 @@
             <h2 style="color: #003f82; text-align: right">Reset filter</h2>
           </div>
           <h2>Vehicle type</h2>
-          <ul>
-            <li>
-              <a href="#"
+          <ul id="ul">
+            <li id="sedan">
+              <a
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -170,7 +174,7 @@
                 Sedan</a
               >
             </li>
-            <li>
+            <li id="suv">
               <a href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +191,7 @@
                 SUV</a
               >
             </li>
-            <li>
+            <li id="luxury_vehicle">
               <a href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +215,7 @@
           <h2>Automatic only</h2>
           <span>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="automatic_only" />
               <span class="slider"></span>
             </label>
           </span>
@@ -228,8 +232,6 @@
           </div>
 
           <input id="range" type="range" min="1" max="4" step="1" />
-          <p>Value: <span id="demo"></span></p>
-
         </div>
 
         <div class="f">
@@ -254,9 +256,11 @@
       </div>
 
       <div class="cars" id="carsContainer"></div>
+      <div id="alert"></div>
     </div>
 
     <script src="../js/api.js"></script>
     <script src="../js/cars.js"></script>
+    <script src="../js/home.js"></script>
   </body>
 </html>

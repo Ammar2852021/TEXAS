@@ -343,7 +343,7 @@ display: none;
 }
 
 ul{margin: 10px;}
-ul li {list-style-type: none;}
+ul li {list-style-type: none;cursor: pointer;}
 
 ul li a {text-decoration: none;}
 
