@@ -488,3 +488,12 @@ range.addEventListener("change", (e) => {
     handleSeats(value + 3);
   }
 });
+
+
+let inputBage=document.getElementById('input-range');
+
+inputBage.addEventListener('change',function()
+{
+  console.log(inputBage.value)
+
+})
