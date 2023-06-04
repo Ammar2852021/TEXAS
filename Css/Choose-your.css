@@ -219,6 +219,8 @@ button a {text-decoration: none;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    footer{display: none;}
+
 }
 
 
@@ -231,6 +233,8 @@ button a {text-decoration: none;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    footer{display: none;}
+
 }
 
 
@@ -251,4 +255,5 @@ button a {text-decoration: none;
         overflow: auto;
         height: auto;
     }
+    footer{display: none;}
 }

@@ -64,6 +64,9 @@ grid-template-columns: 2fr 1fr;
 .Booking{margin: 30px 0px 20px 35px;
 font-family: sans-serif;
 }
+.Booking-options{padding: 20px;
+display: flow-root;
+}
 
 
 
@@ -71,7 +74,6 @@ font-family: sans-serif;
 .box-Flexible{background: white;
     height: 35vh;
     border: 1px solid #003f82;
-margin: 0px  35px;
 padding: 10px;
 border: 3px solid #003f82;
 background-color: var(--color-background, rgba(255, 255, 255, 1));
@@ -116,7 +118,6 @@ font-family: sans-serif;}
     flex-direction: column;
     gap: 10px;
     position: relative;
-    margin: 35px;
   }
   
   .message {
@@ -448,24 +449,23 @@ font-family: sans-serif;}
 
 
 
-.Container footer {
+ footer {
     border-top: 1px solid rgba(255, 255, 255, 1);
     padding: 2vh;
     margin-top: 10vh;
-    grid-column-start: 1;
-    grid-column-end: 3;
+ width: 100%;
 
 
 }
 
 
-.Container footer ul {
+ footer ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
 }
 
-.Container footer ul li a {
+ footer ul li a {
     text-decoration: none;
     text-transform: var(--typo-link-medium-transform, none);
     letter-spacing: var(--typo-link-medium-letter-spacing, 0);
@@ -527,7 +527,7 @@ button a {text-decoration: none;
 
 .card-car{width: 300px; height: 65vh;
 position: fixed;
-top: 80px;
+top: 140px;
 right:  50px;
 background: white;
 padding: 10px;
@@ -594,12 +594,23 @@ font-weight: bold;
     }
 
 @media screen and (max-width:992px) {
-    .Container .Content .Content-div {
-        width: 100%;
-        height: 60vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  
+
+  .contact {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: -webkit-box;
+  }
+
+  .card-car{
+    top: auto;
+    bottom: 10px;
+    right: 20px;
+    width: 250px;
+  }
+
+
 }
 
 
