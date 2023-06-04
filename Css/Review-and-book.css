@@ -118,6 +118,7 @@ font-family: sans-serif;}
     flex-direction: column;
     gap: 10px;
     position: relative;
+    margin-top: 5vh;
   }
   
   .message {
@@ -623,6 +624,10 @@ font-weight: bold;
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
+    .name-car {
+      display: none;
+  }
+  .contact{display: block;}
 }
 
 
@@ -643,6 +648,9 @@ font-weight: bold;
         overflow: auto;
         height: auto;
     }
+    .name-car {
+      display: none;
+  }
 }
 
 
