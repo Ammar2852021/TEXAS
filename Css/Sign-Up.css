@@ -110,7 +110,7 @@ overflow: hidden;}
     
 
 
-        @media screen and (max-width:767px) {          
+        /* @media screen and (max-width:767px) {          
            
 
             .Container-img{display: none;}
@@ -119,4 +119,20 @@ overflow: hidden;}
             }
 
             .Sign-Up{margin:10px;}
-        }
+        } */
+
+
+
+        @media screen and (max-width:992px) {
+          .Container-img{display: none;}
+          .Container{
+            display: block;}}
+
+
+            @media screen and (max-width:600px) {
+              .Sign-Up {
+                margin: 20px;
+            }
+              
+              
+              }
