@@ -628,6 +628,12 @@ font-weight: bold;
       display: none;
   }
   .contact{display: block;}
+  .flex {
+    display: flex;
+    width: 95%;
+    /* gap: 6px; */
+}
+.form label .input{width: 90%;}
 }
 
 
