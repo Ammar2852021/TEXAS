@@ -807,7 +807,6 @@ align-items: center; */
 
 .offer-card{width: 100%; 
   margin-top: 5vh;
-  margin-bottom: 5vh;
 height: -webkit-fill-available;
 align-items: center;
 overflow: auto;
