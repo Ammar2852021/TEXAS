@@ -254,38 +254,61 @@ cursor: pointer;
 
   /* ...................... */
 
-  .buot{display: flex;
-  align-items: center;
-  justify-content: center;
+  .buot{display: grid;
+grid-template-columns: 1fr 2fr 1fr  ;
+align-items: center;
+  background: #eee;
+
   }
 
-  .img{width: 50px;
+  .img{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  .img img{width: 100%;}
 
+
+
+.total-price{display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.put button{display: flex;
+align-items: center;
+justify-content: center;
+}
+
+  
 .container {
-  margin: 0 auto;
-  padding: 4rem;
-  width: 48rem;
+ 
+  width: auto;
+  margin: 10px;
 }
 
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 5vh;
 }
 .accordion .accordion-item button[aria-expanded=true] {
   border-bottom: 1px solid #003f82;
 }
 .accordion button {
   position: relative;
-  display: block;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
   width: 100%;
   padding: 1em 0;
   color: #7288a2;
   font-size: 1.15rem;
   font-weight: 400;
   border: none;
-  background: none;
+  background: azure;
   outline: none;
 }
 .accordion button:hover, .accordion button:focus {
@@ -303,8 +326,7 @@ cursor: pointer;
 .accordion button .icon {
   display: inline-block;
   position: absolute;
-  top: 18px;
-  right: 0;
+margin-left: 10px;
   width: 22px;
   height: 22px;
   border: 1px solid;
@@ -338,9 +360,10 @@ cursor: pointer;
 }
 .accordion button[aria-expanded=true] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: fit-content;
   transition: all 200ms linear;
   will-change: opacity, max-height;
+  padding: 10px;
 }
 .accordion .accordion-content {
   opacity: 0;
@@ -354,3 +377,101 @@ cursor: pointer;
   font-weight: 300;
   margin: 2em 0;
 }
+
+
+
+.put{
+
+
+
+
+
+grid-column-start: 1;
+grid-column-end: 4;
+
+
+}
+
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
