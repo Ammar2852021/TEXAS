@@ -53,3 +53,41 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+// ..................................................
+let PROFILE = document.getElementById('PROFILE');
+
+console.log(PROFILE)
+
+let cick = document.getElementById('cick');
+
+console.log(cick)
+
+
+let MYPROFILE = document.getElementById('MYPROFILE');
+
+console.log(MYPROFILE)
+
+
+let clickher = document.getElementById('click-her');
+
+console.log(clickher)
+
+
+
+
+cick.addEventListener('click',function()
+{
+    clickher.style.display='block';
+    MYPROFILE.style.display='none';
+
+})
+// ...............................
+
+PROFILE.addEventListener('click',function()
+{
+    clickher.style.display='none';
+    MYPROFILE.style.display='block';
+
+})

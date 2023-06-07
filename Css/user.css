@@ -1,484 +1,450 @@
 *{margin: 0%;
-padding: 0%;
-font-family: sans-serif;
-}
-
-
-
-.contenar{display: grid;
-grid-template-columns: 1fr 1fr;
-width: 100%;
-height: auto;
-margin-top: 100vh;}
-
-  .entire {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  padding: 0%;
+  font-family: sans-serif;
+  }
+  
+  body{background: #eee;}
+  
+  .contenar{width: 100%; overflow: hidden;
+  height: auto;
+  }
+  
+  .rol{width: 100vw;
     margin: auto;
-    background: #eee;
-    box-shadow: 0 0px 34px -2px black; 
-  }
-  
-  .in-entire {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .left-cov, .right-cov {
-    height: 100%;
-  }
-  
-  .left-cov {
-    width: 35%;
-    background: #003f82;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .right-cov {
-    width: 65%;
-    background: #fff;
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  @media (max-width: 700px) {
-    .entire {
-      width: auto;
-      height: auto;
-    }
-  
-    .left-cov, .right-cov {
-      width: 100%;
-    }
-  }
-  .profile {
-    margin-bottom: 10vh;
-    width: 100px;
-    padding: 10px;
-
-  }
-  
-  .human {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    border: 9px solid #fff;
-    border-radius: 50%;
-    position: relative;
-  }
-  .human:before {
-    content: "";
-    width: 108px;
-    height: 100px;
-    position: absolute;
-    border: 3px solid #fff;
-    border-width: 9px 0 0 0;
-    right: -55%;
-    bottom: -112px;
-    border-radius: 50%;
-  }
-  
-  .basic {
-    text-align: center;
-    font-size: 26px;
-    color: #fff;
-  }
-  .basic span {
-    display: block;
-    text-align: center;
-    font-size: 22px;
-  }
-  
-  .detail {
-    padding: 1px;
-  }
-  
-  .full-detail {
-    padding: 20px 30px;
-    overflow: auto;
-    width: 100%;
-  }
-  
-  h3 {
-    text-align: center;
-    position: relative;
-    padding: 1px;
-    margin-top: 3vh;
-    
-  }
-  h3:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: -10px;
-    width: 100px;
-    height: 3px;
-    background: #003f82;
-  }
-  
-  h4 {
-    position: relative;
-    padding: 1px;
-  }
-  h4:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 10px;
-    height: 2px;
-    background: #003f82;
-  }
-  
-  p a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-  }
-  p a:hover {
-    color: #888;
-  }
-  
-  .ball {
-    display: block;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-    margin: 0 auto;
-    opacity: 1;
-    -webkit-animation: jump 1s infinite alternate;
-            animation: jump 1s infinite alternate;
-  }
-  
-
-
-
-
-.input-div{display: flex;
-  margin-top: 7vh;
-align-items: center;}
-
-
-  .div{width: 100%;
-height: 10vh;
-background: red;
-}
-
-
-.input-inp{width: 100%;}
-
-.input {
-    position: relative;
-    border: none;
-    box-shadow: 0px 1.5px 0px 0px #858585;
-    padding: .5rem;
-    transition: all 200ms ease-in-out;
-    opacity: .8;
-  }
-  
-  .input-box {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-label {
-    font-size: .625rem;
-    font-weight: bold;
-    color: #858585;
-    margin-bottom: 4px;
-    margin-left: 1px;
-  }
-  
-  .input-helper {
-    color: #858585;
-    font-size: .5rem;
-    margin-top: 6px;
-    margin-left: 1px;
-    visibility: hidden;
-    transform: translateY(-.5rem);
-    transition: all 100ms linear;
-    z-index: -1;
-  }
-  
-  .input::placeholder {
-    color: rgb(145, 145, 145);
-    font-size: .75rem;
-  }
-  
-  .input::after {
-    content: attr(placeholder);
-    position: absolute;
-    color: #161616;
-    top: 0;
-    left: 0;
-  }
-  
-  .input:focus {
-    border: none;
-    box-shadow: 0px 1.5px 0px 0px #003f82;
-    outline: none;
-  }
-  
-  .input:focus + .input-helper {
-    visibility: visible;
-    transform: translateY(0rem);
-  }
-  
-  .input:focus::placeholder {
-    visibility: hidden;
-  }
-
-  .send{display: flex;
-  justify-content: space-between;
-  align-items: center;
-  }
-  
-  input[ type="submit"]{width: 30%;
-  height: 6vh;
-  border: none;
-  outline: none;
-border-radius: 3px;
-background: #003f82;
-color: white;
-cursor: pointer;
-  }
-
-
-  /* ...................... */
-
-  .buot{display: grid;
-grid-template-columns: 1fr 2fr 1fr  ;
-align-items: center;
-  background: #eee;
-
-  }
-
-  .img{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .img img{width: 100%;}
-
-
-
-.total-price{display: flex;
-align-items: center;
-justify-content: center;
-}
-
-
-.put button{display: flex;
-align-items: center;
-justify-content: center;
-}
-
-  
-.container {
- 
-  width: auto;
-  margin: 10px;
-}
-
-.accordion .accordion-item {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 5vh;
-}
-.accordion .accordion-item button[aria-expanded=true] {
-  border-bottom: 1px solid #003f82;
-}
-.accordion button {
+  height: 30vh;
+  background: white;
   position: relative;
   display: flex;
+  align-items: end;
+  grid-gap: 20px;
+  position: relative;
+  }
+  
+  .king-user{
+    display: flex;
   align-items: center;
-  justify-content: left;
-  width: 100%;
-  padding: 1em 0;
-  color: #7288a2;
-  font-size: 1.15rem;
-  font-weight: 400;
-  border: none;
-  background: azure;
-  outline: none;
-}
-.accordion button:hover, .accordion button:focus {
-  cursor: pointer;
-  color: #003f82;
-}
-.accordion button:hover::after, .accordion button:focus::after {
-  cursor: pointer;
-  color: #003f82;
-  border: 1px solid #003f82;
-}
-.accordion button .accordion-title {
-  padding: 1em 1.5em 1em 0;
-}
-.accordion button .icon {
-  display: inline-block;
+  grid-gap: 20px;
   position: absolute;
-margin-left: 10px;
-  width: 22px;
-  height: 22px;
-  border: 1px solid;
-  border-radius: 22px;
-}
-.accordion button .icon::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 9px;
-  left: 5px;
-  width: 10px;
-  height: 2px;
-  background: currentColor;
-}
-.accordion button .icon::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 5px;
-  left: 9px;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
-}
-.accordion button[aria-expanded=true] {
-  color: #003f82;
-}
-.accordion button[aria-expanded=true] .icon::after {
-  width: 0;
-}
-.accordion button[aria-expanded=true] + .accordion-content {
-  opacity: 1;
-  max-height: fit-content;
-  transition: all 200ms linear;
-  will-change: opacity, max-height;
-  padding: 10px;
-}
-.accordion .accordion-content {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 200ms linear, max-height 200ms linear;
-  will-change: opacity, max-height;
-}
-.accordion .accordion-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 2em 0;
-}
-
-
-
-.put{
-
-
-
-
-
-grid-column-start: 1;
-grid-column-end: 4;
-
-
-}
-
-
-table {
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
-}
-
-table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
-}
-
-table tr {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: .35em;
-}
-
-table th,
-table td {
-  padding: .625em;
+  bottom: -60px;
+  }
+  
+  .img-user{width: 150px;
+  height: 150px;
+  background-image: url(/TEXAS/img/Hire\ Chauffeur\ for\ a\ Business\ Meeting.jpeg);
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid orchid;
+  margin-left: 20px;
+  }
+  
+  .but-user{margin: auto;
   text-align: center;
-}
-
-table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
-  }
-
-  table caption {
-    font-size: 1.3em;
   }
   
-  table thead {
+  .but-user button{
+    height: 6vh;
+    width: 10%;
     border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+    background: #003f82;}
+  
+    .but-user button a{text-decoration: none;
+    color: white;
+    font-size: 20px;}
+  
+  
+  .profile-user{width: auto; 
+    margin-top: 15vh;
+  background: white;
+  }
+  .profile-user h2{margin: 10px;}
+  
+  .icons-user{width: auto; 
+  height: auto;
+  background: #eee;
   }
   
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
   
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-  }
+  ::-webkit-scrollbar{width: 0;}
   
-  table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
   
-  table td:last-child {
-    border-bottom: 0;
-  }
-}
-
-
+    
+  
+      @media (max-width: 700px) {
+        .entire {
+          width: auto;
+          height: auto;
+        }
+      
+        .left-cov, .right-cov {
+          width: 100%;
+        }
+      }
+      .profile {
+        margin-bottom: 10vh;
+        width: 100px;
+        padding: 10px;
+    
+      }
+      
+      .human {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border: 9px solid #fff;
+        border-radius: 50%;
+        position: relative;
+      }
+      .human:before {
+        content: "";
+        width: 108px;
+        height: 100px;
+        position: absolute;
+        border: 3px solid #fff;
+        border-width: 9px 0 0 0;
+        right: -55%;
+        bottom: -112px;
+        border-radius: 50%;
+      }
+      
+  
+      
+      .full-detail {
+        margin: 20px;
+        overflow: auto;
+        width: 100%;
+      }
+      
+  
+      
+      h4 {
+        position: relative;
+  margin: 10px;
+      }
+      h4:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 10px;
+        height: 2px;
+        background: #003f82;
+      }
+      
+     
+  
+    
+    
+    .input-div{display: flex;
+      margin-top: 7vh;
+    align-items: center;}
+    
+  
+    
+  
+    
+    .input {
+        position: relative;
+        border: none;
+        box-shadow: 0px 1.5px 0px 0px #858585;
+        padding: .5rem;
+        transition: all 200ms ease-in-out;
+        opacity: .8;
+        background: #eee;
+      }
+  
+  #click-her{display: none;}
+  
+  
+      .input-inp{width:95%;}
+      
+      .input-box {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .input-label {
+        font-size: .625rem;
+        font-weight: bold;
+        color: #858585;
+        margin-bottom: 4px;
+        margin-left: 1px;
+      }
+      
+      .input-helper {
+        color: #858585;
+        font-size: .5rem;
+        margin-top: 6px;
+        margin-left: 1px;
+        visibility: hidden;
+        transform: translateY(-.5rem);
+        transition: all 100ms linear;
+        z-index: -1;
+      }
+      
+      .input::placeholder {
+        color: rgb(145, 145, 145);
+        font-size: .75rem;
+      }
+      
+      .input::after {
+        content: attr(placeholder);
+        position: absolute;
+        color: #161616;
+        top: 0;
+        left: 0;
+      }
+      
+      .input:focus {
+        border: none;
+        box-shadow: 0px 1.5px 0px 0px #003f82;
+        outline: none;
+      }
+      
+      .input:focus + .input-helper {
+        visibility: visible;
+        transform: translateY(0rem);
+      }
+      
+      .input:focus::placeholder {
+        visibility: hidden;
+      }
+    
+      .send{display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+      
+      input[ type="submit"]{width: 20%;
+      height: 7vh;
+      border: none;
+      outline: none;
+    border-radius: 3px;
+    background: #003f82;
+    color: white;
+    cursor: pointer;
+    margin-right: 50px;
+    font-size: 20px;}
+    
+    
+      /* ...................... */
+    
+      .buot{display: grid;
+    grid-template-columns: 1fr 2fr 1fr  ;
+    align-items: center;
+      background: #eee;
+    
+      }
+    
+      .img{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .img img{width: 100%;}
+    
+    
+    
+    .total-price{display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    
+    .put button{display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+  
+    
+    .accordion .accordion-item {
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 5vh;
+    }
+    .accordion .accordion-item button[aria-expanded=true] {
+      border-bottom: 1px solid #003f82;
+    }
+    .accordion button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 100%;
+      padding: 1em 0;
+      color: #7288a2;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: azure;
+      outline: none;
+    }
+    .accordion button:hover, .accordion button:focus {
+      cursor: pointer;
+      color: #003f82;
+    }
+    .accordion button:hover::after, .accordion button:focus::after {
+      cursor: pointer;
+      color: #003f82;
+      border: 1px solid #003f82;
+    }
+    .accordion button .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .accordion button .icon {
+      display: inline-block;
+      position: absolute;
+    margin-left: 10px;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+    }
+    .accordion button .icon::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+    }
+    .accordion button .icon::after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: currentColor;
+    }
+    .accordion button[aria-expanded=true] {
+      color: #003f82;
+    }
+    .accordion button[aria-expanded=true] .icon::after {
+      width: 0;
+    }
+    .accordion button[aria-expanded=true] + .accordion-content {
+      opacity: 1;
+      max-height: fit-content;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+      padding: 10px;
+    }
+    .accordion .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+    }
+    .accordion .accordion-content p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+    
+    
+    
+    .put{
+    
+    
+    
+    
+    
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+    
+    }
+    
+    
+    table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      table-layout: fixed;
+    }
+    
+    table caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em;
+    }
+    
+    table tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: .35em;
+    }
+    
+    table th,
+    table td {
+      padding: .625em;
+      text-align: center;
+    }
+    
+    table th {
+      font-size: .85em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    
+    @media screen and (max-width: 600px) {
+      table {
+        border: 0;
+      }
+    
+      table caption {
+        font-size: 1.3em;
+      }
+      
+      table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      
+      table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+      }
+      
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+      }
+      
+      table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+    
+    
+    
