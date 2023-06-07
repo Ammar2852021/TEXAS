@@ -1,0 +1,178 @@
+/* ................nav */
+
+    
+.top-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    transition: top 0.75s ease-in;
+    background:none;
+    grid-column-start: 1;
+      grid-column-end: 3;
+      background: white;
+  
+  }
+  
+  .top-nav .menu {
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 0;
+    /* transition: max-height 0.2s ease-out; */
+  }
+  .top-nav .menu li a {
+    display: inline-block;
+    min-width: 75px;
+    margin: 1.2em 0;
+  color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+  }
+  
+  
+  .top-nav .menu ul li .king{color: #003f82;
+  font-weight: bold;
+  font-size: 20px;
+  }
+  
+  
+  
+  .top-nav .logo {
+   display: flex; justify-content: center; align-items: center;
+  }
+  .top-nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+  }
+  .top-nav .menu-icon .navicon {
+    background: #20232d;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 1.625rem;
+  }
+  .top-nav .menu-icon .navicon:before, .top-nav .menu-icon .navicon:after {
+    background: #20232d;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .top-nav .menu-icon .navicon:before {
+    top: 7px;
+  }
+  .top-nav .menu-icon .navicon:after {
+    top: -7px;
+  }
+  .top-nav .menu-btn {
+    display: none;
+  }
+  .top-nav .menu-btn:checked ~ .menu {
+    max-height: 100%;
+    background-color: white;
+    height: 100vh;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  justify-content: center;
+  }
+  
+  .top-nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  .top-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .top-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .top-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .top-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  /* ............... */
+  
+  .icon-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .zah-cixbgt.bLHlxK {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .zah-cixbgt a {
+  display: flex;
+  align-items: center;
+  }
+  
+  .zah-cixbgt.bLHlxK svg {
+    width:  1.5rem;
+    margin-right: 10px;
+    height: 1.5rem;}
+  
+    .hAWciU {
+      text-transform: var(--typo-link-medium-transform, none );
+      letter-spacing: var(--typo-link-medium-letter-spacing, 0 );
+      font: var(--typo-link-medium-font, 700 0.875rem Roboto,sans-serif );
+      color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));
+  }
+  
+  .icon-user a {text-decoration: none; color: black;
+  }
+  
+  .icon-user .select{width: auto;
+  border: none;
+  margin: 0px 20px 0px 10px;
+  }
+  
+  /* select.asfour{margin-left: 10px;} */
+  
+  .user{margin-left: 2vh;}
+  
+  select{border: none;}
+  
+  .logo h1 {font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    font-weight: 900;
+  margin: 10px;}
+  
+  .logo h3{margin: 10px;
+  font-weight: 600;
+  border-bottom: 2px solid #003f82;
+  }
+  
+  nav ul li {
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  
+
+
+
+.logo-h a {
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+/* ..............................nav */
