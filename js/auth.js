@@ -1,10 +1,12 @@
 // Register
 let signUpForm = document.getElementById("sign_up_form"),
   signUpSubmit = document.getElementById("sign_up_submit"),
-  errorReg = document.getElementById("error");
+  errorReg = document.getElementById("error"),
+  checkmark = document.getElementById("checkmark");
 if (signUpSubmit) {
   signUpSubmit.addEventListener("click", function (event) {
     event.preventDefault();
+    error.innerHTML = "";
 
     // Accessing the form fields
     const firstName = signUpForm.elements["firstName"].value,
@@ -14,7 +16,7 @@ if (signUpSubmit) {
       password = signUpForm.elements["password"].value,
       password_confirm = signUpForm.elements["password_confirm"].value,
       id = signUpForm.elements["id"].value,
-      terms = signUpForm.elements["terms"].value;
+      terms = signUpForm.elements["terms"];
 
     function returnError(text) {
       let msg = `<span style="margin-bottom: 12px;
@@ -60,6 +62,8 @@ if (signUpSubmit) {
       error.innerHTML = returnError("Passwords do not match");
     } else if (id == "") {
       error.innerHTML = returnError("ID Or Passport number is Required");
+    } else if (!terms.checked) {
+      checkmark.style.border = "2px solid red";
     } else {
       let data = {
         name: firstName + " " + lastName,
@@ -75,7 +79,9 @@ if (signUpSubmit) {
             if (data["data"].email != undefined) {
               error.innerHTML = returnError(data["data"].email[0]);
             } else if (data["data"].id_document != undefined) {
-              error.innerHTML = returnError("The ID Or Passport Number has already been taken!");
+              error.innerHTML = returnError(
+                "The ID Or Passport Number has already been taken!"
+              );
             } else if (data["data"].phone != undefined) {
               error.innerHTML = returnError(data["data"].phone[0]);
             }
@@ -111,9 +117,20 @@ if (loginForm) {
       };
 
       postData(APIs.host + APIs.user.login, data).then((data) => {
-        console.log(data);
         if (data.status === 200) {
           localStorage.setItem("access_token", data.access_token);
+          localStorage.setItem(
+            "user",
+            JSON.stringify({
+              name: data.user.name,
+              email: data.user.email,
+              phone: data.user.phone,
+              id: data.user.id_document,
+            })
+          );
+          if (data.user.email_verified_at == null) {
+            localStorage.setItem("email_verify", false);
+          }
           location.href = "../index.html";
         } else if (data.status === 422) {
           error.innerText = data["data"].password[0];

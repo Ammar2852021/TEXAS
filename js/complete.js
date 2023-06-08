@@ -21,7 +21,10 @@ let total = document.getElementById("total"),
   rent_days = document.getElementById("days"),
   selectedCar = JSON.parse(localStorage.getItem("selectedCar"));
 if (selectedCar) {
-  total.innerText = selectedCar.car_cost * days + " $";
+  total.innerText =
+    selectedCar.car_cost * days +
+    Number(localStorage.getItem("protection")) +
+    " $";
   car_name.innerText = selectedCar.car_name;
   rent_days.innerText = `${days} rentel days`;
   car_image.src = selectedCar.image;

@@ -9,14 +9,14 @@ getData(APIs.host + APIs.social).then((data) => {
       if (e.key === "protection") {
         protection_price.innerText = `$ ${e.value} /day`;
         pr_price = e.value * Number(localStorage.getItem("days"));
-        _price = Number(total.innerText.replace(/\D/g, ""));
+        _price = Number(total.innerText.match(/[0-9.,]+/)[0]);
       }
     }
     if (flixable) {
       if (e.key === "flixable") {
-        flixable.innerText = `+ $${e.value} /day`;
+        flixable.innerText = `+$${e.value} /day`;
         pr_price = e.value * Number(localStorage.getItem("days"));
-        _price = Number(total.innerText.replace(/\D/g, ""));
+        _price = Number(total.innerText.match(/[0-9.,]+/)[0]);
       }
     }
   });
@@ -26,7 +26,7 @@ bordarclass.addEventListener("click", function () {
   if (protection_price) {
     if (bordarclass.classList.contains("class")) {
       total.innerText = `${_price + Number(pr_price)}$`;
-      localStorage.setItem("protection", true);
+      localStorage.setItem("protection", pr_price);
     } else {
       total.innerText = `${_price}$`;
       localStorage.removeItem("protection");
@@ -34,8 +34,8 @@ bordarclass.addEventListener("click", function () {
   }
   if (flixable) {
     if (bordarclass.classList.contains("class")) {
-      total.innerText = `${_price + Number(pr_price)}$`;
-      localStorage.setItem("flixable", true);
+      total.innerText = `${Number(_price) + Number(pr_price)}$`;
+      localStorage.setItem("flixable", pr_price);
     } else {
       total.innerText = `${_price}$`;
       localStorage.removeItem("flixable");
