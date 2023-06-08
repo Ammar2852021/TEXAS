@@ -24,12 +24,12 @@ if (
   localStorage.getItem("pickup_date") != null &&
   localStorage.getItem("drop_off_date") != null
 ) {
-  // <a href="/TEXAS/page/Choose-your.html" class="car-a" >
+  // <a href="../page/Choose-your.html" class="car-a" >
   getData(APIs.host + APIs.cars).then((data) => {
     data["data"].forEach((e) => {
       let str = APIs.host + "/public/" + e.image;
       let card = `
-    <a href="/TEXAS/page/Choose-your.html" class="car-a" >
+    <a href="../page/Choose-your.html" class="car-a" >
     <div class="card">
     <div class="ad" data-ele="carCard" data-car_name="${
       e.brand + " " + e.model
@@ -131,7 +131,7 @@ function handleCarType(type) {
     if (e.car_type === type) {
       let str = APIs.host + "/public/" + e.image;
       let card = `
-    <a href="/TEXAS/page/Choose-your.html">
+    <a href="../page/Choose-your.html">
     <div class="card">
     <div class="ad" data-ele="carCard" data-car_name="${
       e.brand + " " + e.model
@@ -237,7 +237,7 @@ function handleAutoOnly(status) {
       if (e.transmission === "Automatic") {
         let str = APIs.host + "/public/" + e.image;
         let card = `
-        <a href="/TEXAS/page/Choose-your.html">
+        <a href="../page/Choose-your.html">
         <div class="card">
         <div class="ad" data-ele="carCard" data-car_name="${
           e.brand + " " + e.model
@@ -318,7 +318,7 @@ function handleAutoOnly(status) {
     } else {
       let str = APIs.host + "/public/" + e.image;
       let card = `
-      <a href="/TEXAS/page/Choose-your.html">
+      <a href="../page/Choose-your.html">
       <div class="card">
       <div class="ad" data-ele="carCard" data-car_name="${
         e.brand + " " + e.model
@@ -414,7 +414,7 @@ function handleSeats(seats) {
     if (e.seats <= seats) {
       let str = APIs.host + "/public/" + e.image;
       let card = `
-    <a href="/TEXAS/page/Choose-your.html">
+    <a href="../page/Choose-your.html">
     <div class="card">
     <div class="ad" data-ele="carCard" data-car_name="${
       e.brand + " " + e.model
@@ -515,7 +515,7 @@ function handleBags(bags) {
     if (e.bags <= bags) {
       let str = APIs.host + "/public/" + e.image;
       let card = `
-    <a href="/TEXAS/page/Choose-your.html">
+    <a href="../page/Choose-your.html">
     <div class="card">
     <div class="ad" data-ele="carCard" data-car_name="${
       e.brand + " " + e.model

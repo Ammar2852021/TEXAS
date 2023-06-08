@@ -32,7 +32,7 @@ background: #003f82;
 .img-user{width: 150px;
 height: 150px;
 background: #003f82;
-background-image: url(/TEXAS/img/me.png);
+background-image: url(../img/me.png);
 background-size: cover;
 border-radius: 50%;
 border: 5px solid #003f82;

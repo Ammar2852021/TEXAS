@@ -508,7 +508,7 @@ font-weight: bold;
   background-position: 700px 10px; 
 overflow: hidden;
   display: grid;
-background-image: url(/TEXAS/img/Screenshot\ 2023-05-13\ 114704.png);
+background-image: url(../img/Screenshot\ 2023-05-13\ 114704.png);
   grid-template-columns: 2fr 1fr;
   background-color: white;
 }
@@ -794,24 +794,24 @@ border-radius: 10px;}
 .Our-Service{
 background-color: #1c1c1c;
 width: 100%;
-background-image: url(/TEXAS/img/kuni-map.png);
+background-image: url(../img/kuni-map.png);
 background-size: cover;
  height: auto;
   margin-bottom: 10vh;
 overflow: hidden;}
 
 
-#Grid-img-one{background-image: url(/TEXAS/img/Toyota\ Corolla\ Cross.png);
+#Grid-img-one{background-image: url(../img/Toyota\ Corolla\ Cross.png);
 background-size: cover;
 background-position: center center;
 }
 
-#Grid-img-Tow{background-image: url(/TEXAS/img/ford\ puma.png);
+#Grid-img-Tow{background-image: url(../img/ford\ puma.png);
   background-size: cover;
   background-position: center center;
   }
 
-  #Grid-img-Thre{background-image: url(/TEXAS/img/BMW\ i3.jpg);
+  #Grid-img-Thre{background-image: url(../img/BMW\ i3.jpg);
     background-size: cover;
     background-position: center center;
     }
@@ -915,7 +915,7 @@ display: grid;
 grid-template-columns: 1fr 1fr;}
 
 .About-img{
-background-image: url(/TEXAS/img/Hire\ Chauffeur\ for\ a\ Business\ Meeting.jpeg);
+background-image: url(../img/Hire\ Chauffeur\ for\ a\ Business\ Meeting.jpeg);
 background-size: cover;
 background-position: top center;
 margin: 40px;
@@ -1591,7 +1591,7 @@ footer a:hover {
 .footer-middle {
   padding-top: 2em;
   color: white;
-  background-image: url(/TEXAS/img/kuni-map.png);
+  background-image: url(../img/kuni-map.png);
   background-color: #1c1c1c;
   background-size: cover;
 
@@ -1770,7 +1770,7 @@ overflow: hidden;
 
 .blue {
   background: #003f82;
-  background-image: url(/TEXAS/img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
+  background-image: url(../img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
   background-position: bottom;
   position: absolute;
   background-repeat: no-repeat;
@@ -1875,7 +1875,7 @@ label {
 
     .blue {
       background: #003f82;
-      background-image: url(/TEXAS/img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
+      background-image: url(../img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
       background-position: right center;
       background-repeat: no-repeat;
       position: absolute;}
