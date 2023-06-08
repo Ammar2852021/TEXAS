@@ -1885,7 +1885,7 @@ label {
     border-bottom: 1px solid black;
 }
       
-    .zah-12zumyu {display: none;}
+    .heding {display: none;}
     .logo h3{display: none;}
   
   
@@ -2008,4 +2008,6 @@ label {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  
+
   

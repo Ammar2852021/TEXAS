@@ -8,9 +8,7 @@ align-items: center;
 justify-content: center;
 }
 
-/* .Container-Sign-Up{width: 60%;
-height: 100vh;
-} */
+
 
 .Container .Container-Sign-Up .Logo h1 {margin: 15px;
 font-family: sans-serif;
@@ -142,4 +140,18 @@ overflow: hidden;}
             }
               
               
+              }
+
+
+
+
+
+              @media screen and (max-width:767px) {
+                
+                .Container-Sign-Up{width: auto;
+               
+                }
+                .Sign-Up{
+                  margin-top: 15vh;
+                }
               }
