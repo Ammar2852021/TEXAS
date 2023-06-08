@@ -1,7 +1,7 @@
 body{overflow: hidden;}
 
 
-.Container{width: 100%;
+.Container{
 height: 100vh;
 display: flex;
 align-items: center;
@@ -132,10 +132,19 @@ overflow: hidden;}
           .Container-Sign-Up{margin: 0;}}
 
 
+          @media screen and (max-width:767px){
+
+            .Container-Sign-Up{width: auto;}
+
+
+          }
+
+
             @media screen and (max-width:600px) {
               .Sign-Up {
                 margin: 20px;
             }
+            input{width: 85%;}
               
-              
+            input[type="email"]{width: auto;}
               }
