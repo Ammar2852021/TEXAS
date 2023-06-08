@@ -2,7 +2,7 @@
 let signUpForm = document.getElementById("sign_up_form"),
   signUpSubmit = document.getElementById("sign_up_submit");
 
-if (signUpSubmit)
+if (signUpSubmit) {
   signUpSubmit.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -29,6 +29,7 @@ if (signUpSubmit)
       }
     );
   });
+}
 // Login
 let loginForm = document.getElementById("loginForm");
 let error = document.getElementById("error");
