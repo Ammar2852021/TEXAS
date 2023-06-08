@@ -9,55 +9,39 @@
     <title>Sign Up</title>
   </head>
   <body>
-    
     <div class="Container">
-      
       <div class="Container-Sign-Up">
-       
-       
-
-
-
         <div class="Sign-Up">
-          
-          <p>Start for free</p>
-          <h2>create new account</h2>
-          <p>already a memder ? <a href="../page/user.html"> Sign Up</a></p>
+          <h2>Login</h2>
+          <p>don't have account ? <a href="../page/Sign-Up.html">Sign Up</a></p>
           <div class="Sign-Up-input">
-            <form id="sign_up_form">
-              <!-- <input
-                type="text"
-                placeholder="First name"
-                name="firstName"
-                id="firstName"
-              /> -->
-              <!-- <input
-                type="text"
-                placeholder="Last name"
-                name="lastName"
-                id="lastName"
-              /> -->
+            <div style="margin-left: 10px; color: red" id="error"></div>
+            <form id="loginForm" method="post">
               <input type="email" placeholder="Email" name="email" id="email" />
-         
               <input
                 type="password"
                 placeholder="password"
                 name="password"
-                id="password"/>
-            
-   
-              <input type="submit" style="border-radius: 10px;
+                id="password"
+              />
+
+              <input
+                type="submit"
+                style="
+                  border-radius: 10px;
                   outline: none;
-    border: none;
-    height: 8vh;
-    margin: 5px;
-    border-radius: 10px;
-    padding: 10px;
-    color: black;
-    font-family: sans-serif;" value="Create account" id="sign_up_submit" />
-            
+                  border: none;
+                  height: 8vh;
+                  margin: 5px;
+                  border-radius: 10px;
+                  padding: 10px;
+                  color: white;
+                  font-family: sans-serif;
+                "
+                value="Login"
+                id="login_submit"
+              />
             </form>
-            
           </div>
         </div>
       </div>
@@ -81,7 +65,7 @@
         </svg>
       </div>
     </div>
-    <!-- <script src="../js/api.js"></script>
-    <script src="../js/auth.js"></script> -->
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
   </body>
 </html>

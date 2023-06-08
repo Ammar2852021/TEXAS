@@ -5,12 +5,13 @@ var APIs = {
   social: "/api/get-information",
   user: {
     register: "/api/auth/user/register",
+    login: "/api/auth/user/login",
   },
 };
-async function postData(url = "", data = {}, token = null, method) {
+async function postData(url = "", data = {}, token = null) {
   // Default options are marked with *
   const response = await fetch(url, {
-    method: method, // *GET, POST, PUT, DELETE, etc.
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
     credentials: "same-origin", // include, *same-origin, omit

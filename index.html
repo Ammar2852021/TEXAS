@@ -163,9 +163,10 @@
 </div>
 
 
-<div class="Add Add-button">
-<button class="button2">
-<a href="page/Cars.html"><span>Show Cars</span></a></button>
+<div class="Add Add-button" id="show-cars">
+  <button class="button2">
+  <a href="page/Cars.html"><span >Show Cars</span></a>
+</button>
 </div>
 
 
@@ -586,6 +587,25 @@ $('.stop').on('click',function(){
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<script>
+  $(function(){
+  var dtToday = new Date();
+
+  var month = dtToday.getMonth() + 1;
+  var day = dtToday.getDate();
+  var year = dtToday.getFullYear();
+
+  if(month < 10)
+      month = '0' + month.toString();
+  if(day < 10)
+      day = '0' + day.toString();
+
+  var maxDate = year + '-' + month + '-' + day;    
+  $('#drop_off_date').attr('min', maxDate);
+  $('#pickup_date').attr('min', maxDate);
+
+});
 </script>
 
 </body>

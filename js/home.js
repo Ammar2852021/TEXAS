@@ -1,7 +1,7 @@
 let Address = document.getElementById("Address");
 if (Address) {
   let suggestions = document.getElementById("suggestions");
-  let Arr = [4554, 156456, 1, 45, 564, 45];
+  let Arr = ["ALiaa Queen Airport", "Mallorca Palma Airport"];
 
   Arr.forEach(function (e) {
     suggestions.innerHTML += `<option>${e}</option>`;
@@ -9,6 +9,7 @@ if (Address) {
 
   Address.addEventListener("input", function (e) {
     console.log(e.target.value);
+    localStorage.setItem("pickup_area", e.target.value);
   });
 }
 
@@ -75,3 +76,13 @@ if (drop_off_time_storage !== null) {
 } else {
   setDefaultTime(drop_off_time);
 }
+let show_cars = document.getElementById("show-cars");
+
+if (show_cars)
+  show_cars.onclick = (e) => {
+    console.log("clicked");
+    localStorage.setItem("pickup_time", pickup_time.value);
+    localStorage.setItem("drop_off_time", drop_off_time.value);
+  };
+
+ 
