@@ -13,7 +13,8 @@ if (signUpSubmit) {
       phone = signUpForm.elements["phone"].value,
       password = signUpForm.elements["password"].value,
       password_confirm = signUpForm.elements["password_confirm"].value,
-      id = signUpForm.elements["id"].value;
+      id = signUpForm.elements["id"].value,
+      terms = signUpForm.elements["terms"].value;
 
     function returnError(text) {
       let msg = `<span style="margin-bottom: 12px;
@@ -74,7 +75,7 @@ if (signUpSubmit) {
             if (data["data"].email != undefined) {
               error.innerHTML = returnError(data["data"].email[0]);
             } else if (data["data"].id_document != undefined) {
-              error.innerHTML = returnError(data["data"].id_document[0]);
+              error.innerHTML = returnError("The ID Or Passport Number has already been taken!");
             } else if (data["data"].phone != undefined) {
               error.innerHTML = returnError(data["data"].phone[0]);
             }
