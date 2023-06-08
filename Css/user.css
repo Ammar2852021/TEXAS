@@ -568,7 +568,27 @@ table th {
       .but-user button{margin-left: 10px;
     
       }
-      .but-user button a ,.king-user h2{  font-size: 12px;}
+
+      .king-user{bottom: 0;}
+      .but-user {
+        text-align: center;
+        position: absolute;
+        background: #003f82;
+        right: 0;
+        border-radius: 0px 0px 0px 10px;
+        margin-top: 15vh;}
+
+        .but-user button {
+          height: 6vh;
+          border: none;
+          padding: 5px;
+          border-radius: 20px;
+          outline: none;
+          background: #003f82;
+      }
+
+
+      .but-user button a {  font-size: 12px;}
 
       input[ type="submit"]{margin: 0;}
 
