@@ -230,7 +230,6 @@ border-radius: 3px;
 background: #003f82;
 color: white;
 cursor: pointer;
-margin-right: 50px;
 font-size: 20px;}
 
 
@@ -558,4 +557,19 @@ table th {
             border-radius: 50%;
         }
     
+    }
+
+
+
+    @media screen and (max-width:767px) {
+
+      .img-user{width: 100px; height: 100px;}
+
+      .but-user button{margin-left: 10px;
+    
+      }
+      .but-user button a ,.king-user h2{  font-size: 12px;}
+
+      input[ type="submit"]{margin: 0;}
+
     }
