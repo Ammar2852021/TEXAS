@@ -96,7 +96,7 @@ font-size: 20px;
 .top-nav .menu-icon {
   cursor: pointer;
   display: inline-block;
-  /* padding: 28px 20px; */
+  padding: 28px 20px;
 }
 .top-nav .menu-icon .navicon {
   background: #20232d;
@@ -1862,10 +1862,17 @@ label {
 
   @media(max-width: 767px) {
 
+    .top-nav .menu-icon {
+  
+      padding: 0px;
+    }
+    .top
+
     .blue {
       background: #003f82;
       background-image: url(/TEXAS/img/13954fe7-98c8-42b1-b415-d211f628ccab.jpg);
       background-position: right center;
+      background-repeat: no-repeat;
       position: absolute;}
 
     .Rent-car{font: var(--typo-headline-small-font,700 1rem "Roboto Condensed",sans-serif );}
