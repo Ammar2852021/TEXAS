@@ -166,6 +166,7 @@ nav ul li {
 
 
 
+
 .Promised{
   text-align: center;
   width: 100%;
@@ -567,9 +568,41 @@ input[ type="range"]::-webkit-slider-thumb {
 
 }
 
+.Add input[type="time"], .Add input[type="date"] {
+  text-transform: var(--typo-headline-small-transform,none );
+  letter-spacing: var(--typo-headline-small-letter-spacing,0 );
+  font: var(--typo-headline-small-font,700 1rem "Roboto Condensed",sans-serif );
+  color: var(--debug-typo-color,var(--color-primary,white));
+  text-align: left;
+}
 
+.search__input {
+  appearance: none;
+  outline: none;
+  cursor: text;
+  padding: 10px;
+
+  width: 100%;
+  border: 0px;
+  border-radius: 0px;
+  background: transparent;
+  color: var(--color-primary,white);
+  text-transform: var(--typo-input-small-transform,none );
+  letter-spacing: var(--typo-input-small-letter-spacing,0 );
+  font: var(--typo-input-small-font,700 1.25rem "Roboto Condensed",sans-serif );
+}
 
 @media screen and (max-width:767px) {
+
+  .Add input[type="time"], .Add input[type="date"] {
+    text-transform: var(--typo-headline-small-transform,none );
+    letter-spacing: var(--typo-headline-small-letter-spacing,0 );
+    font: var(--typo-headline-small-font,700 1rem "Roboto Condensed",sans-serif );
+    color: var(--debug-typo-color,var(--color-primary,white));
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
 .mallorca{display: none;}
 
 .contenar{display: block; height: auto;}
@@ -581,4 +614,10 @@ input[ type="range"]::-webkit-slider-thumb {
 .f {
   padding: 15px;
 }
+}
+@media screen and (max-width:992px) {
+  .top-nav .menu-btn:checked ~ .menu{height: auto;}
+  .Promised{height: auto;
+  display: block;
+  }
 }

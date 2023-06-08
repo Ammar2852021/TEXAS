@@ -76,29 +76,7 @@
   .top-nav .menu-btn {
     display: none;
   }
-  .top-nav .menu-btn:checked ~ .menu {
-    max-height: 100%;
-    background-color: white;
-    height: 100vh;
-    z-index: 999;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
-  justify-content: center;
-  }
-  
-  .top-nav .menu-btn:checked ~ .menu-icon .navicon {
-    background: transparent;
-  }
-  .top-nav .menu-btn:checked ~ .menu-icon .navicon:before {
-    transform: rotate(-45deg);
-  }
-  .top-nav .menu-btn:checked ~ .menu-icon .navicon:after {
-    transform: rotate(45deg);
-  }
-  .top-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .top-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-    top: 0;
-  }
+
   /* ............... */
   
   .icon-user {
