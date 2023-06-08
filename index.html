@@ -560,7 +560,22 @@ Texas  was founded in 1994. we have begun to serve in the rental industry with h
 owl.owlCarousel({
     items:3,
     loop:true,
-    // margin:5,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        767:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:false
+        }
+    },
     autoplay:true,
     autoplayTimeout:3000,
     autoplayHoverPause:true
