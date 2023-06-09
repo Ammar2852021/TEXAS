@@ -1,3 +1,5 @@
+localStorage.removeItem("flixable");
+
 let bordarclass = document.getElementById("bordar-class");
 let protection_price = document.getElementById("protection_price");
 let flixable = document.getElementById("flixable");

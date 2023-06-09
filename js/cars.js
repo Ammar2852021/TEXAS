@@ -36,7 +36,7 @@ if (
       e.brand + " " + e.model
     }" data-cost="${e.cost}" data-car_type="${
         e.car_type
-      }" data-img="${str}" ></div>
+      }" data-img="${str}"  data-car_id="${e.id}"></div>
     <div class="card-titel" >
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -138,7 +138,7 @@ function handleCarType(type) {
       e.brand + " " + e.model
     }" data-cost="${e.cost}" data-car_type="${
         e.car_type
-      }" data-img="${str}" ></div>
+      }" data-img="${str}"  data-car_id="${e.id}"></div>
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -244,7 +244,7 @@ function handleAutoOnly(status) {
           e.brand + " " + e.model
         }" data-cost="${e.cost}" data-car_type="${
           e.car_type
-        }" data-img="${str}" ></div>
+        }" data-img="${str}"  data-car_id="${e.id}"></div>
         <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -325,7 +325,7 @@ function handleAutoOnly(status) {
         e.brand + " " + e.model
       }" data-cost="${e.cost}" data-car_type="${
         e.car_type
-      }" data-img="${str}" ></div>
+      }" data-img="${str}"  data-car_id="${e.id}"></div>
       <div class="card-titel">
     <h2>${e.brand + " " + e.model}</h2>
     <p>${e.car_type}</p>
@@ -421,7 +421,7 @@ function handleSeats(seats) {
       e.brand + " " + e.model
     }" data-cost="${e.cost}" data-car_type="${
         e.car_type
-      }" data-img="${str}" ></div>
+      }" data-img="${str}"  data-car_id="${e.id}"></div>
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -522,7 +522,7 @@ function handleBags(bags) {
       e.brand + " " + e.model
     }" data-cost="${e.cost}" data-car_type="${
         e.car_type
-      }" data-img="${str}" ></div>
+      }" data-img="${str}"  data-car_id="${e.id}" ></div>
     <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -607,6 +607,7 @@ window.addEventListener("click", (e) => {
     localStorage.setItem(
       "selectedCar",
       JSON.stringify({
+        car_id: e.target.dataset.car_id,
         car_type: e.target.dataset.car_type,
         car_name: e.target.dataset.car_name,
         car_cost: Number(e.target.dataset.cost),

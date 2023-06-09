@@ -3,9 +3,14 @@ var APIs = {
   cars: "/api/cars",
   members: "/api/members",
   social: "/api/get-information",
+  orders: {
+    get: "/api/user-orders",
+    store: "/api/store-order",
+  },
   user: {
     register: "/api/auth/user/register",
     login: "/api/auth/user/login",
+    profile: "/api/auth/user/user-profile",
   },
   coupon: {
     check: "/api/check-coupon",
@@ -46,3 +51,29 @@ async function getData(url = "", token = "") {
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
+function checkToken() {
+  fetch(APIs.host + APIs.user.profile, {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.removeItem("access_token"),
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+  })
+    .then((data) => {
+      return data.json();
+    })
+    .then((data) => {
+      console.clear();
+      if (data.status !== 200) {
+        localStorage.removeItem("access_token");
+        localStorage.removeItem("user");
+      }
+    });
+}
+
+checkToken();
