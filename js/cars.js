@@ -17,6 +17,7 @@ let days = calculateDaysBetweenDates(
   localStorage.getItem("pickup_date"),
   localStorage.getItem("drop_off_date")
 );
+localStorage.setItem("days", days);
 let carContainer = document.getElementById("carsContainer");
 let con = document.getElementById("con");
 let cars = [];
@@ -242,8 +243,8 @@ function handleAutoOnly(status) {
         <div class="ad" data-ele="carCard" data-car_name="${
           e.brand + " " + e.model
         }" data-cost="${e.cost}" data-car_type="${
-            e.car_type
-          }" data-img="${str}" ></div>
+          e.car_type
+        }" data-img="${str}" ></div>
         <div class="card-titel">
       <h2>${e.brand + " " + e.model}</h2>
       <p>${e.car_type}</p>
@@ -323,8 +324,8 @@ function handleAutoOnly(status) {
       <div class="ad" data-ele="carCard" data-car_name="${
         e.brand + " " + e.model
       }" data-cost="${e.cost}" data-car_type="${
-          e.car_type
-        }" data-img="${str}" ></div>
+        e.car_type
+      }" data-img="${str}" ></div>
       <div class="card-titel">
     <h2>${e.brand + " " + e.model}</h2>
     <p>${e.car_type}</p>
@@ -612,6 +613,5 @@ window.addEventListener("click", (e) => {
         image: e.target.dataset.img,
       })
     );
-
   }
 });
