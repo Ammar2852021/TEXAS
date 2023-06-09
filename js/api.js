@@ -1,5 +1,6 @@
 var APIs = {
   host: "https://rentcar.yousef-mohamed.com",
+  // host: "http://rent-car.io",
   cars: "/api/cars",
   members: "/api/members",
   social: "/api/get-information",
@@ -59,7 +60,7 @@ function checkToken() {
     credentials: "same-origin", // include, *same-origin, omit
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.removeItem("access_token"),
+      Authorization: "Bearer " + localStorage.getItem("access_token"),
     },
     redirect: "follow", // manual, *follow, error
     referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url

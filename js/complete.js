@@ -20,9 +20,9 @@ let total = document.getElementById("total"),
   selectedCar = JSON.parse(localStorage.getItem("selectedCar"));
 if (selectedCar) {
   total.innerText =
-    selectedCar.car_cost * days +
-    Number(localStorage.getItem("protection")) +
-    " $";
+    Math.ceil(
+      selectedCar.car_cost * days + Number(localStorage.getItem("protection"))
+    ) + " $";
   car_name.innerText = selectedCar.car_name;
   rent_days.innerText = `${days} rentel days`;
   car_image.src = selectedCar.image;
@@ -77,16 +77,23 @@ if (!user) {
 }
 let code = "";
 let coupon = document.getElementById("coupon"),
-  coupon_status = document.getElementById("coupon-status");
+  coupon_status = document.getElementById("coupon-status"),
+  tot = document.getElementById("total_p");
 coupon.addEventListener("input", (e) => {
+  let total_p = Number(total.innerText.match(/[0-9.,]+/)[0]);
   if (e.target.value != "") {
     postData(APIs.host + APIs.coupon.check, { code: e.target.value }).then(
       (data) => {
         if (data.status === 400) {
           coupon_status.style.color = "red";
           coupon_status.innerText = "Coupon Invalid";
+          total.style.textDecoration = "none";
+          tot.innerText = "";
           console.clear();
         } else if (data.status === 201) {
+          let t = (total_p * Number(data["data"].percentage)) / 100;
+          tot.innerText = `${total_p - t}$`;
+          total.style.textDecoration = "line-through";
           coupon_status.style.color = "green";
           coupon_status.innerText = "Coupon Valid";
           code = e.target.value;
@@ -94,6 +101,8 @@ coupon.addEventListener("input", (e) => {
       }
     );
   } else {
+    total.style.textDecoration = "none";
+    tot.innerText = "";
     coupon_status.innerText = "";
   }
 });
@@ -128,26 +137,10 @@ complete_button.addEventListener("click", (e) => {
     total += Number(localStorage.getItem("protection"));
     order_details.push({
       title: "Protection",
-      price: Number(localStorage.getItem("protection")),
+      price: Number(localStorage.getItem("protection")) / days,
       period: days,
     });
   }
-  if (localStorage.getItem("flixable")) {
-    total += Number(localStorage.getItem("flixable"));
-    order_details.push({
-      title: "Flixable",
-      price: Number(localStorage.getItem("flixable")),
-      period: days,
-    });
-  }
-  /*
-    pickup_area: "pickup area",
-    pickup_date: "2023-6-8",
-    pickup_time: "13:00",
-    drop_off_area: "drop_off_area",
-    drop_off_date: "2023-6-10",
-    drop_off_time: "13:00",
-*/
   let pickup_time = localStorage.getItem("pickup_time"),
     drop_off_time = localStorage.getItem("drop_off_time"),
     drop_off_area = localStorage.getItem("pickup_area"),
@@ -157,8 +150,6 @@ complete_button.addEventListener("click", (e) => {
     total_cost: Math.ceil(total),
     order_details: order_details,
   };
-  // data.pickup_date
-  // drop_off_date
   data.pickup_date = pickup_date;
   data.pickup_time = pickup_time;
   data.pickup_area = pickup_area;
@@ -228,6 +219,8 @@ complete_button.addEventListener("click", (e) => {
     if (st) {
       postData(APIs.host + APIs.orders.store, data, access_token).then(
         (data) => {
+          console.log(data);
+
           if (data.status === 201) {
             document.body.insertAdjacentHTML("afterbegin", success);
             let success_el = document.getElementById("success");
@@ -254,9 +247,3 @@ complete_button.addEventListener("click", (e) => {
     }
   }
 });
-/*
-// parent
-    
-    // SOn
-        
-*/
