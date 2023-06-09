@@ -439,7 +439,7 @@ function handleSeats(seats) {
             clip-rule="evenodd"
           ></path>
         </svg>
-        <h3>
+        <h3 >
           <span>${e.seats}</span> Seater
         </h3>
       </div>
@@ -485,7 +485,7 @@ function handleSeats(seats) {
       </div>
     </div>
     <div class="card-salre">
-      <h2 style="color: #003f82">$${e.cost} /day</h2>
+      <h2 style="color: #003f82" >$${e.cost} /day</h2>
       <h2>$${e.cost * days} /total</h2>
     </div>
   </div>
