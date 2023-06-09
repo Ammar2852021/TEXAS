@@ -7,6 +7,9 @@ var APIs = {
     register: "/api/auth/user/register",
     login: "/api/auth/user/login",
   },
+  coupon: {
+    check: "/api/check-coupon",
+  },
 };
 async function postData(url = "", data = {}, token = null) {
   // Default options are marked with *

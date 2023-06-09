@@ -33,3 +33,16 @@ if (selectedCar) {
   location.href = "Cars.html";
 }
 //
+let coupon = document.getElementById("coupon"),
+  coupon_status = document.getElementById("coupon-status");
+coupon.addEventListener("input", (e) => {
+  postData(APIs.host + APIs.coupon.check, { code: e.target.value }).then(
+    (data) => {
+      // console.log(data);
+      if (data.status === 400) {
+        coupon_status.style.color = red;
+        coupon_status.innerText = "Coupon Invalid";
+      }
+    }
+  );
+});

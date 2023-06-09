@@ -77,12 +77,14 @@ if (drop_off_time_storage !== null) {
   setDefaultTime(drop_off_time);
 }
 let show_cars = document.getElementById("show-cars");
-
 if (show_cars)
   show_cars.onclick = (e) => {
     console.log("clicked");
+    // Address
+    if (Address.value == "") {
+      e.preventDefault();
+      Address.style.border = "red solid 2px";
+    }
     localStorage.setItem("pickup_time", pickup_time.value);
     localStorage.setItem("drop_off_time", drop_off_time.value);
   };
-
- 
