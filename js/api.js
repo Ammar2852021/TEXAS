@@ -12,6 +12,7 @@ var APIs = {
     register: "/api/auth/user/register",
     login: "/api/auth/user/login",
     profile: "/api/auth/user/user-profile",
+    edit: "/api/auth/user/update",
   },
   coupon: {
     check: "/api/check-coupon",
@@ -69,10 +70,23 @@ function checkToken() {
       return data.json();
     })
     .then((data) => {
-      console.clear();
+      // console.clear();
       if (data.status !== 200) {
         localStorage.removeItem("access_token");
         localStorage.removeItem("user");
+      } else {
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            name: data["data"].name,
+            email: data["data"].email,
+            phone: data["data"].phone,
+            id: data["data"].id_document,
+          })
+        );
+        if (data["data"].email_verified_at == null) {
+          localStorage.setItem("email_verify", false);
+        }
       }
     });
 }

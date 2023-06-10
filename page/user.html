@@ -109,6 +109,7 @@
 
         <div class="full-detail" id="MYPROFILE">
           <h4> MY PROFILE</h4>
+          <div id="success_a" style="background-color: green;color: white;padding: 15px 15px;font-size: 18px;border-radius: 7px;display: none;"></div>
           
           <div class="input-div">
             <div class="input-icons">
@@ -122,6 +123,7 @@
               <div class="input-box">
                 <label class="input-label">Full Name</label>
                 <input placeholder="Enter New Name" class="input" name="name" id="name" type="text">
+                <span class="input-helper" id="nameErr"></span>
               </div>
             </div>
       </div>
@@ -140,9 +142,7 @@
             <div class="input-inp">
               <div class="input-box">
                 <label class="input-label">Email</label>
-                <!-- <input placeholder="example@mail.com" class="input" name="email" id="email" type="email"> -->
-                <div class="input" name="email" id="email" type="email"><p>example@mail.com</p></div>
-                <span class="input-helper">enter a valid email</span>
+                <div class="input" id="email"></div>
               </div>
             </div>
       </div>
@@ -160,7 +160,7 @@
               <div class="input-box">
                 <label class="input-label">Phone Number</label>
                 <input placeholder="+123456789" class="input" id="phone" type="tel">
-                <span class="input-helper">enter a valid phonr</span>
+                <span class="input-helper" id="phoneErr"></span>
               </div>
             </div>
       </div>
@@ -180,9 +180,7 @@
         <div class="input-inp">
           <div class="input-box">
             <label class="input-label">ID</label>
-            <!-- <input placeholder="Enter ID National Or Passport Number" class="input" id="id" type="text"> -->
-            <div class="input" id="id" type="text"><p>Enter ID National Or Passport Number</p></div>
-            <span class="input-helper">enter a valid email</span>
+            <div class="input" id="id"></div>
           </div>
         </div>
   </div>
@@ -206,8 +204,8 @@
     <div class="input-inp">
       <div class="input-box">
         <label class="input-label">password</label>
-        <input placeholder="123456" class="input"  type="password">
-        <span class="input-helper">enter a valid email</span>
+        <input placeholder="123456" id="password" class="input"  type="password">
+        <span class="input-helper" id="passErr"></span>
       </div>
     </div>
 </div>
@@ -216,7 +214,7 @@
 <div class="send">
   
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, </p>
-  <input type="submit" value="send" >
+  <input type="submit" value="Edit" id="editInfo" >
 
 </div>
 
@@ -321,6 +319,7 @@
 
 
 
+<script src="../js/api.js"></script>
 <script src="../js/user.js"></script>
 <script src="../js/loding.js"></script>
 

@@ -180,14 +180,10 @@ align-items: center;}
   }
   
   .input-helper {
-    color: #858585;
-    font-size: .5rem;
+    font-size: .8rem;
     margin-top: 6px;
     margin-left: 1px;
-    visibility: hidden;
-    transform: translateY(-.5rem);
     transition: all 100ms linear;
-    z-index: -1;
   }
   
   .input::placeholder {

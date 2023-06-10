@@ -89,7 +89,7 @@ coupon.addEventListener("input", (e) => {
           coupon_status.innerText = "Coupon Invalid";
           total.style.textDecoration = "none";
           tot.innerText = "";
-          console.clear();
+          // console.clear();
         } else if (data.status === 201) {
           let t = (total_p * Number(data["data"].percentage)) / 100;
           tot.innerText = `${total_p - t}$`;
