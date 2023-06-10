@@ -236,12 +236,14 @@ complete_button.addEventListener("click", (e) => {
     if (access_token != "") {
       postData(APIs.host + APIs.orders.store, data, access_token).then(
         (data) => {
-          location.href = "../index.html";
-          document.body.insertAdjacentHTML("afterbegin", success);
-          let success_el = document.getElementById("success");
-          setTimeout(() => {
-            success_el.remove();
-          }, 1500);
+          if (data.status === 201) {
+            location.href = "../page/user.html";
+            document.body.insertAdjacentHTML("afterbegin", success);
+            let success_el = document.getElementById("success");
+            setTimeout(() => {
+              success_el.remove();
+            }, 1500);
+          }
         }
       );
     }

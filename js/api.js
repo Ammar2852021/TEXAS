@@ -13,6 +13,7 @@ var APIs = {
     login: "/api/auth/user/login",
     profile: "/api/auth/user/user-profile",
     edit: "/api/auth/user/update",
+    orders: "/api/user-orders",
   },
   coupon: {
     check: "/api/check-coupon",
@@ -44,7 +45,7 @@ async function getData(url = "", token = "") {
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
     credentials: "same-origin", // include, *same-origin, omit
     headers: {
-      // "Content-Type": "application/json",
+      "Content-Type": "application/json",
       // "Content-Type": "application/x-www-form-urlencoded",
       Authorization: "Bearer " + token,
     },

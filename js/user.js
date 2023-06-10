@@ -170,3 +170,73 @@ editInfo.addEventListener("click", (e) => {
     });
   }
 });
+let ordersCon = document.getElementById("orders");
+getData(APIs.host + APIs.user.orders, access_token).then((data) => {
+  console.log(data);
+  data["data"].forEach((e) => {
+    let str = APIs.host + "/public/" + e.car.image;
+    let details = "";
+    e.order_details.forEach((e) => {
+      details += `<tr>
+      <td class="text-left">${e.title}</td>
+      <td class="text-left">${e.period} days</td>
+      <td class="text-left">${e.price} $</td>
+      <td class="text-left">${e.price * e.period} $</td>
+    </tr>`;
+    });
+    let order = `
+    <div class="accordion" >
+          <div class="accordion-item">
+            <div class="buot">
+              <div class="img"><img src="${str}" alt="" /></div>
+              <div class="name-car">
+                <h2>${e.car.brand + " " + e.car.model} </h2>
+                <p>${e.car.car_type + " | " + e.car.transmission}</p>
+              </div>
+              <div class="total-price">
+                <h2 class="price"><span>Total: </span>${e.total_cost}$</h2>
+                ${
+                  e.code
+                    ? `<h2 class="price" style="font-size:12px;margin:0 15px"><span>Coupon: </span>${e.code}</h2>`
+                    : null
+                }
+                
+              </div>
+              <div class="put">
+                <button id="accordion-button-${e.id}" aria-expanded="false">
+                  <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <div class="table-title">
+                    <h3>Data Table</h3>
+                  </div>
+                  <table class="table-fill">
+                    <thead>
+                      <tr>
+                        <th class="text-left">Title</th>
+                        <th class="text-left">Period</th>
+                        <th class="text-left">Price</th>
+                        <th class="text-left">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                      ${details}
+                    </tbody>
+                  </table>
+                </div>
+                <!-- ................end-tebal -->
+              </div>
+            </div>
+          </div>
+        </div>
+    `;
+    ordersCon.innerHTML += order;
+  });
+});
+
+/*
+
+
+
+
+*/
