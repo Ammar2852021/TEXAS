@@ -31,7 +31,7 @@ if (selectedCar) {
   location.href = "Cars.html";
 }
 //
-let infoE = `<h2>Please fill this information</h2>
+let infoE = `<h2 class="tr">Please fill this information</h2>
 <div class="flex">
   <label>
     <input required="" placeholder="First Name" name="firstName" type="text" class="input" />

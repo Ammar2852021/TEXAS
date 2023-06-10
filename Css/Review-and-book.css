@@ -485,6 +485,7 @@ text-align: center;
 outline: none;
 border: none;
 background: #003f82;
+cursor: pointer;
 }
 
 button a {text-decoration: none;
