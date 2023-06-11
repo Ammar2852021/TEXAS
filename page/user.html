@@ -47,7 +47,7 @@
                   </svg>
                 </div>
                 <span class="zah-12zumyu hAWciU">
-                  <select class="asfour hAWciU">
+                  <select class="asfour hAWciU" id="translate"> 
                     <option value="2" id="ENG">EN</option>
                     <option value="3" id="ARB">Ar</option>
                     <!-- | -->
@@ -103,15 +103,15 @@
             <h2 id="name_"></h2>
           </div>
           <div class="but-user">
-            <button><a id="PROFILE" href="#">MY PROFILE</a></button>
-            <button><a id="cick" href="#">MY ORDERS</a></button>
+            <button><a id="PROFILE" href="#" class="tr">MY PROFILE</a></button>
+            <button><a id="cick" href="#" class="tr">MY ORDERS</a></button>
           </div>
         </div>
       </div>
       <div class="profile-user">
         <div class="Edit-profile icons-user">
           <div class="full-detail" id="MYPROFILE">
-            <h4>MY PROFILE</h4>
+            <h4 class="tr">MY PROFILE</h4>
             <div
               id="success_a"
               style="
@@ -140,7 +140,7 @@
               </div>
               <div class="input-inp">
                 <div class="input-box">
-                  <label class="input-label">Full Name</label>
+                  <label class="input-label tr" >Full Name</label>
                   <input
                     placeholder="Enter New Name"
                     class="input"
@@ -169,7 +169,7 @@
               </div>
               <div class="input-inp">
                 <div class="input-box">
-                  <label class="input-label">Email</label>
+                  <label class="input-label tr">Email</label>
                   <div class="input" id="email"></div>
                 </div>
               </div>
@@ -191,7 +191,7 @@
               </div>
               <div class="input-inp">
                 <div class="input-box">
-                  <label class="input-label">Phone Number</label>
+                  <label class="input-label tr">Phone Number</label>
                   <input
                     placeholder="+123456789"
                     class="input"
@@ -250,7 +250,7 @@
               </div>
               <div class="input-inp">
                 <div class="input-box">
-                  <label class="input-label">password</label>
+                  <label class="input-label tr">password</label>
                   <input
                     placeholder="123456"
                     id="password"
@@ -273,15 +273,19 @@
       </div>
     </div>
     <div class="full-detail" id="click-her">
-      <h4>MY ORDERS</h4>
+      <h4 class="tr">MY ORDERS</h4>
       <!-- .............................. -->
       <div id="orders">
         
       </div>
+
+
+
       <!-- ............................................ -->
     </div >
     <script src="../js/api.js"></script>
     <script src="../js/user.js"></script>
     <script src="../js/loding.js"></script>
+    <script src="../js/translate.js"></script>
   </body>
 </html>

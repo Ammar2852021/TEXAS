@@ -7,6 +7,11 @@ body{background: white;}
 .contenar{width: 100%; overflow: hidden;
 height: auto;}
 
+h3 {
+  margin-bottom: 15px;
+}
+
+
 .rol{width: 100vw;
 margin: auto;
 height: 30vh;
@@ -235,7 +240,7 @@ font-size: 20px;}
   /* ...................... */
 
   .buot{display: grid;
-grid-template-columns: 1fr 2fr 1fr  ;
+grid-template-columns: 1fr 1fr 1fr 1fr  ;
 align-items: center;
   background: #eee;
 
@@ -358,7 +363,7 @@ margin-left: 50px;
 
 .put{
 grid-column-start: 1;
-grid-column-end: 4;}
+grid-column-end: 5;}
 
 
 table {
@@ -672,4 +677,10 @@ table th {
       opacity: 1;
       transform: translateY(30px);
       transition-duration: .3s;
+    }
+
+
+    .opcion{display: flex;
+    align-items: center;
+    justify-content: center;
     }
