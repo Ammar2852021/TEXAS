@@ -56,6 +56,7 @@ async function getData(url = "", token = "") {
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
+
 let guest = `
         <div class="user">
           <div class="zah-cixbgt bLHlxK">
@@ -110,7 +111,7 @@ function checkToken() {
     .then((data) => {
       // console.clear();
       if (data.status !== 200) {
-        authEle.insertAdjacentHTML("beforeend", guest);
+        authEle && authEle.insertAdjacentHTML("beforeend", guest);
         localStorage.removeItem("access_token");
         localStorage.removeItem("user");
       } else {
@@ -127,20 +128,26 @@ function checkToken() {
           localStorage.setItem("email_verify", false);
         }
         authEle.insertAdjacentHTML("beforeend", userH);
+
+        let logout = document.getElementById("log-out");
+        if (logout) {
+          logout.addEventListener("click", (e) => {
+            e.preventDefault();
+            logoutFun();
+          });
+        }
       }
     });
 }
 
 checkToken();
-let logout = document.getElementById("log-out");
 
-logout.addEventListener("click", (e) => {
-  e.preventDefault();
+const logoutFun = () => {
   postData(
     APIs.host + APIs.user.logout,
     null,
     localStorage.getItem("access_token")
   ).then((data) => {
-    console.log(data);
+    location.href = "../index.html";
   });
-});
+};

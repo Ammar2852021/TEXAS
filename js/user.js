@@ -117,6 +117,7 @@ editInfo.addEventListener("click", (e) => {
   }
 
   if (st) {
+    // console.log(data);
     postData(APIs.host + APIs.user.edit, data, access_token).then((data) => {
       localStorage.setItem(
         "user",
