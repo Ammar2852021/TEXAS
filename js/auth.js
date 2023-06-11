@@ -131,7 +131,7 @@ if (loginForm) {
           if (data.user.email_verified_at == null) {
             localStorage.setItem("email_verify", false);
           }
-          location.href = "../index.html";
+          location.href = "../page/user.html";
         } else if (data.status === 422) {
           error.innerText = data["data"].password[0];
           setTimeout(() => {

@@ -28,21 +28,6 @@ if (!user) {
   location.href = "../index.html";
 }
 let access_token = localStorage.getItem("access_token");
-const items = document.querySelectorAll(".accordion button");
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute("aria-expanded");
-
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute("aria-expanded", "false");
-  }
-
-  if (itemToggle == "false") {
-    this.setAttribute("aria-expanded", "true");
-  }
-}
-
-items.forEach((item) => item.addEventListener("click", toggleAccordion));
 
 // ..................................................
 let PROFILE = document.getElementById("PROFILE");
@@ -171,6 +156,7 @@ editInfo.addEventListener("click", (e) => {
   }
 });
 let ordersCon = document.getElementById("orders");
+let btn = false;
 getData(APIs.host + APIs.user.orders, access_token).then((data) => {
   console.log(data);
   data["data"].forEach((e) => {
@@ -198,13 +184,17 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
                 ${
                   e.code
                     ? `<h2 class="price" style="font-size:12px;margin:0 15px"><span>Coupon: </span>${e.code}</h2>`
-                    : null
+                    : ""
                 }
                 
               </div>
               <div class="put">
-                <button id="accordion-button-${e.id}" aria-expanded="true">
-                  <span class="icon" aria-hidden="true"></span>
+                <button class="collapseEl" aria-expanded="false" id="accordion-button-${
+                  e.id
+                }">
+                  <span class="icon" id="collapseBtn" data-collabse="accordion-button-${
+                    e.id
+                  }" aria-hidden="false"></span>
                 </button>
                 <div class="accordion-content">
                   <div class="table-title">
@@ -232,11 +222,16 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
     `;
     ordersCon.innerHTML += order;
   });
+  btn = true;
 });
 
-/*
-
-
-
-
-*/
+document.body.addEventListener("click", (e) => {
+  if (e.target.getAttribute("id") === "collapseBtn") {
+    let btn = document.getElementById(e.target.dataset.collabse);
+    if (btn.getAttribute("aria-expanded") === "true") {
+      btn.setAttribute("aria-expanded", "false");
+    } else if (btn.getAttribute("aria-expanded") === "false") {
+      btn.setAttribute("aria-expanded", "true");
+    }
+  }
+});

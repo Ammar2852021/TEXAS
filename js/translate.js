@@ -1,12 +1,6 @@
 let translate = document.getElementById("translate");
 
 let htext = document.querySelectorAll('.tr');
-let onlode = document.getElementById('on-lode')
-
-window.onload=function()
-{
-    onlode.style.display='none';
-}
 
 let englishArray = [];
 htext.forEach((text)=>{englishArray.push(text.innerText)})
