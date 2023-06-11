@@ -159,7 +159,26 @@ let ordersCon = document.getElementById("orders");
 let btn = false;
 getData(APIs.host + APIs.user.orders, access_token).then((data) => {
   console.log(data);
+  let color = "";
   data["data"].forEach((e) => {
+    switch (e.order_status) {
+      case "processing":
+        color = "#ffc107";
+        break;
+      case "rejected":
+        color = "rgb(220,53,69)";
+        break;
+      case "canceled":
+        color = "rgb(220,53,69)";
+        break;
+      case "accepted":
+        color = "rgb(25,135,84)";
+        break;
+      case "completed":
+        color = "rgb(25,135,84)";
+        break;
+    }
+
     let str = APIs.host + "/public/" + e.car.image;
     let details = "";
     e.order_details.forEach((e) => {
@@ -172,14 +191,27 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
     });
     let order = `
     <div class="accordion">
-    <button class="button-del" style="background: #eee;">
-    <svg id="exit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-    <path fill="#191919" d="M31 2.237L28.763 0 15.5 13.263 2.237 0 0 2.237 13.263 15.5 0 28.763 2.237 31 15.5 17.737 28.763 31 31 28.763 17.737 15.5z"></path>
-  </svg>
-    cansel
-
-  </button>
-
+        ${
+          e.order_status === "processing"
+            ? `<button
+              class="button-del cancleBtn"
+              onclick="cancleOrder(event,${e.id},'st-${e.id}');"
+              style="background: #eee;"
+            >
+              <svg
+                id="exit"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#191919"
+                  d="M31 2.237L28.763 0 15.5 13.263 2.237 0 0 2.237 13.263 15.5 0 28.763 2.237 31 15.5 17.737 28.763 31 31 28.763 17.737 15.5z"
+                ></path>
+              </svg>
+              Cancel
+            </button>`
+            : ""
+        }
           <div class="accordion-item">
             <div class="buot">
               <div class="img"><img src="${str}" alt="" /></div>
@@ -197,12 +229,13 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
                 
               </div>
 
-              <div class="opcion"><p>text</p></div>
-
-              
+              <div class="opcion"><p style="text-transform: capitalize;" >Order Status: <strong id="st-${
+                e.id
+              }" style="color:${color}">
+              ${e.order_status} 
+              </strong>
+              </p></div>
               <div class="put">
-
-         
 
                 <button class="collapseEl" aria-expanded="false" id="accordion-button-${
                   e.id
@@ -211,10 +244,6 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
                     e.id
                   }" aria-hidden="false"></span>
                 </button>
-       
-
-
-
                 <div class="accordion-content">
                   <div class="table-title">
                     <h3>Data Table</h3>
@@ -244,6 +273,26 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
   btn = true;
 });
 
+function cancleOrder(event, id, e) {
+  let data = { order_status: "cancel" };
+  let ele = document.getElementById(e);
+  postData(APIs.host + APIs.user.cancle + `/${id}`, data, access_token).then(
+    (data) => {
+      if (data.status === 201) {
+        ele.innerText = "canceled";
+        ele.style.color = "rgb(220,53,69)";
+        event.target.remove();
+        let success_c = document.getElementById("success_c");
+        success_c.innerText = "Order Canceled!";
+        success_c.style.display = "block";
+        setTimeout(() => {
+          success_c.style.display = "none";
+          success_c.innerText = "";
+        }, 2000);
+      }
+    }
+  );
+}
 document.body.addEventListener("click", (e) => {
   if (e.target.getAttribute("id") === "collapseBtn") {
     let btn = document.getElementById(e.target.dataset.collabse);
