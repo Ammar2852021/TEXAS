@@ -439,7 +439,7 @@ function handleSeats(seats) {
             clip-rule="evenodd"
           ></path>
         </svg>
-        <h3 >
+        <h3>
           <span>${e.seats}</span> Seater
         </h3>
       </div>

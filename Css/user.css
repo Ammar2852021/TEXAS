@@ -667,9 +667,10 @@ table th {
       position: absolute;
       top: -20px;
       content: "Delete";
-      color: white;
+      color:black;
       transition-duration: .3s;
       font-size: 2px;
+      font-weight: bold;
     }
     
     .button-del:hover::before {
