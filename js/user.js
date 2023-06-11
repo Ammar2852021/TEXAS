@@ -203,7 +203,7 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
                 
               </div>
               <div class="put">
-                <button id="accordion-button-${e.id}" aria-expanded="false">
+                <button id="accordion-button-${e.id}" aria-expanded="true">
                   <span class="icon" aria-hidden="true"></span>
                 </button>
                 <div class="accordion-content">
