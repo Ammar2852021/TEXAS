@@ -164,6 +164,11 @@
 
 
 
+#log-out{
+  border: none;
+  cursor: pointer;
+}
+
 #log-out svg{width: 25px;
 height: 25px;
 }
