@@ -4,6 +4,7 @@ var APIs = {
   cars: "/api/cars",
   members: "/api/members",
   social: "/api/get-information",
+  offers: "/api/offers",
   orders: {
     get: "/api/user-orders",
     store: "/api/store-order",

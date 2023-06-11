@@ -194,3 +194,58 @@ window.addEventListener("load", () => {
   //set date background styles
   setDateBG();
 });
+// Offers
+let offersCon = document.getElementById("offersCon");
+
+getData(APIs.host + APIs.offers)
+  .then((data) => {
+    console.log(data);
+    if (data.status === 200) {
+      data["data"].forEach((ele) => {
+        let str = APIs.host + "/public/" + ele.image;
+        let offer = `
+          <div class="offer-offer item">
+               <div class="offer-offer-img" style="background-image: url(${str}"></div>
+               <div class="offer-offer-text">
+                  <h2>${ele.title}</h2>
+                  <p>${ele.body}</p>
+                  <a href="#">more</a>
+               </div>
+            </div>
+            `;
+        offersCon.innerHTML += offer;
+      });
+    }
+  })
+  .then((data) => {
+    var owl = $(".owl-carousel");
+    owl.owlCarousel({
+      items: 3,
+      loop: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true,
+        },
+        767: {
+          items: 2,
+          nav: false,
+        },
+        1000: {
+          items: 3,
+          nav: true,
+          loop: false,
+        },
+      },
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+    });
+    $(".play").on("click", function () {
+      owl.trigger("play.owl.autoplay", [1000]);
+    });
+    $(".stop").on("click", function () {
+      owl.trigger("stop.owl.autoplay");
+    });
+  });
