@@ -2023,3 +2023,10 @@ label {
   
 
   
+  #log-out{
+    background: none;
+    border: none;
+    cursor: pointer;}
+    
+    #log-out svg{width: 25px;
+    height: 25px;}
