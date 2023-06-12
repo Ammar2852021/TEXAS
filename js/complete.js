@@ -239,6 +239,18 @@ complete_button.addEventListener("click", (e) => {
               success_el.remove();
             }, 1500);
           }
+          if (
+            (data.status === 400 && data.message["pickup_date"]) ||
+            data.message["drop_off_date"]
+          ) {
+            data.message["pickup_date"]
+              ? alert(data.message["pickup_date"][0])
+              : null;
+            data.message["drop_off_data"]
+              ? alert(data.message["drop_off_data"][0])
+              : null;
+            location.href = "../index.html"
+          }
         }
       );
     }
