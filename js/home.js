@@ -12,6 +12,20 @@ if (Address) {
     localStorage.setItem("pickup_area", e.target.value);
   });
 }
+let delivary = document.getElementById("delivary");
+if (delivary) {
+  let delivaries = document.getElementById("delivaries");
+  let Arr2 = ["ALiaa Queen Airport", "Mallorca Palma Airport"];
+
+  Arr2.forEach(function (e) {
+    delivaries.innerHTML += `<option>${e}</option>`;
+  });
+
+  delivary.addEventListener("input", function (e) {
+    console.log(e.target.value);
+    localStorage.setItem("drop_off_area", e.target.value);
+  });
+}
 
 function setDefaultDate(element) {
   var currentDate = new Date();

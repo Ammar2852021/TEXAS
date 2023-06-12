@@ -143,8 +143,18 @@ complete_button.addEventListener("click", (e) => {
   }
   let pickup_time = localStorage.getItem("pickup_time"),
     drop_off_time = localStorage.getItem("drop_off_time"),
-    drop_off_area = localStorage.getItem("pickup_area"),
     pickup_area = localStorage.getItem("pickup_area");
+
+  let drop_off_area = "";
+  if (
+    localStorage.getItem("drop_off_area") &&
+    localStorage.getItem("drop_off_area") != ""
+  ) {
+    drop_off_area = localStorage.getItem("drop_off_area");
+  } else {
+    drop_off_area = localStorage.getItem("pickup_area");
+  }
+
   let data = {
     car_id: Number(car.car_id),
     total_cost: Math.ceil(total),
