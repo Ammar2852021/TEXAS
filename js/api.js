@@ -93,55 +93,51 @@ let userH = `
        </svg>
      </button>`;
 let authEle = document.getElementById("auth");
-function checkToken() {
-  fetch(APIs.host + APIs.user.profile, {
-    method: "GET", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.getItem("access_token"),
-    },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+const check = fetch(APIs.host + APIs.user.profile, {
+  method: "GET", // *GET, POST, PUT, DELETE, etc.
+  mode: "cors", // no-cors, *cors, same-origin
+  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+  credentials: "same-origin", // include, *same-origin, omit
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "Bearer " + localStorage.getItem("access_token"),
+  },
+  redirect: "follow", // manual, *follow, error
+  referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+})
+  .then((data) => {
+    return data.json();
   })
-    .then((data) => {
-      return data.json();
-    })
-    .then((data) => {
-      // console.clear();
-      if (data.status !== 200) {
-        authEle && authEle.insertAdjacentHTML("beforeend", guest);
-        localStorage.removeItem("access_token");
-        localStorage.removeItem("user");
-      } else {
-        localStorage.setItem(
-          "user",
-          JSON.stringify({
-            name: data["data"].name,
-            email: data["data"].email,
-            phone: data["data"].phone,
-            id: data["data"].id_document,
-          })
-        );
-        if (data["data"].email_verified_at == null) {
-          localStorage.setItem("email_verify", false);
-        }
-        authEle.insertAdjacentHTML("beforeend", userH);
-
-        let logout = document.getElementById("log-out");
-        if (logout) {
-          logout.addEventListener("click", (e) => {
-            e.preventDefault();
-            logoutFun();
-          });
-        }
+  .then((data) => {
+    // console.clear();
+    if (data.status !== 200) {
+      authEle && authEle.insertAdjacentHTML("beforeend", guest);
+      localStorage.removeItem("access_token");
+      localStorage.removeItem("user");
+    } else {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          name: data["data"].name,
+          email: data["data"].email,
+          phone: data["data"].phone,
+          id: data["data"].id_document,
+        })
+      );
+      if (data["data"].email_verified_at == null) {
+        localStorage.setItem("email_verify", false);
       }
-    });
-}
+      authEle.insertAdjacentHTML("beforeend", userH);
 
-checkToken();
+      let logout = document.getElementById("log-out");
+      if (logout) {
+        logout.addEventListener("click", (e) => {
+          e.preventDefault();
+          logoutFun();
+        });
+      }
+    }
+  });
 
 const logoutFun = () => {
   postData(
