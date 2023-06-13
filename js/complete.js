@@ -62,7 +62,7 @@ let infoE = `<h2 class="tr">Please fill this information</h2>
   <input type="checkbox" id="morning" class="inp-cbx" />
   <label for="morning" class="cbx"
     ><span> <svg height="10px" width="12px"></svg></span
-    ><span>Morning</span></label
+    ><span class="tr">I am 21 years of age or older</span></label
   >
   <svg class="inline-svg">
     <symbol viewBox="0 0 12 10" id="check-4">
