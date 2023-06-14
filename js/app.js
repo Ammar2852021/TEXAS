@@ -65,8 +65,8 @@ getData(APIs.host + APIs.members).then((data) => {
       <div class="Our-Tame-img">
         <img src="${str}" alt="Member">
       </div>
-      <h3 class="Name">${e.name}</h3>
-      <p class="About">${e.job_title}</p> 
+      <h3 class="Name tr">${e.name}</h3>
+      <p class="About tr">${e.job_title}</p> 
     </div>`;
 
     membersContainer.innerHTML += card;

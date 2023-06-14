@@ -2011,6 +2011,9 @@ label {
     .Our-Tame {
       grid-template-columns: 1fr 1fr;
     }
+    .Our-Tame-img{border-radius: 3px;
+    background: none;
+    }
   
     .xbox .content p {
       display: none;

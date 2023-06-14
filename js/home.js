@@ -5,7 +5,7 @@ console.log(search)
 let Address = document.getElementById("Address");
 if (Address) {
   let suggestions = document.getElementById("suggestions");
-  let Arr = ["ALiaa Queen Airport", "Mallorca Palma Airport"];
+  let Arr = ["ALiaa Queen Airport", "Mallorca Palma Airport","مطار الملكه عليا"];
 
   Arr.forEach(function (e) {
     suggestions.innerHTML += `<option>${e}</option>`;
