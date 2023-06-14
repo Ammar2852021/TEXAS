@@ -590,6 +590,10 @@ function handleBags(bags) {
     }
   });
 }
+let resetFilter = document.getElementById("resetFilter");
+resetFilter.addEventListener("click", () => {
+  location.reload();
+});
 let inputBage = document.getElementById("input-range");
 
 inputBage.addEventListener("change", function (e) {
