@@ -109,12 +109,14 @@ const check = fetch(APIs.host + APIs.user.profile, {
     return data.json();
   })
   .then((data) => {
-    console.clear();
+    // console.clear();
     if (data.status !== 200) {
       authEle && authEle.insertAdjacentHTML("beforeend", guest);
       localStorage.removeItem("access_token");
       localStorage.removeItem("user");
     } else {
+      console.log(data);
+
       localStorage.setItem(
         "user",
         JSON.stringify({
@@ -126,6 +128,7 @@ const check = fetch(APIs.host + APIs.user.profile, {
       );
       if (data["data"].email_verified_at == null) {
         localStorage.setItem("email_verify", false);
+        location.href = "../verify.html";
       }
       authEle.insertAdjacentHTML("beforeend", userH);
 
