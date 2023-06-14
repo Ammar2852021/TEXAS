@@ -14,13 +14,11 @@ background-position: center center;
 h1 {
     color: #333333;
     font-size: 32px;
-    margin-bottom: 20px;
 }
 
 p {
     color: #666666;
     font-size: 18px;
-    margin-bottom: 30px;
     line-height: 1.5;
 }
 
@@ -43,9 +41,12 @@ p {
 
 .container {
     max-width: 400px;
-    margin: 0 auto;
     padding: 30px;
     border-radius: 6px;
 margin-top: 20vh;
-background: white;
+}
+
+@media screen and (max-width:992px) {
+    .container {background: white;}
+
 }
