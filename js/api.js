@@ -126,6 +126,7 @@ const check = fetch(APIs.host + APIs.user.profile, {
       );
       if (data["data"].email_verified_at == null) {
         localStorage.setItem("email_verify", false);
+        location.href = "../verify.html";
       }
       authEle.insertAdjacentHTML("beforeend", userH);
 
