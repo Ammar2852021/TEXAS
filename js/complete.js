@@ -59,9 +59,9 @@ let infoE = `<h2 class="tr">Please fill this information</h2>
 </label>
 
 <div class="checkbox-wrapper-4">
-  <input type="checkbox" id="morning" class="inp-cbx" />
-  <label for="morning" class="cbx"
-    ><span> <svg height="10px" width="12px"></svg></span
+  <input type="checkbox" id="legalAge" name="legalAge" class="inp-cbx" />
+  <label for="legalAge" class="cbx"
+    ><span id="checkbox"> <svg height="10px" width="12px"></svg></span
     ><span class="tr">I am 21 years of age or older</span></label
   >
   <svg class="inline-svg">
@@ -174,8 +174,9 @@ complete_button.addEventListener("click", (e) => {
       lastName = formInfo.elements["lastName"].value,
       email = formInfo.elements["email"].value,
       phone = formInfo.elements["phone"].value,
-      id = formInfo.elements["id"].value;
-
+      id = formInfo.elements["id"].value,
+      legalAge = formInfo.elements["legalAge"];
+    let checkbox = document.getElementById("checkbox");
     function returnError(text, id) {
       let ele = document.getElementById(id);
       let msg = `${text}`;
@@ -210,6 +211,10 @@ complete_button.addEventListener("click", (e) => {
     if (id == "") {
       returnError("ID Or Passport number is Required", "idErr");
       st = false;
+    }
+    if (!legalAge.checked) {
+      st = false;
+      checkbox.style.backgroundColor = "red";
     }
 
     if (st) {
@@ -249,7 +254,7 @@ complete_button.addEventListener("click", (e) => {
             data.message["drop_off_data"]
               ? alert(data.message["drop_off_data"][0])
               : null;
-            location.href = "../index.html"
+            location.href = "../index.html";
           }
         }
       );
