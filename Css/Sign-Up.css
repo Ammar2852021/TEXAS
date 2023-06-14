@@ -104,7 +104,7 @@ height: 7vh;
         .Container-img{
 background-image: url(../img/CITROËN\ -\ E-Mehari.jpg);
 background-size: cover;
-background-position: center  left;
+background-position: 150px;
 
 overflow: hidden;}
 

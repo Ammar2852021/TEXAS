@@ -30,6 +30,9 @@ body {
   line-height: 1.5;
 }
 
+
+#ARBLANG-tr{display: none;}
+
 a {
   color: #262626;
   text-decoration: none;
