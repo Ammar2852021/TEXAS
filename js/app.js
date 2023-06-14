@@ -47,6 +47,8 @@ getData(APIs.host + APIs.social).then((data) => {
   google_play.href = social["google_play"];
   instagram.href = social["instagram"];
   email.innerText = social["email"];
+  document.getElementById("a-mail").href = "mailto:" + social["email"];
+  document.getElementById("a-phone").href = "tel:" + social["phone"];
   phone_t.innerText = social["phone"];
   address.innerText = social["address"];
 });
