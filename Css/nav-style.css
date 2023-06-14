@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     flex-wrap: wrap;
     transition: top 0.75s ease-in;
     background:none;
@@ -154,6 +154,7 @@
 }
 
 /* ..............................nav */
+.top-nav .menu-icon{display: none;}
 
 
 @media screen and (max-width:992px) {

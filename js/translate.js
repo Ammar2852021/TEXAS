@@ -5,6 +5,12 @@ let htext = document.querySelectorAll(".tr");
 let ARB = document.getElementById("ARB");
 let ENG = document.getElementById("ENG");
 
+let ENGLANG2 = document.getElementById('ENGLANG-tr');
+let ARBLANG2 = document.getElementById('ARBLANG-tr');
+
+console.log(ENGLANG2);
+
+
 ARB.addEventListener("change", function () {
   console.log("Ammar Ahmed mostaf");
 });
