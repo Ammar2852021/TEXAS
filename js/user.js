@@ -32,19 +32,15 @@ let access_token = localStorage.getItem("access_token");
 // ..................................................
 let PROFILE = document.getElementById("PROFILE");
 
-console.log(PROFILE);
 
 let cick = document.getElementById("cick");
 
-console.log(cick);
 
 let MYPROFILE = document.getElementById("MYPROFILE");
 
-console.log(MYPROFILE);
 
 let clickher = document.getElementById("click-her");
 
-console.log(clickher);
 
 cick.addEventListener("click", function () {
   clickher.style.display = "block";
@@ -117,7 +113,7 @@ editInfo.addEventListener("click", (e) => {
   }
 
   if (st) {
-    // console.log(data);
+    //
     postData(APIs.host + APIs.user.edit, data, access_token).then((data) => {
       localStorage.setItem(
         "user",
@@ -159,7 +155,6 @@ editInfo.addEventListener("click", (e) => {
 let ordersCon = document.getElementById("orders");
 let btn = false;
 getData(APIs.host + APIs.user.orders, access_token).then((data) => {
-  console.log(data);
   let color = "";
   data["data"].forEach((e) => {
     switch (e.order_status) {

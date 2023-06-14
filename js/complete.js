@@ -12,6 +12,15 @@ let pickup_date = localStorage.getItem("pickup_date"),
   drop_off_date = localStorage.getItem("drop_off_date");
 let days = calculateDaysBetweenDates(pickup_date, drop_off_date);
 
+document.getElementById("pick-up-area").innerText =
+  localStorage.getItem("pickup_area");
+if (localStorage.getItem("drop_off_area")) {
+  document.getElementById("drop-off-area").innerText =
+    localStorage.getItem("drop_off_area");
+} else {
+  document.getElementById("drop-off-area").innerText =
+    localStorage.getItem("pickup_area");
+}
 let total = document.getElementById("total"),
   car_name = document.getElementById("car_name"),
   car_type = document.getElementById("car_type"),
@@ -89,7 +98,7 @@ coupon.addEventListener("input", (e) => {
           coupon_status.innerText = "Coupon Invalid";
           total.style.textDecoration = "none";
           tot.innerText = "";
-          // console.clear();
+          console.clear();
         } else if (data.status === 201) {
           let t = (total_p * Number(data["data"].percentage)) / 100;
           tot.innerText = `${total_p - t}$`;
@@ -229,13 +238,11 @@ complete_button.addEventListener("click", (e) => {
   if (code != "") {
     data.code = code;
   }
-  console.log(data);
+
   if (!user) {
     if (st) {
       postData(APIs.host + APIs.orders.store, data, access_token).then(
         (data) => {
-          console.log(data);
-
           if (data.status === 201) {
             document.body.insertAdjacentHTML("afterbegin", success);
             let success_el = document.getElementById("success");

@@ -11,20 +11,15 @@ function calculateDaysBetweenDates(startDate, endDate) {
 
   return days;
 }
-
+let pickup_date = localStorage.getItem("pickup_date");
+let drop_off_date = localStorage.getItem("drop_off_date");
 // ..............................
-let days = calculateDaysBetweenDates(
-  localStorage.getItem("pickup_date"),
-  localStorage.getItem("drop_off_date")
-);
+let days = calculateDaysBetweenDates(pickup_date, drop_off_date);
 localStorage.setItem("days", days);
 let carContainer = document.getElementById("carsContainer");
 let con = document.getElementById("con");
 let cars = [];
-if (
-  localStorage.getItem("pickup_date") != null &&
-  localStorage.getItem("drop_off_date") != null
-) {
+if (pickup_date != null && drop_off_date != null) {
   // <a href="../page/Choose-your.html" class="car-a" >
   getData(APIs.host + APIs.cars).then((data) => {
     data["data"].forEach((e) => {
@@ -103,7 +98,6 @@ if (
       carContainer.innerHTML += card;
     });
     cars = data["data"];
-    console.log(cars);
   });
 } else {
   let alert = document.getElementById("alert");
@@ -616,3 +610,36 @@ window.addEventListener("click", (e) => {
     );
   }
 });
+let picA = document.getElementById("pickArea"),
+  timeInfo = document.getElementById("timeInfo");
+picA.innerText = localStorage.getItem("pickup_area");
+
+let picD = new Date(pickup_date);
+const formattedPick = picD.toLocaleString("en-US", {
+  month: "long",
+  day: "numeric",
+});
+let picT = new Date(pickup_date);
+const formattedPickT = picT.toLocaleString("en-US", {
+  hour: "numeric",
+  minute: "numeric",
+});
+let dropD = new Date(drop_off_date);
+const formattedDrop = dropD.toLocaleString("en-US", {
+  month: "long",
+  day: "numeric",
+});
+let dropT = new Date(drop_off_date);
+const formattedDropT = dropT.toLocaleString("en-US", {
+  hour: "numeric",
+  minute: "numeric",
+});
+
+timeInfo.innerText =
+  formattedPick +
+  " | " +
+  formattedPickT +
+  " - " +
+  formattedDrop +
+  " | " +
+  formattedDropT;

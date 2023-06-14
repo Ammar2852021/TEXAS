@@ -199,7 +199,6 @@ let offersCon = document.getElementById("offersCon");
 
 getData(APIs.host + APIs.offers)
   .then((data) => {
-    console.log(data);
     if (data.status === 200) {
       data["data"].forEach((ele) => {
         let str = APIs.host + "/public/" + ele.image;
@@ -209,7 +208,6 @@ getData(APIs.host + APIs.offers)
                <div class="offer-offer-text">
                   <h2>${ele.title}</h2>
                   <p>${ele.body}</p>
-                  <a href="#">more</a>
                </div>
             </div>
             `;

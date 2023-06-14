@@ -1,6 +1,5 @@
 
 let search = document.getElementById('search');
-console.log(search)
 
 let Address = document.getElementById("Address");
 if (Address) {
@@ -12,7 +11,6 @@ if (Address) {
   });
 
   Address.addEventListener("input", function (e) {
-    console.log(e.target.value);
     localStorage.setItem("pickup_area", e.target.value);
   });
 }
@@ -26,7 +24,6 @@ if (delivary) {
   });
 
   delivary.addEventListener("input", function (e) {
-    console.log(e.target.value);
     localStorage.setItem("drop_off_area", e.target.value);
   });
 }
@@ -97,7 +94,6 @@ if (drop_off_time_storage !== null) {
 let show_cars = document.getElementById("show-cars");
 if (show_cars)
   show_cars.onclick = (e) => {
-    console.log("clicked");
     // Address
     if (Address.value == "") {
       e.preventDefault();
