@@ -618,32 +618,36 @@ let picA = document.getElementById("pickArea"),
   timeInfo = document.getElementById("timeInfo");
 picA.innerText = localStorage.getItem("pickup_area");
 
+function convertTo12Hour(time) {
+  const timeParts = time.split(":");
+  let hours = parseInt(timeParts[0]);
+  const minutes = timeParts[1];
+  let period = "AM";
+
+  if (hours >= 12) {
+    period = "PM";
+    if (hours > 12) {
+      hours -= 12;
+    }
+  }
+
+  const convertedTime =
+    hours.toString().padStart(2, "0") + ":" + minutes + " " + period;
+  return convertedTime;
+}
+
 let picD = new Date(pickup_date);
 const formattedPick = picD.toLocaleString("en-US", {
   month: "long",
   day: "numeric",
 });
-let picT = new Date(pickup_date);
-const formattedPickT = picT.toLocaleString("en-US", {
-  hour: "numeric",
-  minute: "numeric",
-});
+let picT = convertTo12Hour(localStorage.getItem("pickup_time"));
 let dropD = new Date(drop_off_date);
 const formattedDrop = dropD.toLocaleString("en-US", {
   month: "long",
   day: "numeric",
 });
-let dropT = new Date(drop_off_date);
-const formattedDropT = dropT.toLocaleString("en-US", {
-  hour: "numeric",
-  minute: "numeric",
-});
+let dropT = convertTo12Hour(localStorage.getItem("drop_off_time"));
 
 timeInfo.innerText =
-  formattedPick +
-  " | " +
-  formattedPickT +
-  " - " +
-  formattedDrop +
-  " | " +
-  formattedDropT;
+  formattedPick + " | " + picT + " - " + formattedDrop + " | " + dropT;
