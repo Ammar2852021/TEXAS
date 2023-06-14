@@ -39,7 +39,7 @@ height: 120px;
 background: white;
 background-image: url(../img/me.png);
 background-position: bottom center;
-background-size: 115px;
+background-size:contain;
 background-repeat: no-repeat;
 border-radius: 50%;
 border: 5px solid #003f82;
@@ -84,6 +84,18 @@ background: white;
 ::-webkit-scrollbar{width: 0;}
 
 
+/* 
+@media screen and (max-width:992px) {
+  .img-user{display: none;}
+  .but-user{width: 100%;    border-radius: 0px 0px 0px 0px;}
+  .king-user {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+} */
 
 
   @media (max-width: 700px) {
