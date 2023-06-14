@@ -156,6 +156,11 @@
 /* ..............................nav */
 
 
+@media screen and (max-width:992px) {
+  a.zah-12zumyu.hAWciU.heding{display: none;}  
+}
+
+
 @media screen and (max-width:767px) {
 
   .heding{display: none;}
@@ -170,3 +175,9 @@ cursor: pointer;}
 
 #log-out svg{width: 25px;
 height: 25px;}
+
+
+select#translate {
+  outline: none;
+  border: none;
+}

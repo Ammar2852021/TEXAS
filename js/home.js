@@ -1,3 +1,7 @@
+
+let search = document.getElementById('search');
+console.log(search)
+
 let Address = document.getElementById("Address");
 if (Address) {
   let suggestions = document.getElementById("suggestions");
@@ -97,7 +101,7 @@ if (show_cars)
     // Address
     if (Address.value == "") {
       e.preventDefault();
-      Address.style.border = "red solid 2px";
+      search.style.border = "#003f82 solid 2px";
     }
     localStorage.setItem("pickup_time", pickup_time.value);
     localStorage.setItem("drop_off_time", drop_off_time.value);

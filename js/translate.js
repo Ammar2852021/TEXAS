@@ -2,6 +2,20 @@ let translate = document.getElementById("translate");
 
 let htext = document.querySelectorAll('.tr');
 
+let ARB = document.getElementById('ARB');
+let ENG = document.getElementById('ENG');
+console.log(ARB);
+console.log(ENG);
+
+
+ARB.addEventListener('change',function()
+{
+  console.log('Ammar Ahmed mostaf');
+
+})
+
+
+
 let englishArray = [];
 htext.forEach((text)=>{englishArray.push(text.innerText)})
 console.log(translate);

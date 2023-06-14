@@ -34,11 +34,13 @@ height: 10vh;
 background: #003f82;
 }
 
-.img-user{width: 150px;
-height: 150px;
-background: #003f82;
+.img-user{width: 120px;
+height: 120px;
+background: white;
 background-image: url(../img/me.png);
-background-size: cover;
+background-position: bottom center;
+background-size: 115px;
+background-repeat: no-repeat;
 border-radius: 50%;
 border: 5px solid #003f82;
 margin-left: 20px;
@@ -565,6 +567,15 @@ table th {
     
     }
 
+
+    @media screen and (max-width:992px) {
+      
+      .buot{display: block;}
+      .name-car{text-align: center;
+      margin: 5px 0px;
+      }
+
+    }
 
 
     @media screen and (max-width:767px) {

@@ -393,6 +393,10 @@ margin-right: 5vh;
   margin-left: 20px;
 }
 
+@media screen and (max-width:992px) {
+  a.zah-12zumyu.hAWciU.heding{display: none;}  
+}
+
 .menu-btn {
   cursor: pointer;
   position: absolute;
@@ -648,8 +652,10 @@ justify-content: center;
 .span-top{font-size: 20px;
 font-weight: 500;
 font-family: sans-serif;
-color: #eee;
+color: #003f82;
 font-weight: bold;
+text-transform: capitalize;
+
 }
 
 .TOPS{background: white;}
@@ -694,6 +700,8 @@ align-items: center; */
     height: 100%;
     /* border-right: 2px solid #003f82; */
     /* padding-right: 15px; */
+    padding: 8px;
+
   }
   
   .search__input {
