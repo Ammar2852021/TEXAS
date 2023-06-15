@@ -129,6 +129,9 @@
     display: flex;
     font-weight: 900;
   margin: 10px;}
+  @media screen and (max-width:992px) {
+    .logo h1 {font-size: 1.5rem;}
+}
   
   .logo h3{margin: 10px;
   font-weight: 600;
@@ -153,12 +156,25 @@
     font-family: sans-serif;
 }
 
+
+
 /* ..............................nav */
 .top-nav .menu-icon{display: none;}
 
 
 @media screen and (max-width:992px) {
   a.zah-12zumyu.hAWciU.heding{display: none;}  
+
+
+
+    .logo h1 {font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    font-weight: 900;
+  margin: 10px;}
+
+  .logo-h a{    font-size: 1.5rem;
+  }
 
 }
 
