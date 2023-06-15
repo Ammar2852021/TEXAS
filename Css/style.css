@@ -101,6 +101,9 @@ font-size: 20px;
 .top-nav .logo {
  display: flex; justify-content: center; align-items: center;
 }
+@media screen and (max-width:992px) {
+  .logo{margin-top: 1vh;}
+}
 .top-nav .menu-icon {
   cursor: pointer;
   display: inline-block;
