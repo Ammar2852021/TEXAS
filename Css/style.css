@@ -235,6 +235,7 @@ align-items: center;
 .icon-user a {text-decoration: none; color: black;
 }
 
+
 .icon-user .select{width: auto;
 border: none;
 margin: 0px 20px 0px 10px;
@@ -552,6 +553,7 @@ background-image: url(../img/Screenshot\ 2023-05-13\ 114704.png);
 }
 
 
+
 .showcase-img {
 width: inherit;
 display: flex;
@@ -611,6 +613,20 @@ margin-left: -45vh;
     text-decoration: none;
   }
   
+
+
+  #no-hid,#hidden
+  {
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+
+  }
+
+
   .playstore-button:hover {
     background-color: transparent;
     color: rgba(0, 0, 0, 1);
