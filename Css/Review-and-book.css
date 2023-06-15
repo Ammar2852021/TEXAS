@@ -62,6 +62,11 @@ box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px 
 .Flexible{display: flex;
 align-items: center;}
 
+@media screen and (max-width:992px) {
+  .box-Flexible{margin-bottom: 75px;}
+  .checkbox-wrapper-4{margin-bottom: 50px;}
+}
+
 .Flexible h2{margin-left: 10px;
 font-family: sans-serif;}
 

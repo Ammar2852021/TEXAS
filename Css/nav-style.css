@@ -128,7 +128,7 @@
     font-size: 2rem;
     display: flex;
     font-weight: 900;
-  margin: 10px;}
+  margin-left: 20px;}
   @media screen and (max-width:992px) {
     .logo h1 {font-size: 1.5rem;}
 }
@@ -154,6 +154,7 @@
     display: flex;
     font-weight: 900;
     font-family: sans-serif;
+    margin-left: 20px;
 }
 
 
