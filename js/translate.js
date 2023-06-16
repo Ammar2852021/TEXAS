@@ -47,13 +47,19 @@ if (localStorage.getItem("lang")) {
 
 translate.addEventListener("change", (e) => {
   if (e.target.value == 3) {
-    document.querySelector('.footer-middle').style.display='none'
+   
     //translate from en to ar
     trans(englishArray, "en", "ar");
     localStorage.setItem("lang", "ar");
+
+    ENGLANG2.style.display='none'
+    ARBLANG2.style.display='block'
   } else if (e.target.value == 2) {
-    document.querySelector('.footer-middle').style.display='block'
+ 
     trans(englishArray, "ar", "en");
     localStorage.removeItem("lang");
+
+    ENGLANG2.style.display='block'
+    ARBLANG2.style.display='none'
   }
 });
