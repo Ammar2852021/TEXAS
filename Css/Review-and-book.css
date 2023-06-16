@@ -643,4 +643,6 @@ font-weight: bold;
 }
 
 
-.class{border: 3px solid  #003f82;}
+.class{border: 3px solid  #003f82;
+height: auto;
+}
