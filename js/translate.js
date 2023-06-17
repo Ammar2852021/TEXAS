@@ -10,6 +10,7 @@ let footer = document.getElementById('footer')
 let ENGLANG2 = document.querySelectorAll ('.ENGLANG-tr');
 let ARBLANG2 = document.querySelectorAll ('.ARBLANG-tr');
 
+let Aboutus=document.getElementById('About-us');
 
 console.log(ENGLANG2);
 
@@ -57,6 +58,8 @@ translate.addEventListener("change", (e) => {
 
     ENGLANG2.forEach((e)=>e.style.display='none')
     ARBLANG2.forEach((e)=>e.style.display='block')
+    Aboutus.style.direction='rtl';
+
     footer.style.direction='rtl';
   } else if (e.target.value == 2) {
  
@@ -65,6 +68,7 @@ translate.addEventListener("change", (e) => {
 
     ENGLANG2.forEach((e)=>e.style.display='block')
     ARBLANG2.forEach((e)=>e.style.display='none')
+    Aboutus.style.direction='ltr';
     footer.style.direction='ltr';
 
   }
