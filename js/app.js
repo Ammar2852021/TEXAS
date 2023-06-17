@@ -35,7 +35,8 @@ let social = [],
   instagram = document.getElementById("instagram"),
   email = document.getElementById("email"),
   phone_t = document.getElementById("phone-t"),
-  address = document.getElementById("address");
+  address = document.getElementById("address"),
+  another_location = document.getElementById("hidden");
 
 getData(APIs.host + APIs.social).then((data) => {
   data["data"].forEach((e) => {
@@ -51,6 +52,7 @@ getData(APIs.host + APIs.social).then((data) => {
   document.getElementById("a-phone").href = "tel:" + social["phone"];
   phone_t.innerText = social["phone"];
   address.innerText = social["address"];
+  another_location.innerHTML += `<span style='font-size:10px'>(+${social["another_location"]}$)</span>`
 });
 // ---------------------------
 let membersContainer = document.getElementById("membersContainer");
