@@ -34,7 +34,7 @@ body {
 
 
 .ARBLANG-tr{display: none;}
-p#ARBLANG-tr {
+p.ARBLANG-tr {
     font-family: system-ui;
     font-weight: bold;
 }
@@ -980,7 +980,9 @@ height:-webkit-fill-available;}
 
 .Grid-text{margin: 10px;
 
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 color: white;}
 
 .Grid-text p {font-size: small;}
