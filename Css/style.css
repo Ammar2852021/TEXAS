@@ -1972,13 +1972,20 @@ label {
 
   @media(max-width: 767px) {
 
-    button#no-hid {
+    button#no-hid, #hidden{
       text-align: left;
       margin: 10px;
   }
 
+
     .TOPS{display: none;}
 
+    .Promised .Top{border-radius: 0px;
+      top: -40px;}
+
+      .Top-TOP button{color: #003f82;
+        font-size: 24px;
+        }
 
     .top-nav .menu-icon {
   
