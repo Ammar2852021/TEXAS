@@ -241,6 +241,7 @@ align-items: center;
     letter-spacing: var(--typo-link-medium-letter-spacing, 0 );
     font: var(--typo-link-medium-font, 700 0.875rem Roboto,sans-serif );
     color: var(--debug-typo-color,var(--color-primary,rgba(25,25,25,1)));
+    background: none;
 }
 
 .icon-user a {text-decoration: none; color: black;
