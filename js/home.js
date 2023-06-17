@@ -4,7 +4,7 @@ let search = document.getElementById('search');
 let Address = document.getElementById("Address");
 if (Address) {
   let suggestions = document.getElementById("suggestions");
-  let Arr = ["ALiaa Queen Airport", "Mallorca Palma Airport","مطار الملكه عليا"];
+  let Arr = ["Aliaa Queen Airport", "Mallorca Palma Airport","مطار الملكه علياء"];
 
   Arr.forEach(function (e) {
     suggestions.innerHTML += `<option>${e}</option>`;
@@ -17,7 +17,7 @@ if (Address) {
 let delivary = document.getElementById("delivary");
 if (delivary) {
   let delivaries = document.getElementById("delivaries");
-  let Arr2 = ["ALiaa Queen Airport", "Mallorca Palma Airport"];
+  let Arr2 = ["Aliaa Queen Airport", "Mallorca Palma Airport"];
 
   Arr2.forEach(function (e) {
     delivaries.innerHTML += `<option>${e}</option>`;
