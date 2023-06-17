@@ -32,15 +32,11 @@ let access_token = localStorage.getItem("access_token");
 // ..................................................
 let PROFILE = document.getElementById("PROFILE");
 
-
 let cick = document.getElementById("cick");
-
 
 let MYPROFILE = document.getElementById("MYPROFILE");
 
-
 let clickher = document.getElementById("click-her");
-
 
 cick.addEventListener("click", function () {
   clickher.style.display = "block";
@@ -180,9 +176,13 @@ getData(APIs.host + APIs.user.orders, access_token).then((data) => {
     e.order_details.forEach((e) => {
       details += `<tr>
       <td class="text-left">${e.title}</td>
-      <td class="text-left">${e.period} days</td>
+      <td class="text-left">${
+        e.period === 0 ? "One Time" : e.period + " days"
+      } </td>
       <td class="text-left">${e.price} $</td>
-      <td class="text-left">${e.price * e.period} $</td>
+      <td class="text-left">${
+        e.price * e.period === 0 ? e.price : e.price * e.period
+      } $</td>
     </tr>`;
     });
     let order = `
