@@ -27,3 +27,13 @@ bordarclass.addEventListener("click", function () {
     }
   }
 });
+var myArray = ["Aliaa Queen Airport", "مطار الملكة علياء"];
+let an_lo = Number(localStorage.getItem("another_location"));
+var target_pick = localStorage.getItem("pickup_area");
+if (!myArray.includes(target_pick)) {
+  total.innerText = `${Number(total.innerText.match(/[0-9.,]+/)[0]) + an_lo}$`;
+}
+var target_drop = localStorage.getItem("drop_off_area");
+if (!myArray.includes(target_drop)) {
+  total.innerText = `${Number(total.innerText.match(/[0-9.,]+/)[0]) + an_lo}$`;
+}

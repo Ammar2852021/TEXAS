@@ -52,7 +52,8 @@ getData(APIs.host + APIs.social).then((data) => {
   document.getElementById("a-phone").href = "tel:" + social["phone"];
   phone_t.innerText = social["phone"];
   address.innerText = social["address"];
-  another_location.innerHTML += `<span style='font-size:10px'>(+${social["another_location"]}$)</span>`
+  another_location.innerHTML += `<span style='font-size:10px'>(+${social["another_location"]}$)</span>`;
+  localStorage.setItem("another_location", social["another_location"]);
 });
 // ---------------------------
 let membersContainer = document.getElementById("membersContainer");

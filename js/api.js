@@ -109,7 +109,7 @@ const check = fetch(APIs.host + APIs.user.profile, {
     return data.json();
   })
   .then((data) => {
-    console.clear();
+    // console.clear();
     if (data.status !== 200) {
       authEle && authEle.insertAdjacentHTML("beforeend", guest);
       localStorage.removeItem("access_token");
