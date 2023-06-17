@@ -33,7 +33,7 @@ body {
 }
 
 
-#ARBLANG-tr{display: none;}
+.ARBLANG-tr{display: none;}
 p#ARBLANG-tr {
     font-family: system-ui;
     font-weight: bold;

@@ -1,12 +1,14 @@
 let translate = document.getElementById("translate");
-
 let htext = document.querySelectorAll(".tr");
+
 
 let ARB = document.getElementById("ARB");
 let ENG = document.getElementById("ENG");
 
-let ENGLANG2 = document. getElementById ('ENGLANG-tr');
-let ARBLANG2 = document. getElementById ('ARBLANG-tr');
+
+let ENGLANG2 = document.querySelectorAll ('.ENGLANG-tr');
+let ARBLANG2 = document.querySelectorAll ('.ARBLANG-tr');
+
 
 console.log(ENGLANG2);
 
@@ -52,14 +54,15 @@ translate.addEventListener("change", (e) => {
     trans(englishArray, "en", "ar");
     localStorage.setItem("lang", "ar");
 
-    ENGLANG2.style.display='none'
-    ARBLANG2.style.display='block'
+    ENGLANG2.forEach((e)=>e.style.display='none')
+    ARBLANG2.forEach((e)=>e.style.display='block')
+    
   } else if (e.target.value == 2) {
  
     trans(englishArray, "ar", "en");
     localStorage.removeItem("lang");
 
-    ENGLANG2.style.display='block'
-    ARBLANG2.style.display='none'
+    ENGLANG2.forEach((e)=>e.style.display='block')
+    ARBLANG2.forEach((e)=>e.style.display='none')
   }
 });
