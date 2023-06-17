@@ -1983,10 +1983,11 @@ label {
     .Promised .Top{border-radius: 0px;
       top: -40px;}
 
-      .Top-TOP button{color: #003f82;
-        font-size: 24px;
-        }
-
+      .Top-TOP button {
+        color: black;
+        font-size: 1.3rem;
+        font-family: sans-serif;
+    }
     .top-nav .menu-icon {
   
       padding: 0px;
