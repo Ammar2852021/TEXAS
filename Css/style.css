@@ -1972,6 +1972,11 @@ label {
 
   @media(max-width: 767px) {
 
+    button#no-hid {
+      text-align: left;
+      margin: 10px;
+  }
+
     .TOPS{display: none;}
 
 
