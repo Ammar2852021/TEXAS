@@ -4,6 +4,7 @@ let htext = document.querySelectorAll(".tr");
 
 let ARB = document.getElementById("ARB");
 let ENG = document.getElementById("ENG");
+let footer = document.getElementById('footer')
 
 
 let ENGLANG2 = document.querySelectorAll ('.ENGLANG-tr');
@@ -56,7 +57,7 @@ translate.addEventListener("change", (e) => {
 
     ENGLANG2.forEach((e)=>e.style.display='none')
     ARBLANG2.forEach((e)=>e.style.display='block')
-    
+    footer.style.direction='rtl';
   } else if (e.target.value == 2) {
  
     trans(englishArray, "ar", "en");
@@ -64,5 +65,7 @@ translate.addEventListener("change", (e) => {
 
     ENGLANG2.forEach((e)=>e.style.display='block')
     ARBLANG2.forEach((e)=>e.style.display='none')
+    footer.style.direction='ltr';
+
   }
 });
