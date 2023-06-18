@@ -221,6 +221,11 @@ luxury_vehicle.addEventListener("click", (e) => {
   e.preventDefault();
   handleCarType("Luxury Vehicle");
 });
+let small = document.getElementById("small");
+small.addEventListener("click", (e) => {
+  e.preventDefault();
+  handleCarType("Small");
+});
 
 // Automatic only
 let automatic_only = document.getElementById("automatic_only");
