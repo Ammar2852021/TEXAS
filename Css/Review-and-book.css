@@ -575,6 +575,11 @@ font-weight: bold;
 @media screen and (max-width:992px) {
   
 
+  .card-car{position: sticky;
+display: block;
+margin: 20px 0px; 
+  }
+
   .contact {
     width: 100%;
     height: 100vh;
@@ -586,7 +591,8 @@ font-weight: bold;
     top: auto;
     bottom: 10px;
     right: 20px;
-    width: 250px;
+    width: auto;  
+  height: auto;
   }
 
 
@@ -602,9 +608,11 @@ font-weight: bold;
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
-    .name-car {
+    /* .name-car {
       display: none;
-  }
+  } */
+
+
   .contact{display: block;}
   .flex {
     display: flex;
@@ -632,9 +640,9 @@ font-weight: bold;
         overflow: auto;
         height: auto;
     }
-    .name-car {
+    /* .name-car {
       display: none;
-  }
+  } */
 }
 
 
