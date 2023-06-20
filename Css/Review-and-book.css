@@ -17,6 +17,7 @@
 
 
 
+
 .contact{width: 100%;
 height: auto;
 background: white;
@@ -24,7 +25,7 @@ display: grid;
 grid-template-columns: 2fr 1fr;}
 
 
-
+.respons{display: none;}
 
 .titel {
     display: flex;
@@ -50,7 +51,14 @@ display: flow-root;
 }
 
 
-
+.respons svg {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  float: right;
+  margin: 10px;
+  cursor: pointer;
+}
 
 .box-Flexible{background: white;
     height: 35vh;
@@ -502,6 +510,13 @@ button a {text-decoration: none;
 
 
 
+.exit svg {
+  width: 20px;
+  margin: 10px;
+  cursor: pointer;
+  display: none;
+}
+
 
 
 .card-car{width: 300px; height: 65vh;
@@ -572,13 +587,18 @@ font-weight: bold;
     color: #003f82;
     }
 
-@media screen and (max-width:992px) {
   
 
-  .card-car{position: sticky;
-display: block;
-margin: 20px 0px; 
-  }
+@media screen and (max-width:992px) {
+  .respons{display: block;} 
+  
+  .exit svg {
+  
+    display: block;
+}
+  
+
+
 
   .contact {
     width: 100%;
@@ -589,10 +609,10 @@ margin: 20px 0px;
 
   .card-car{
     top: auto;
-    bottom: 10px;
-    right: 20px;
+    bottom: 0px;
+    right: 0px;
     width: auto;  
-  height: auto;
+  display: none;
   }
 
 

@@ -121,7 +121,15 @@ font-size: 20px;
 .centar{display: flex;  align-items: center;}
 
 
+div#alert {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+position: fixed;}
 
+@media screen and (max-width:400px) {
+div#alert {font-size: 12px;}}
 
 
 
