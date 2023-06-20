@@ -1,10 +1,13 @@
-
-let search = document.getElementById('search');
+let search = document.getElementById("search");
 
 let Address = document.getElementById("Address");
 if (Address) {
   let suggestions = document.getElementById("suggestions");
-  let Arr = ["Aliaa Queen Airport", "Mallorca Palma Airport","مطار الملكه علياء"];
+  let Arr = [
+    "Aliaa Queen Airport",
+    "Mallorca Palma Airport",
+    "مطار الملكه علياء",
+  ];
 
   Arr.forEach(function (e) {
     suggestions.innerHTML += `<option>${e}</option>`;
@@ -12,6 +15,7 @@ if (Address) {
 
   Address.addEventListener("input", function (e) {
     localStorage.setItem("pickup_area", e.target.value);
+    localStorage.setItem("drop_off_area", e.target.value);
   });
 }
 let delivary = document.getElementById("delivary");
@@ -24,7 +28,14 @@ if (delivary) {
   });
 
   delivary.addEventListener("input", function (e) {
-    localStorage.setItem("drop_off_area", e.target.value);
+    if (e.target.value === "") {
+      localStorage.setItem(
+        "drop_off_area",
+        localStorage.getItem("pickup_area")
+      );
+    } else {
+      localStorage.setItem("drop_off_area", e.target.value);
+    }
   });
 }
 
@@ -103,28 +114,24 @@ if (show_cars)
     localStorage.setItem("drop_off_time", drop_off_time.value);
   };
 
+// button-hidden
 
-  // button-hidden
+let nohid = document.getElementById("no-hid");
+let inputhid = document.getElementById("input-hid");
+let inputnohid = document.getElementById("input-no-hid");
 
-let nohid = document.getElementById('no-hid');
-  let inputhid = document.getElementById('input-hid');
-  let inputnohid = document.getElementById('input-no-hid');
+let hidden = document.getElementById("hidden");
 
-  let hidden = document.getElementById('hidden');
+nohid.addEventListener("click", function () {
+  inputhid.style.display = "block";
+  inputnohid.style.display = "none";
+  nohid.style.display = "none";
+  hidden.style.display = "block";
+});
 
-  nohid.addEventListener('click',function()
-  {
-    inputhid.style.display='block';
-    inputnohid.style.display='none';
-    nohid.style.display='none';
-    hidden.style.display='block';
-  })
-
-  hidden.addEventListener('click',function()
-  {
-    inputhid.style.display='none';
-    inputnohid.style.display='block';
-    nohid.style.display='block';
-    hidden.style.display='none';
-  })
-
+hidden.addEventListener("click", function () {
+  inputhid.style.display = "none";
+  inputnohid.style.display = "block";
+  nohid.style.display = "block";
+  hidden.style.display = "none";
+});
