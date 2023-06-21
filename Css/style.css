@@ -2260,26 +2260,16 @@ details summary span {
   transform: translateY(-50%);
   transform-origin: center center;
 }
-details[open] summary {
-  border-color: #2260ff;
-  box-shadow: 0 0 0 4px #b5c9fc;
-}
-details[open] summary span {
-  transform: scaleY(-1) translateY(50%);
-}
+
 details div {
   margin-top: 8px;
   background-color: #fff;
   border: 2px solid #b5bfd9;
   border-radius: 8px;
   flex-direction: column;
-  padding: 0.5rem;
-  box-shadow: 0 3px 7px 0 #c8cfe1;
+  padding: 5px;
 }
-details div label {
-  position: relative;
-  cursor: pointer;
-}
+
 details div input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2293,10 +2283,4 @@ details div input:checked + span {
 }
 details div span:hover {
   background-color: #e9efff;
-}
-details div span {
-  display: block;
-  padding: 0.625rem;
-  border-radius: 8px;
-  margin-top: 0.25rem;
 }
