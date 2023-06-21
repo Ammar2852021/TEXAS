@@ -2230,3 +2230,73 @@ label {
 
 
      
+
+
+
+details {
+  position: relative;
+}
+details summary {
+
+  padding: 5px;
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+details summary:hover, details summary:focus {
+  border-color: #2260ff;
+}
+details summary span {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  transform-origin: center center;
+}
+details[open] summary {
+  border-color: #2260ff;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+details[open] summary span {
+  transform: scaleY(-1) translateY(50%);
+}
+details div {
+  margin-top: 8px;
+  background-color: #fff;
+  border: 2px solid #b5bfd9;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-shadow: 0 3px 7px 0 #c8cfe1;
+}
+details div label {
+  position: relative;
+  cursor: pointer;
+}
+details div input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  visibility: hidden;
+  position: absolute;
+}
+details div input:checked + span {
+  background-color: #e9efff;
+  color: #2260ff;
+}
+details div span:hover {
+  background-color: #e9efff;
+}
+details div span {
+  display: block;
+  padding: 0.625rem;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+}
