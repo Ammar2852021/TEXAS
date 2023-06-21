@@ -168,6 +168,7 @@ justify-content: center;
 /* ............... */
 
 
+
 @media screen and (max-width:767px)  {
   
 
@@ -1210,6 +1211,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 20px;
+background-size: cover;
+background-position: center center;
 }
 
 .offer p {
