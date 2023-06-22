@@ -102,10 +102,14 @@
                <div class="Promised" id="Promised">
               
                   <div class="Top">
-                     <div class="Top-TOP TOPS"><span class="span-top" style="color: #003f82;">Choose location</span></div>
+                     <div class="Top-TOP TOPS"><span class="span-top" style="color: #003f82;"> Choose Location</span></div>
                      <div class="Top-TOP">
-                    <button id="no-hid" class="tr" >Delivery location</button>
-                    <button id="hidden" class="tr"  style="display: none;" >Place of return</button>
+                    <button id="no-hid" class="tr" > Different return location +  </button>
+                    <div class="input-hid" id="input-hid" style="display: none;">
+                     <input  class="search__input" id="delivary" placeholder="Delivery Possibility"/> 
+                     <datalist id="delivaries">
+                     </datalist>
+                  </div>
 
                      </div>
                   </div>
@@ -118,12 +122,7 @@
                            <input  class="search__input"  id="Address" placeholder="From : Address" autoComplete="on" list="suggestions"/>    
                         </div>
 
-                     <div class="input-hid" id="input-hid" style="display: none;">
-                        <input  class="search__input" id="delivary" placeholder="Place of delivery"/> 
-                        <datalist id="delivaries">
-                        </datalist>
-                     </div>
-
+           
                         <button class="search__button">
                            <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
                               <g>

@@ -118,20 +118,20 @@ if (show_cars)
 
 let nohid = document.getElementById("no-hid");
 let inputhid = document.getElementById("input-hid");
-let inputnohid = document.getElementById("input-no-hid");
+// let inputnohid = document.getElementById("input-no-hid");
 
 let hidden = document.getElementById("hidden");
 
 nohid.addEventListener("click", function () {
   inputhid.style.display = "block";
-  inputnohid.style.display = "none";
+  // inputnohid.style.display = "none";
   nohid.style.display = "none";
   hidden.style.display = "block";
 });
 
 hidden.addEventListener("click", function () {
   inputhid.style.display = "none";
-  inputnohid.style.display = "block";
+  // inputnohid.style.display = "block";
   nohid.style.display = "block";
   hidden.style.display = "none";
 });
