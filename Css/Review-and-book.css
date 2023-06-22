@@ -522,7 +522,7 @@ button a {text-decoration: none;
 .card-car{width: 300px; height: 65vh;
 position: fixed;
 top: 140px;
-right:  50px;
+right:  20px;
 background: white;
 padding: 10px;
 background-color: var(--color-background, rgba(255, 255, 255, 1));
@@ -590,6 +590,13 @@ font-weight: bold;
   
 
 @media screen and (max-width:992px) {
+
+
+
+  
+
+
+
   .respons{display: block;} 
   
   .exit svg {
@@ -673,4 +680,47 @@ font-weight: bold;
 
 .class{border: 3px solid  #003f82;
 height: auto;
+}
+
+
+
+
+@media screen and (max-width:992px) {
+  .card-car{display: none;}
+  .contact{display: block;}
+  .respons {
+    display: block;
+}
+.exit svg {
+  display: block;
+}
+
+.card-car {
+  top: auto;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  display: none;
+  height: auto;
+}
+.car-img .img img {
+  width: 80px;
+}
+
+.car-img {
+  display: flex;
+  align-items: center;
+}
+.text {
+  margin-right: 20px;
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+
+
 }
