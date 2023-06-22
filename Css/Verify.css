@@ -23,7 +23,6 @@ h1 {
 p {
     color: #666666;
     font-size: 18px;
-    line-height: 2;
 }
 
 .button {
@@ -37,7 +36,6 @@ p {
     transition: background-color 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 1vh;
 }
 
 .button:hover {
