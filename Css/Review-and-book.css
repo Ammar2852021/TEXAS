@@ -646,7 +646,7 @@ font-weight: bold;
     width: 95%;
     /* gap: 6px; */
 }
-.form label .input{width: 90%;}
+.form label .input{width: 100%;}
 }
 
 

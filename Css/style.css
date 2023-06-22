@@ -2332,3 +2332,9 @@ details div span:hover {
 div#input-no-hid {
   width: 100%;
 }
+
+
+.Contenar-our.aos-init.aos-animate {
+  width: 80%;
+  margin: auto;
+}
