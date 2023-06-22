@@ -1211,7 +1211,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 20px;
-background-size: cover;
+background-size: contain;
+background-repeat: no-repeat;
 background-position: center center;
 }
 
@@ -1985,7 +1986,7 @@ label {
   */
 
 
-  @media(max-width: 767px) {
+  @media(max-width: 992px) {
 
     button#no-hid, #hidden{
       text-align: left;
@@ -1995,14 +1996,13 @@ label {
 
   
 
-  .card-Grid{height: auto;}
 
 
 
     .TOPS{display: none;}
 
     .Promised .Top{border-radius: 0px;
-      top: -40px;}
+      top: -60px;}
 
       .Top-TOP button {
         color: black;
@@ -2075,7 +2075,6 @@ label {
     .Grid{display: block;
     height: auto;
     }
-    .card-Grid{display: block;}
   
     .offer-offer{width: 100%;}
   
@@ -2140,7 +2139,7 @@ label {
     }
   
     .home-cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   
     .Our-Tame {
@@ -2313,3 +2312,14 @@ details div span:hover {
 }
 
 }
+
+
+@media screen and (max-width:767px) {
+  .card-Grid{height: auto;}
+
+  .home-cards {
+    grid-template-columns: 1fr ;
+}
+
+}
+
