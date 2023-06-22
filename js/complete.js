@@ -292,3 +292,11 @@ var target_drop = localStorage.getItem("drop_off_area");
 if (!myArray.includes(target_drop)) {
   total.innerText = `${Number(total.innerText.match(/[0-9.,]+/)[0]) + an_lo}$`;
 }
+
+getData(APIs.host + APIs.social).then((data) => {
+  data["data"].forEach((e) => {
+    if(e.key === "another_location"){
+      console.log(e.value);
+    }
+  });
+});
