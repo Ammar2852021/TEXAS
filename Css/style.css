@@ -2065,7 +2065,7 @@ label {
           padding-bottom: 20px;
           justify-content: center;
           background-position: right bottom;
-          
+          height: auto;
     }
 
     /* .Promised{margin-top: 10vh;} */
@@ -2352,4 +2352,10 @@ div#input-no-hid {
     width: 100%;
     margin: auto;
   }
+}
+
+
+@media screen and (max-width:767px) {
+  .Promised{margin-top: 0px;}
+  .blue{height: fit-content;}
 }
