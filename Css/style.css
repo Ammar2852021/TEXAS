@@ -172,6 +172,8 @@ justify-content: center;
   
 
 
+
+
   .top-nav .menu-btn:checked ~ .menu{
     height: -webkit-fill-available;
         z-index: 999;
@@ -1989,6 +1991,12 @@ label {
   }
 
 
+  
+
+  .card-Grid{height: auto;}
+
+
+
     .TOPS{display: none;}
 
     .Promised .Top{border-radius: 0px;
@@ -2283,4 +2291,20 @@ details div input:checked + span {
 }
 details div span:hover {
   background-color: #e9efff;
+}
+
+
+
+@media screen and (max-width:767px) {
+  
+
+  .TEXES-Car {
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    margin-top: -5vh;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 }
