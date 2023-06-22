@@ -244,6 +244,7 @@ button a {text-decoration: none;
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;}
+        footer{display: none;}
 
 }
     
@@ -266,8 +267,9 @@ button a {text-decoration: none;
         overflow: auto;
         height: auto;
     }
-    /* footer{display: none;} */
     .PH{display: none;}
+    footer{display: none;}
+
 
 }
 
