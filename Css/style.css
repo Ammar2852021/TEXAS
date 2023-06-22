@@ -2315,11 +2315,16 @@ details div span:hover {
 
 
 @media screen and (max-width:767px) {
-  .card-Grid{height: auto;}
+  .card-Grid{height: auto; display: block;}
 
   .home-cards {
     grid-template-columns: 1fr ;
 }
 
+
+
 }
 
+div#input-no-hid {
+  width: 100%;
+}
