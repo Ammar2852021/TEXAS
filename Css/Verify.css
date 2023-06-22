@@ -9,16 +9,11 @@ align-items: center;
 justify-content: center;
 overflow: hidden;
 background: white;
-font-family: sans-serif;
-/* background-image: url(../img/Audi.jpeg);
-background-size: cover;
-background-position: center center; */
-}
+font-family: sans-serif;}
 
 h1 {
     color: #333333;
-    font-size: 32px;
-}
+    font-size: 32px;}
 
 p {
     color: #666666;
