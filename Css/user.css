@@ -60,7 +60,7 @@ padding: 5px;
 border-radius: 20px;
 margin-left: 50px;
 outline: none;
-background: #003f82;}
+background: none;}
 
 .but-user button a{text-decoration: none;
 color: white;
@@ -150,7 +150,7 @@ margin: 10px;
 margin-bottom: 5vh;
 }
 
-  h4:before {
+  /* h4:before {
     content: "";
     position: absolute;
     left: 0;
@@ -159,7 +159,7 @@ margin-bottom: 5vh;
     height: 2px;
     background: #003f82;
   }
-  
+   */
   
 
 
@@ -607,7 +607,6 @@ table th {
           padding: 5px;
           border-radius: 20px;
           outline: none;
-          background: #003f82;
       }
 
 

@@ -5,7 +5,7 @@ body{overflow: hidden;}
 height: 100vh;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
 }
 
 .Container-Sign-Up{
@@ -129,6 +129,14 @@ overflow: hidden;}
 
 
         @media screen and (max-width:992px) {
+
+          .Container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
           .Container-Sign-Up{width: auto;}
 
           .Container-img{display: none;}
