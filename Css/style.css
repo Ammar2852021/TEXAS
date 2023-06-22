@@ -716,7 +716,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 .Top-TOP{background-color: #dbdbdb;
-float: right;
+/* float: right; */
 display: flex;
 align-items: center;
 justify-content: center;
@@ -1833,6 +1833,10 @@ justify-content: center;
           justify-content: center;
           width: inherit;
           height: inherit; */
+          /* float: right; */
+display: flex;
+align-items: center;
+justify-content: start;
           
       }
       
