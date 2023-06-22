@@ -2249,6 +2249,9 @@ details summary {
   position: relative;
   border-radius: 3px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 details summary::-webkit-details-marker {
   display: none;
