@@ -671,3 +671,9 @@ table th {
     align-items: center;
     justify-content: center;
     }
+
+
+    .top-nav{height: 10vh;}
+    h1.logo-h {
+      margin-top: -5px;
+  }

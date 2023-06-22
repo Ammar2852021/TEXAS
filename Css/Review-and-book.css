@@ -724,3 +724,10 @@ height: auto;
 
 
 }
+
+
+@media screen and (max-width:767px) {
+  .Add.Add-button {
+    margin-top: 10px;
+}
+}
