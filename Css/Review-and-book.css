@@ -71,6 +71,12 @@ box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px 
 align-items: center;}
 
 @media screen and (max-width:992px) {
+
+
+
+
+
+
   .box-Flexible{margin-bottom: 75px;}
   .checkbox-wrapper-4{margin-bottom: 50px;}
 }
@@ -619,7 +625,7 @@ font-weight: bold;
     bottom: 0px;
     right: 0px;
     width: auto;  
-  display: none;
+  /* display: none; */
   }
 
 
@@ -686,7 +692,7 @@ height: auto;
 
 
 @media screen and (max-width:992px) {
-  .card-car{display: none;}
+  /* .card-car{display: none;} */
   .contact{display: block;}
   .respons {
     display: block;
@@ -700,7 +706,7 @@ height: auto;
   bottom: 0px;
   right: 0px;
   width: 100%;
-  display: none;
+  /* display: none; */
   height: auto;
 }
 .car-img .img img {
@@ -731,3 +737,50 @@ height: auto;
     margin-top: 10px;
 }
 }
+
+@media screen and (max-width:992px) {
+  
+  .contact{width: 100%;
+    height: auto;
+    background: white;
+    display: block;
+    grid-template-columns: 2fr 1fr;}
+
+
+    .card-car {
+      width: 100%;
+      height: auto;
+      position: static;
+      top: 140px;
+      right: 20px;
+      background: white;
+      padding: 10px;
+      background-color: var(--color-background, rgba(255, 255, 255, 1));
+      transition: box-shadow 300ms ease-in-out 0s;
+      box-shadow:none;
+  }
+
+
+
+
+.exit {
+  display: none;
+}
+
+.card-cars-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.car-img {
+  grid-gap: 30px;
+}
+
+span.tr {
+  margin-right: 20px;
+}
+
+}
+
