@@ -103,6 +103,8 @@ font-weight: bold;
 font-size: 20px;
 }
 
+.social-circle li a{margin: 5px;}
+
 
 
 .top-nav .logo {
@@ -110,6 +112,7 @@ font-size: 20px;
 }
 @media screen and (max-width:992px) {
   #input-hid{display: block; width: 100%;}
+  
   .logo{margin-top: 1vh;}
 }
 .top-nav .menu-icon {
